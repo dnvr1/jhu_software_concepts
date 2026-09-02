@@ -1,0 +1,185 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: #f7f5f1;
+    color: #111111;
+    font-family: "Barlow", Arial, sans-serif;
+}
+
+main {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 70px 50px;
+}
+
+/* Main biography layout. */
+.bio-section {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: center;
+    gap: 90px;
+    min-height: 800px;
+}
+
+/* Biography text. */
+.bio-text {
+    width: 100%;
+    max-width: 760px;
+}
+
+.eyebrow {
+    margin: 0 0 42px;
+    color: #ff4f0a;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    line-height: 1;
+}
+
+.dot {
+    margin-right: 8px;
+    font-size: 15px;
+}
+
+.bio-text h1 {
+    margin: 0 0 24px;
+    font-family: "Anton", sans-serif;
+    font-size: clamp(68px, 6vw, 96px);
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.bio-text h2 {
+    margin: 0 0 38px;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.bio-text p:not(.eyebrow) {
+    margin: 0 0 28px;
+    color: #292929;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+/* Profile photo card. */
+.bio-image {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.bio-image img {
+    display: block;
+    width: 100%;
+    max-width: 540px;
+    height: 670px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 32px;
+    box-shadow: 0 20px 55px rgba(0, 0, 0, 0.12);
+}
+
+/* Tablet layout. */
+@media (max-width: 1000px) {
+    main {
+        padding: 60px 35px;
+    }
+
+    .bio-section {
+        grid-template-columns: 1fr 0.8fr;
+        gap: 55px;
+    }
+
+    .bio-text h1 {
+        font-size: 64px;
+    }
+
+    .bio-text p:not(.eyebrow) {
+        font-size: 18px;
+    }
+
+    .bio-image img {
+        height: 580px;
+        object-position: center top;
+    }
+}
+
+/* Mobile layout. */
+@media (max-width: 800px) {
+    main {
+        padding: 50px 28px;
+    }
+
+    .bio-section {
+        grid-template-columns: 1fr;
+        gap: 45px;
+        min-height: auto;
+    }
+
+    .bio-text {
+        max-width: 100%;
+    }
+
+    .bio-image {
+        justify-content: flex-start;
+    }
+
+    .bio-image img {
+        max-width: 500px;
+        height: 600px;
+        object-position: center top;
+    }
+
+    .eyebrow {
+        margin-bottom: 30px;
+    }
+
+    .bio-text h1 {
+        font-size: 60px;
+    }
+}
+
+/* Small mobile layout. */
+@media (max-width: 500px) {
+    main {
+        padding: 40px 20px;
+    }
+
+    .bio-text h1 {
+        font-size: 48px;
+    }
+
+    .bio-text h2 {
+        font-size: 21px;
+        letter-spacing: 3px;
+    }
+
+    .bio-text p:not(.eyebrow) {
+        font-size: 17px;
+        line-height: 1.65;
+    }
+
+    .bio-image img {
+        height: 500px;
+        object-position: center top;
+        border-radius: 24px;
+    }
+}
