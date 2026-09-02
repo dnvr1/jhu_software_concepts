@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>{% block title %}Denver Clarke{% endblock %}</title>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@600;700&display=swap"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <a class="site-name" href="{{ url_for('pages.home') }}">
+            DENVER CLARKE
+        </a>
+
+        <nav class="navigation">
+            <a
+                href="{{ url_for('pages.home') }}"
+                class="{% if request.endpoint == 'pages.home' %}active{% endif %}">
+                Home
+            </a>
+
+            <a
+                href="{{ url_for('pages.projects') }}"
+                class="{% if request.endpoint == 'pages.projects' %}active{% endif %}">
+                Projects
+            </a>
+
+            <a
+                href="{{ url_for('pages.contact') }}"
+                class="{% if request.endpoint == 'pages.contact' %}active{% endif %}">
+                Contact
+            </a>
+        </nav>
+    </header>
+
+    {% block content %}
+    {% endblock %}
+
+</body>
+</html>

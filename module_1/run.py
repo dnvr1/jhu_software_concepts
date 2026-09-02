@@ -6,7 +6,7 @@ from app import create_app
 def main() -> None:
     """Start the Flask development server."""
     app = create_app()
-    app.run(host="0.0.0.0", port=8080)
+    app.run(host="0.0.0.0", port=8080, debug=True)
 
 
 if __name__ == "__main__":

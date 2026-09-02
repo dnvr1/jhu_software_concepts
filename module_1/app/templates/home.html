@@ -1,81 +1,57 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+{% extends "base.html" %}
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0">
+{% block title %}Denver Clarke | Home{% endblock %}
 
-    <title>Denver Clarke | Home</title>
+{% block content %}
 
-    <link
-        rel="preconnect"
-        href="https://fonts.googleapis.com">
+<main>
+    <section class="bio-section">
 
-    <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin>
+        <div class="bio-text">
+            <p class="eyebrow">
+                <span class="dot">●</span>
+                ABOUT
+            </p>
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@600;700&display=swap"
-        rel="stylesheet">
+            <h1>Hey, I'm Denver.</h1>
 
-    <link
-        rel="stylesheet"
-        href="{{ url_for('static', filename='styles.css') }}">
-</head>
+            <h2>Cloud Network Engineer</h2>
 
-<body>
-    <main>
-        <section class="bio-section">
+            <p>
+                I'm a cloud network engineer based in Baltimore with a
+                background in computer networking, cloud infrastructure,
+                and technology education. I'm originally from Jamaica and
+                currently studying Artificial Intelligence at Johns
+                Hopkins University.
+            </p>
 
-            <div class="bio-text">
-                <p class="eyebrow">
-                    <span class="dot">●</span>
-                    ABOUT
-                </p>
+            <p>
+                I'm especially interested in the intersection of
+                networking, automation, software development, and AI.
+                I enjoy learning how these technologies can work together
+                to solve practical problems and make complex systems
+                easier to manage.
+            </p>
 
-                <h1>Hey, I'm Denver.</h1>
+            <p>
+                Outside of work and school, I'm into fitness, photography,
+                cooking, and building personal projects. One of those
+                projects is Fully TuFF, a simple notes-style workout app
+                with AI features that I'm developing alongside my own
+                fitness journey.
+            </p>
+        </div>
 
-                <h2>Cloud Network Engineer</h2>
+        <div class="bio-image">
+            <img
+                src="{{ url_for(
+                    'static',
+                    filename='images/denver.jpg'
+                ) }}"
+                alt="Portrait of Denver Clarke">
+        </div>
 
-                <p>
-                    I'm a cloud network engineer based in Baltimore with a
-                    background in computer networking, cloud infrastructure,
-                    and technology education. I'm originally from Jamaica and
-                    currently studying Artificial Intelligence at Johns
-                    Hopkins University.
-                </p>
+    </section>
+</main>
 
-                <p>
-                    I'm especially interested in the intersection of
-                    networking, automation, software development, and AI.
-                    I enjoy learning how these technologies can work together
-                    to solve practical problems and make complex systems
-                    easier to manage.
-                </p>
-
-                <p>
-                    Outside of work and school, I'm into fitness, photography,
-                    cooking, and building personal projects. One of those
-                    projects is Fully TuFF, a simple notes-style workout app
-                    with AI features that I'm developing alongside my own
-                    fitness journey.
-                </p>
-            </div>
-
-            <div class="bio-image">
-                <img
-                    src="{{ url_for(
-                        'static',
-                        filename='images/denver.jpg'
-                    ) }}"
-                    alt="Portrait of Denver Clarke">
-            </div>
-
-        </section>
-    </main>
-</body>
-</html>
+{% endblock %}

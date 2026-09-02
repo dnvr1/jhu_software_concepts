@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block title %}Denver Clarke | Projects{% endblock %}
+
+{% block content %}
+
+<main class="projects-page">
+
+    <section class="projects-header">
+        <p class="eyebrow">
+            <span class="dot">●</span>
+            PROJECTS
+        </p>
+
+        <h1>Things I've Built.</h1>
+
+        <p class="projects-intro">
+            A collection of software projects I'm building while exploring
+            Python, networking, automation, artificial intelligence, and
+            software development.
+        </p>
+    </section>
+
+    <section class="project-grid">
+
+        <article class="project-card">
+
+            <p class="project-number">01 / MODULE 1</p>
+
+            <h2>Personal Developer Website</h2>
+
+            <p>
+                A personal developer website built with Flask, HTML, and CSS
+                for Modern Software Concepts in Python at Johns Hopkins
+                University.
+            </p>
+
+            <p>
+                The project uses Flask Blueprints and reusable HTML templates
+                to organize multiple pages for my biography, projects, and
+                contact information.
+            </p>
+
+            <div class="project-tags">
+                <span>PYTHON</span>
+                <span>FLASK</span>
+                <span>HTML</span>
+                <span>CSS</span>
+            </div>
+
+            <a
+                class="project-link"
+                href="https://github.com/dnvr1/jhu_software_concepts/tree/main/module_1"
+                target="_blank"
+                rel="noopener noreferrer">
+                VIEW ON GITHUB →
+            </a>
+
+        </article>
+
+    </section>
+
+</main>
+
+{% endblock %}
