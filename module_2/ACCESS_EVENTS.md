@@ -45,3 +45,13 @@ reviewed transport guard was extended only for this exact client message; HTTP,
 challenge, rate-limit, policy, and similar-looking compound errors remain
 blocking. Collection was then authorized to resume at the saved cursor with the
 unchanged 10-second delay.
+
+The same local WebSocket message later recurred at 24,440 records while Chrome,
+the public results page, and the saved cursor remained healthy. Investigation
+found that the browser helper retained one DevTools WebSocket across hundreds
+of pages. The helper now closes that local socket after each committed page and
+opens a fresh socket to the same stable Chrome target before the next page. This
+does not add website requests or relax any response checks. Missing/replaced
+tabs, HTTP errors, challenges, account state, policy changes, pagination faults,
+and unfamiliar layouts still stop collection. Page 1,223 had no partial archive;
+the user authorized resume after robots.txt was reviewed again.

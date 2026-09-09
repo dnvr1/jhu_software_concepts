@@ -33,7 +33,8 @@ from scrape import (
 class BrowserPage:
     """A local CDP page with command IDs and document-rejection checks."""
 
-    def __init__(self, socket_url: str):
+    def __init__(self, socket_url: str, target_id: str | None = None):
+        self.target_id = target_id
         self.socket = websocket.create_connection(
             socket_url, timeout=30, suppress_origin=True
         )
@@ -142,18 +143,16 @@ class BrowserPage:
         deadline = time.monotonic() + 45
         while time.monotonic() < deadline:
             snapshot = self.snapshot()
-            if (
-                snapshot["ready"] == "complete"
-                and (
-                    urlparse(url).path == "/robots.txt"
-                    or snapshot.get("first")
-                )
-                and _same_page(snapshot["url"], url)
-                and (
-                    previous_first is None
-                    or snapshot.get("first") != previous_first
-                )
-            ):
+            ready = snapshot["ready"] == "complete"
+            content_ready = (
+                urlparse(url).path == "/robots.txt" or snapshot.get("first")
+            )
+            correct_page = _same_page(snapshot["url"], url)
+            fresh_table = (
+                previous_first is None
+                or snapshot.get("first") != previous_first
+            )
+            if all((ready, content_ready, correct_page, fresh_table)):
                 return snapshot
             time.sleep(0.5)
         raise ScrapingStopped(
@@ -242,11 +241,45 @@ def _find_page(port: int) -> BrowserPage:
             and parsed.hostname in {"www.thegradcafe.com", "thegradcafe.com"}
             and parsed.path == "/robots.txt"
         ):
-            return BrowserPage(tab["webSocketDebuggerUrl"])
+            return BrowserPage(tab["webSocketDebuggerUrl"], tab["id"])
     raise ValueError(
         "Open public https://www.thegradcafe.com/robots.txt in the "
         "dedicated browser before attaching. Do not sign into an account."
     )
+
+
+def _connect_tab(port: int, target_id: str) -> BrowserPage:
+    """Open a fresh local CDP socket to the same public GradCafe tab."""
+    for tab in _tabs(port):
+        parsed = urlparse(tab.get("url", ""))
+        if (
+            tab.get("id") == target_id
+            and tab.get("type") == "page"
+            and parsed.hostname in {"www.thegradcafe.com", "thegradcafe.com"}
+            and parsed.path in {"/robots.txt", "/survey"}
+        ):
+            return BrowserPage(tab["webSocketDebuggerUrl"], target_id)
+    raise ValueError(
+        "The verified GradCafe browser tab is no longer available; "
+        "collection stopped without opening a replacement tab."
+    )
+
+
+def _record_verified_policy(page, collector, args) -> str:
+    """Validate and archive the visible public policy, returning its tab ID."""
+    policy = page.snapshot()
+    if not _same_page(policy["url"], BASE_URL + "robots.txt"):
+        raise ValueError("The initial public robots policy is not visible.")
+    args.raw_dir.mkdir(parents=True, exist_ok=True)
+    policy_path = args.raw_dir / "browser-robots.txt"
+    policy_path.write_text(policy["text"], encoding="utf-8")
+    collector.check_robots(policy_path)
+    screenshot = page.command("Page.captureScreenshot", {"format": "jpeg"})
+    evidence = args.output.parent / "screenshot-robots-live.jpg"
+    evidence.write_bytes(base64.b64decode(screenshot["data"]))
+    if not page.target_id:
+        raise ValueError("Verified browser tab has no stable target ID")
+    return page.target_id
 
 
 def main() -> int:
@@ -322,18 +355,9 @@ def main() -> int:
         )
         input("Press Enter only when robots.txt is visible without login: ")
         page = _find_page(args.port)
-        policy = page.snapshot()
-        if not _same_page(policy["url"], BASE_URL + "robots.txt"):
-            raise ValueError(
-                "The initial public robots policy is not visible."
-            )
-        args.raw_dir.mkdir(parents=True, exist_ok=True)
-        policy_path = args.raw_dir / "browser-robots.txt"
-        policy_path.write_text(policy["text"], encoding="utf-8")
-        collector.check_robots(policy_path)
-        screenshot = page.command("Page.captureScreenshot", {"format": "jpeg"})
-        evidence = args.output.parent / "screenshot-robots-live.jpg"
-        evidence.write_bytes(base64.b64decode(screenshot["data"]))
+        target_id = _record_verified_policy(page, collector, args)
+        page.close()
+        page = None
         url = collector.state.get("next_url")
         if not url:
             print(
@@ -347,6 +371,7 @@ def main() -> int:
         while len(collector.records) < args.target:
             collector.ensure_live_allowed()
             time.sleep(collector.delay)
+            page = _connect_tab(args.port, target_id)
             current = page.navigate(url, previous_first)
             collector.ingest(
                 current["html"].encode("utf-8"),
@@ -359,6 +384,8 @@ def main() -> int:
                 f"{len(collector.records)}/{args.target} records",
                 flush=True,
             )
+            page.close()
+            page = None
             previous_first = current.get("first")
             page_number += 1
             url = collector.state.get("next_url")

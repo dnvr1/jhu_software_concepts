@@ -6,6 +6,7 @@ import pytest
 
 from browser_collect import (
     BrowserPage,
+    _connect_tab,
     _require_anonymous_public_page,
     _same_page,
     main,
@@ -118,6 +119,47 @@ def test_optional_sign_in_navigation_is_not_a_login_gate():
             "headings": ["Admissions Results"],
         }
     )
+
+
+def test_fresh_socket_reconnects_to_same_public_tab():
+    tabs = [
+        {
+            "id": "stable-target",
+            "type": "page",
+            "url": "https://www.thegradcafe.com/survey?cursor=next",
+            "webSocketDebuggerUrl": "ws://127.0.0.1/page/stable-target",
+        }
+    ]
+    with patch("browser_collect._tabs", return_value=tabs), patch(
+        "browser_collect.BrowserPage"
+    ) as browser_page:
+        _connect_tab(9224, "stable-target")
+    browser_page.assert_called_once_with(
+        "ws://127.0.0.1/page/stable-target", "stable-target"
+    )
+
+
+@pytest.mark.parametrize(
+    "tab",
+    [
+        {
+            "id": "different-target",
+            "type": "page",
+            "url": "https://www.thegradcafe.com/survey",
+            "webSocketDebuggerUrl": "ws://local/other",
+        },
+        {
+            "id": "stable-target",
+            "type": "page",
+            "url": "https://example.org/survey",
+            "webSocketDebuggerUrl": "ws://local/wrong-host",
+        },
+    ],
+)
+def test_fresh_socket_refuses_other_tab_or_host(tab):
+    with patch("browser_collect._tabs", return_value=[tab]):
+        with pytest.raises(ValueError, match="no longer available"):
+            _connect_tab(9224, "stable-target")
 
 
 def test_persisted_stop_prevents_browser_launch_attach_and_prompt(tmp_path):
