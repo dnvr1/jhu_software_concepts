@@ -298,10 +298,11 @@ class GradCafeScraper:
     def resolve_browser_transport_stop(self, resolution: str) -> None:
         """Clear a reviewed local Chrome connection failure only.
 
-        This recovery is intentionally limited to Windows error 10054, which
-        indicates that the local Chrome DevTools socket closed.  HTTP errors,
-        access challenges, rate limits, policy stops, and other failures must
-        remain blocking.
+        This recovery is intentionally limited to Windows error 10054 and the
+        WebSocket client's exact remote-host-loss message. Both indicate that
+        the local Chrome DevTools socket closed. HTTP errors, access
+        challenges, rate limits, policy stops, and other failures must remain
+        blocking.
 
         Args:
             resolution: Human-readable evidence supporting the reviewed retry.
@@ -311,10 +312,16 @@ class GradCafeScraper:
                 or no review evidence was supplied.
         """
         reason = self.state.get("stop_reason")
-        is_known_transport_stop = bool(
+        is_windows_socket_reset = bool(
             reason
             and "[WinError 10054]" in reason
             and "connection was forcibly closed" in reason.lower()
+        )
+        is_websocket_disconnect = (
+            reason == "Connection to remote host was lost."
+        )
+        is_known_transport_stop = (
+            is_windows_socket_reset or is_websocket_disconnect
         )
         if not is_known_transport_stop:
             raise ValueError(

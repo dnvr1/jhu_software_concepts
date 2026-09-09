@@ -177,12 +177,24 @@ def test_reviewed_browser_transport_stop_can_be_resolved(scraper):
     )
 
 
+def test_exact_websocket_disconnect_can_be_resolved(scraper):
+    scraper.record_stop("Connection to remote host was lost.")
+    scraper.resolve_browser_transport_stop(
+        "Verified Chrome control port and public policy page"
+    )
+    assert scraper.state["stop_reason"] is None
+    assert scraper.state["stop_history"][-1]["reason"] == (
+        "Connection to remote host was lost."
+    )
+
+
 @pytest.mark.parametrize(
     "reason",
     [
         "HTTP 403",
         "Cloudflare challenge detected",
         "Rate limit response",
+        "Connection to remote host was lost during HTTP 403.",
         "[WinError 10061] No connection could be made",
     ],
 )

@@ -35,3 +35,13 @@ were checked locally before recovery. The save layer now retries only transient
 temporary file; other filesystem errors still fail immediately. A separately
 guarded recovery recorded the review, reconciled page 763 without another web
 request, and produced 15,260 unique records with all 20 archived URLs present.
+
+At 22,280 records, the WebSocket client reported its exact local message,
+`Connection to remote host was lost.` Chrome's debugging port remained open,
+the last visible result cursor was exactly one page behind the saved next cursor,
+and no orphan page 1,115 existed. At the user's explicit direction, the public
+robots.txt policy was loaded and read again in the same anonymous profile. The
+reviewed transport guard was extended only for this exact client message; HTTP,
+challenge, rate-limit, policy, and similar-looking compound errors remain
+blocking. Collection was then authorized to resume at the saved cursor with the
+unchanged 10-second delay.
