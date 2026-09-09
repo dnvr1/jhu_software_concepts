@@ -66,7 +66,9 @@ def audit(data_path, raw_dir):  # pylint: disable=too-many-locals
                 )
                 continue
             school = cells[0].get_text(" ", strip=True)
-            name, degree = [span.get_text(" ", strip=True) for span in spans]
+            name, degree = [
+                span.get_text(" ", strip=True) or None for span in spans
+            ]
             decision = cells[3].get_text(" ", strip=True)
             status, separator, date = decision.partition(" on ")
             date = date if separator else None
@@ -89,7 +91,7 @@ def audit(data_path, raw_dir):  # pylint: disable=too-many-locals
             expected = {
                 "university": school,
                 "program_name": name,
-                "program": name + ", " + school,
+                "program": name + ", " + school if name else None,
                 "degree": degree,
                 "date_added": cells[2].get_text(" ", strip=True),
                 "status": {"Wait listed": "Waitlisted"}.get(status, status),

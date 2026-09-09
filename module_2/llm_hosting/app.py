@@ -36,6 +36,7 @@ CANON_PROGS_PATH = os.getenv("CANON_PROGS_PATH", "canon_programs.txt")
 # Precompiled, non-greedy JSON object matcher to tolerate chatter around JSON
 JSON_OBJ_RE = re.compile(r"\{.*?\}", re.DOTALL)
 
+
 # ---------------- Canonical lists + abbrev maps ----------------
 def _read_lines(path: str) -> List[str]:
     """Read non-empty, stripped lines from a file (UTF-8)."""
@@ -79,7 +80,7 @@ SYSTEM_PROMPT = (
     '- Expand obvious abbreviations (e.g., "McG" -> "McGill University", '
     '"UBC" -> "University of British Columbia").\n'
     "- Use Title Case for program; use official capitalization for university "
-    "names (e.g., \"University of X\").\n"
+    'names (e.g., "University of X").\n'
     '- Ensure correct spelling (e.g., "McGill", not "McGiill").\n'
     '- If university cannot be inferred, return "Unknown".\n\n'
     "Return JSON ONLY with keys:\n"
@@ -160,7 +161,9 @@ def _split_fallback(text: str) -> Tuple[str, str]:
     return prog, uni
 
 
-def _best_match(name: str, candidates: List[str], cutoff: float = 0.86) -> str | None:
+def _best_match(
+    name: str, candidates: List[str], cutoff: float = 0.86
+) -> str | None:
     """Fuzzy match via difflib (lightweight, Replit-friendly)."""
     if not name or not candidates:
         return None
@@ -203,8 +206,9 @@ def _post_normalize_university(uni: str) -> str:
     return match or u or "Unknown"
 
 
-def _guard_source_candidate(source: str | None, candidate: str,
-                            canonical: List[str]) -> str:
+def _guard_source_candidate(
+    source: str | None, candidate: str, canonical: List[str]
+) -> str:
     """Keep model edits supported by source text and the canonical vocabulary.
 
     Exact known source names win. A canonical model proposal must be a close
@@ -212,21 +216,30 @@ def _guard_source_candidate(source: str | None, candidate: str,
     This avoids tiny-model inventions such as 'Dhaka' becoming 'Dhaaka'.
     """
     if not source:
-        return candidate
+        return "Unknown"
     source = re.sub(r"\s+", " ", source).strip()
-    exact = next((name for name in canonical
-                  if name.casefold() == source.casefold()), None)
+    exact = next(
+        (name for name in canonical if name.casefold() == source.casefold()),
+        None,
+    )
     if exact:
         return exact
-    if candidate in canonical and difflib.SequenceMatcher(
-        None, source.casefold(), candidate.casefold()
-    ).ratio() >= 0.90:
+    if (
+        candidate in canonical
+        and difflib.SequenceMatcher(
+            None, source.casefold(), candidate.casefold()
+        ).ratio()
+        >= 0.90
+    ):
         return candidate
     return source
 
 
-def _call_llm(program_text: str, source_program: str | None = None,
-              source_university: str | None = None) -> Dict[str, str]:
+def _call_llm(
+    program_text: str,
+    source_program: str | None = None,
+    source_university: str | None = None,
+) -> Dict[str, str]:
     """Query the tiny LLM and return standardized fields."""
     llm = _load_llm()
 
@@ -244,7 +257,9 @@ def _call_llm(program_text: str, source_program: str | None = None,
     messages.append(
         {
             "role": "user",
-            "content": json.dumps({"program": program_text}, ensure_ascii=False),
+            "content": json.dumps(
+                {"program": program_text}, ensure_ascii=False
+            ),
         }
     )
 
@@ -265,9 +280,11 @@ def _call_llm(program_text: str, source_program: str | None = None,
         std_prog, std_uni = _split_fallback(program_text)
 
     std_prog = _guard_source_candidate(
-        source_program, _post_normalize_program(std_prog), CANON_PROGS)
+        source_program, _post_normalize_program(std_prog), CANON_PROGS
+    )
     std_uni = _guard_source_candidate(
-        source_university, _post_normalize_university(std_uni), CANON_UNIS)
+        source_university, _post_normalize_university(std_uni), CANON_UNIS
+    )
     return {
         "standardized_program": std_prog,
         "standardized_university": std_uni,
@@ -298,8 +315,9 @@ def standardize() -> Any:
     out: List[Dict[str, Any]] = []
     for row in rows:
         program_text = (row or {}).get("program") or ""
-        result = _call_llm(program_text, row.get("program_name"),
-                           row.get("university"))
+        result = _call_llm(
+            program_text, row.get("program_name"), row.get("university")
+        )
         row["llm-generated-program"] = result["standardized_program"]
         row["llm-generated-university"] = result["standardized_university"]
         out.append(row)
@@ -328,8 +346,9 @@ def _cli_process_file(
     try:
         for row in rows:
             program_text = (row or {}).get("program") or ""
-            result = _call_llm(program_text, row.get("program_name"),
-                               row.get("university"))
+            result = _call_llm(
+                program_text, row.get("program_name"), row.get("university")
+            )
             row["llm-generated-program"] = result["standardized_program"]
             row["llm-generated-university"] = result["standardized_university"]
 

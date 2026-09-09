@@ -23,7 +23,7 @@ from storage import save_json as _save_json
 
 BASE_URL = "https://www.thegradcafe.com/"
 USER_AGENT = "JHU-Module2-EducationalScraper/1.0"
-PARSER_SCHEMA_VERSION = 3
+PARSER_SCHEMA_VERSION = 4
 SCORE_FIELDS = {"gre", "gre_v", "gre_aw", "gre_quantitative", "gpa"}
 
 
@@ -273,6 +273,26 @@ class GradCafeScraper:
                 "before any separately authorized collection."
             )
 
+    def resolve_parser_stop(self, resolution: str) -> None:
+        """Clear only a reviewed parser-layout stop after offline validation.
+
+        Access denials, challenges, rate limits, and transport failures cannot
+        be cleared through this method.
+        """
+        reason = self.state.get("stop_reason")
+        if not reason or not reason.startswith("Unrecognized applicant row layout"):
+            raise ValueError("Current stop is not a parser-layout review stop")
+        history = self.state.setdefault("stop_history", [])
+        history.append(
+            {
+                "time": self.state.get("updated_at"),
+                "reason": reason,
+                "resolution": resolution,
+            }
+        )
+        self.state["stop_reason"] = None
+        self._checkpoint()
+
     def _allowed(self, url: str) -> None:
         validate_public_url(url)
         if urlparse(url).path != "/robots.txt" and (
@@ -388,7 +408,7 @@ class GradCafeScraper:
             if program_cell
             else None
         )
-        if len(cells) < 4 or not program or not university:
+        if len(cells) < 4 or program_cell is None or not university:
             raise ValueError(
                 "Unrecognized applicant row layout; "
                 "refusing to silently discard fields"
@@ -451,7 +471,7 @@ class GradCafeScraper:
         if degree is None and degree_match:
             degree = degree_match.group(1)
         item = {
-            "program": f"{program}, {university}",
+            "program": f"{program}, {university}" if program else None,
             "program_name": program,
             "university": university,
             "comments": comments,

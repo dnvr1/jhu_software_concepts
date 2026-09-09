@@ -37,8 +37,13 @@ def main():
             manifest["source_url"],
             method="offline schema migration from saved HTML",
         )
+    for key in ("stop_history", "local_recovery_note"):
+        if key in checkpoint:
+            collector.state[key] = checkpoint[key]
     if checkpoint.get("stop_reason"):
         collector.record_stop(checkpoint["stop_reason"])
+    else:
+        collector._checkpoint()  # pylint: disable=protected-access
     print(f"Replayed {len(collector.records)} records offline")
 
 

@@ -136,6 +136,32 @@ def test_program_title_cannot_supply_citizenship_or_scores(scraper):
     assert row["score_provenance"]["gpa"] == "comment_labeled_narrative"
 
 
+def test_missing_program_name_is_preserved_as_null(scraper):
+    html = """<table><tbody><tr><td>Example Divinity School</td>
+    <td><span></span><span>Masters</span></td><td>Mar 09, 2026</td>
+    <td>Accepted on Mar 09</td><td><a href='/result/77'>View</a></td></tr>
+    <tr><td colspan='5'><div>Fall 2026</div><div>American</div></td></tr>
+    </tbody></table>"""
+    row = scraper.parse_html(html, result_url(1))[0]
+    assert row["program"] is None
+    assert row["program_name"] is None
+    assert row["university"] == "Example Divinity School"
+    assert row["degree"] == "Masters"
+    assert row["raw_program"] == "Masters"
+
+
+def test_only_reviewed_parser_stop_can_be_resolved(scraper):
+    scraper.record_stop("HTTP 403")
+    with pytest.raises(ValueError):
+        scraper.resolve_parser_stop("not allowed")
+    scraper.state["stop_reason"] = (
+        "Unrecognized applicant row layout; refusing to silently discard fields"
+    )
+    scraper.resolve_parser_stop("Empty program name represented as null")
+    assert scraper.state["stop_reason"] is None
+    assert scraper.state["stop_history"][-1]["resolution"].endswith("null")
+
+
 def test_first_actual_capture_matches_inspected_source(scraper):
     capture = (
         Path(__file__).resolve().parents[1]
