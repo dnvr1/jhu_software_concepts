@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.llm_cache/
+tmp/
+*.tmp
+llm_hosting/.venv/
+llm_hosting/models/
+llm_hosting/.cache/
+docs/_build/
+.browser_profile/

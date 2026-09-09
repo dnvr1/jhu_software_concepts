@@ -1,0 +1,3 @@
+# Complete tested environment: Python 3.12.6 on Windows x64.
+# Includes scraping, the local LLM, tests, linting, and documentation.
+-r requirements-lock.txt
