@@ -4,6 +4,30 @@ import json
 import os
 from pathlib import Path
 import tempfile
+import time
+
+
+REPLACE_ATTEMPTS = 10
+INITIAL_REPLACE_DELAY = 0.05
+
+
+def _replace_with_retry(source: Path, destination: Path) -> None:
+    """Replace a file despite brief Windows reader locks.
+
+    A complete temporary file is retained between attempts. Only
+    ``PermissionError`` is retried; unrelated filesystem failures remain
+    immediately visible to the caller.
+    """
+    delay = INITIAL_REPLACE_DELAY
+    for attempt in range(REPLACE_ATTEMPTS):
+        try:
+            os.replace(source, destination)
+            return
+        except PermissionError:
+            if attempt == REPLACE_ATTEMPTS - 1:
+                raise
+            time.sleep(delay)
+            delay = min(delay * 2, 0.5)
 
 
 def save_json(data: object, filename: Path) -> None:
@@ -31,7 +55,7 @@ def save_json(data: object, filename: Path) -> None:
             handle.write("\n")
             handle.flush()
             os.fsync(handle.fileno())
-        os.replace(temporary, filename)
+        _replace_with_retry(temporary, filename)
     finally:
         if temporary is not None and temporary.exists():
             temporary.unlink()

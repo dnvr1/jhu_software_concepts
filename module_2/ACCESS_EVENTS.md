@@ -26,3 +26,12 @@ loaded as a GradCafe admissions-results page. A narrowly scoped recovery method
 recorded that evidence in checkpoint history and resumed one collector at the
 unchanged 10-second delay. It cannot clear access, policy, challenge, HTTP, rate
 limit, or unrelated transport stops.
+
+At 15,240 committed records, Windows briefly denied the atomic replacement of
+`applicant_data.json`. The complete HTML and JSON for page 763 had already been
+archived. Its hash, schema version, source cursor, parsed count, and next cursor
+were checked locally before recovery. The save layer now retries only transient
+`PermissionError` failures for a bounded interval while retaining the complete
+temporary file; other filesystem errors still fail immediately. A separately
+guarded recovery recorded the review, reconciled page 763 without another web
+request, and produced 15,260 unique records with all 20 archived URLs present.

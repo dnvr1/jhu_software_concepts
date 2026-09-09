@@ -334,6 +334,38 @@ class GradCafeScraper:
         self.state["stop_reason"] = None
         self._checkpoint()
 
+    def resolve_atomic_save_stop(self, resolution: str) -> None:
+        """Clear a reviewed Windows lock on this collection's output file.
+
+        The saved temporary-file replacement pattern must name the configured
+        output on both sides. Website, parser, policy, and general filesystem
+        failures cannot be cleared through this recovery path.
+        """
+        reason = self.state.get("stop_reason") or ""
+        output_name = self.output.name.lower()
+        lowered = reason.lower()
+        is_output_lock = (
+            reason.startswith("[WinError 5] Access is denied:")
+            and f".{output_name}." in lowered
+            and f"-> '{output_name}'" in lowered
+        )
+        if not is_output_lock:
+            raise ValueError(
+                "Current stop is not a reviewed atomic output-save lock"
+            )
+        if not resolution.strip():
+            raise ValueError("Save recovery requires review evidence")
+        self.state.setdefault("stop_history", []).append(
+            {
+                "time": self.state.get("updated_at"),
+                "reason": reason,
+                "resolution": resolution,
+                "type": "reviewed_atomic_save_recovery",
+            }
+        )
+        self.state["stop_reason"] = None
+        self._checkpoint()
+
     def _allowed(self, url: str) -> None:
         validate_public_url(url)
         if urlparse(url).path != "/robots.txt" and (

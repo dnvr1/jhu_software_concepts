@@ -7,6 +7,7 @@ from unittest.mock import Mock, patch
 import pytest
 
 from clean import clean_data, extend_with_llm
+import storage
 from scrape import (
     GradCafeScraper,
     ScrapingStopped,
@@ -200,6 +201,33 @@ def test_transport_recovery_requires_evidence(scraper):
     with pytest.raises(ValueError):
         scraper.resolve_browser_transport_stop("  ")
     assert scraper.state["stop_reason"] is not None
+
+
+def test_reviewed_atomic_output_lock_can_be_resolved(scraper):
+    scraper.record_stop(
+        "[WinError 5] Access is denied: "
+        "'.applicant_data.json.random.tmp' -> 'applicant_data.json'"
+    )
+    scraper.resolve_atomic_save_stop("Archived page hash and cursor verified")
+    assert scraper.state["stop_reason"] is None
+    assert scraper.state["stop_history"][-1]["type"] == (
+        "reviewed_atomic_save_recovery"
+    )
+
+
+@pytest.mark.parametrize(
+    "reason",
+    [
+        "HTTP 403",
+        "[WinError 5] Access is denied: '.other.json.x.tmp' -> 'other.json'",
+        "[WinError 112] There is not enough space on the disk",
+    ],
+)
+def test_atomic_save_recovery_cannot_clear_other_stops(scraper, reason):
+    scraper.record_stop(reason)
+    with pytest.raises(ValueError):
+        scraper.resolve_atomic_save_stop("reviewed")
+    assert scraper.state["stop_reason"] == reason
 
 
 def test_first_actual_capture_matches_inspected_source(scraper):
@@ -452,6 +480,39 @@ def test_json_unicode_round_trip_and_invalid_shape(tmp_path):
     path.write_text("{}", encoding="utf-8")
     with pytest.raises(ValueError, match="JSON array"):
         load_data(path)
+
+
+def test_atomic_save_retries_transient_windows_lock(tmp_path):
+    path = tmp_path / "data.json"
+    actual_replace = storage.os.replace
+    attempts = 0
+
+    def intermittently_locked(source, destination):
+        nonlocal attempts
+        attempts += 1
+        if attempts < 3:
+            raise PermissionError("synthetic reader lock")
+        actual_replace(source, destination)
+
+    with patch("storage.os.replace", side_effect=intermittently_locked), patch(
+        "storage.time.sleep"
+    ) as sleep:
+        save_data([{"program": "Mathematics"}], path)
+
+    assert attempts == 3
+    assert sleep.call_count == 2
+    assert load_data(path) == [{"program": "Mathematics"}]
+
+
+def test_atomic_save_does_not_retry_unrelated_os_error(tmp_path):
+    path = tmp_path / "data.json"
+    with patch("storage.os.replace", side_effect=OSError("disk failure")), patch(
+        "storage.time.sleep"
+    ) as sleep:
+        with pytest.raises(OSError, match="disk failure"):
+            save_data([{"program": "Mathematics"}], path)
+    sleep.assert_not_called()
+    assert not list(tmp_path.glob(".data.json.*.tmp"))
 
 
 def test_missing_instructor_package_is_explicit(tmp_path):
