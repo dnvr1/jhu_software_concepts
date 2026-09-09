@@ -8,8 +8,9 @@ records. The current snapshot contains **420 genuine public listings**, and
 local TinyLlama run. Every original field was compared and preserved. No
 applicant records or LLM results are fabricated. A separate 40-record batch was
 captured through the Codex browser and audited against saved HTML. This is a
-parser test, not a completed standalone Python collection test. Bulk collection
-is paused until unauthenticated public access and the Python workflow are verified.
+parser test. Subsequent signed-out checks and a live Python collection/resume
+test passed for 60 records; see PUBLIC_ACCESS.md and LIVE_TEST.md. Bulk collection
+has not yet started.
 
 Student name: **Denver Clarke**. JHED ID: **dclar106**.
 Course: EN.605.256, Modern Software Concepts in Python.
@@ -242,6 +243,12 @@ explicit limit requiring reviewed canonical/alias updates, not guessed data.
 
 ## Verification, documentation, and limitations
 
+For measured local processing optimization, see BENCHMARK.md. The fastest tested
+configuration was two independent model workers with six threads each. Run
+`parallel_clean.py --workers 2 --threads 6 --work-dir tmp/parallel-clean --output llm_extend_applicant_data.json`
+on a frozen source file. Workers have separate caches; the parent validates and
+merges in source order. This does not increase website request concurrency.
+
 ```powershell
 .\.venv\Scripts\python.exe -m pip install -r requirements-dev.txt
 .\.venv\Scripts\python.exe -m pytest -q
@@ -283,6 +290,6 @@ raw evidence, and local LLM output). Canvas submission has not been performed.
 Repository metadata was checked through GitHub: `dnvr1/jhu_software_concepts`
 is private. Module 2 files are pushed; grader access remains unverified.
 The current suite passes 51 tests. Signed-out access to two pages is verified;
-standalone live Python collection and the
-30,000-entry requirement are still unresolved; these commits are not a claim
+the live Python collection/resume test passed for 60 records. The
+30,000-entry requirement is still unresolved; these commits are not a claim
 of assignment completion.
