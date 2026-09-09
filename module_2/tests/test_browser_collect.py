@@ -52,6 +52,22 @@ def test_browser_challenge_stops_before_capture():
         page.snapshot()
 
 
+def test_navigation_waits_for_table_even_after_document_complete():
+    page = BrowserPage.__new__(BrowserPage)
+    page.command = Mock(return_value={})
+    url = "https://www.thegradcafe.com/survey/"
+    page.snapshot = Mock(
+        side_effect=[
+            {"ready": "loading", "url": url, "html": ""},
+            {"ready": "complete", "url": url},
+            {"ready": "complete", "url": url, "first": "/result/1"},
+        ]
+    )
+    with patch("browser_collect.time.sleep"):
+        assert page.navigate(url)["first"] == "/result/1"
+    assert page.command.call_count == 1
+
+
 def test_document_rate_limit_is_recorded_without_retry():
     page = BrowserPage.__new__(BrowserPage)
     page.command_id = 0

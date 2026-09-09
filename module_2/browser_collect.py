@@ -86,7 +86,7 @@ class BrowserPage:
             """(() => ({
             url: location.href,
             title: document.title,
-            html: document.documentElement.outerHTML,
+            html: document.documentElement?.outerHTML || '',
             text: document.body ? document.body.innerText : '',
             first: document.querySelector('table a[href*="/result/"]')?.href,
             ready: document.readyState,
@@ -144,6 +144,10 @@ class BrowserPage:
             snapshot = self.snapshot()
             if (
                 snapshot["ready"] == "complete"
+                and (
+                    urlparse(url).path == "/robots.txt"
+                    or snapshot.get("first")
+                )
                 and _same_page(snapshot["url"], url)
                 and (
                     previous_first is None
