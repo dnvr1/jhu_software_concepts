@@ -69,7 +69,10 @@ the user signed in before the 40-record audit capture. Those 40 records match
 earlier public captures, but this does not establish an independently runnable,
 unauthenticated collection workflow. That sample remains separate under `tmp/`.
 Do not collect more data through authenticated sessions or treat account login
-as an assignment-approved workaround. Public-access eligibility remains unresolved.
+as an assignment-approved workaround. A subsequent normal logout check verified
+that both tested admissions pages load while signed out; see PUBLIC_ACCESS.md.
+This resolves the public-access question for those pages, not the remaining
+standalone Python live test or future pages.
 
 `urllib.parse` constructs and validates URLs. The current site uses **cursor-based
 Next links**; the scraper follows the exact source link instead of guessing page
@@ -279,6 +282,7 @@ raw evidence, and local LLM output). Canvas submission has not been performed.
 
 Repository metadata was checked through GitHub: `dnvr1/jhu_software_concepts`
 is private. Module 2 files are pushed; grader access remains unverified.
-The current suite passes 51 tests. Public-only live Python collection and the
+The current suite passes 51 tests. Signed-out access to two pages is verified;
+standalone live Python collection and the
 30,000-entry requirement are still unresolved; these commits are not a claim
 of assignment completion.

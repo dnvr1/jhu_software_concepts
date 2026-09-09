@@ -46,9 +46,9 @@ and the local LLM was rerun. Every refreshed source field is preserved in its
 extended counterpart. The previous snapshot is backed up locally under tmp/.
 
 The audited 40-record sample used Codex browser capture and Python parsing;
-it was not a successful standalone Python collection run. That browser required
-sign-in, so no larger collection is authorized until unauthenticated public
-access is established. No authenticated data beyond that separate sample is to
+it was not a successful standalone Python collection run. A later normal logout
+check confirmed two admissions pages load while signed out (PUBLIC_ACCESS.md).
+The standalone live Python test remains outstanding. No authenticated data beyond that separate sample is to
 be collected. GitHub metadata confirms the repository is private; Module 2
 files were pushed in code and data checkpoints (4d4bc30, fca0659). Grader access
 and Canvas submission remain pending. The current suite passes 51 tests.

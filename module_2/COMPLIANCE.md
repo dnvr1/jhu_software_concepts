@@ -25,10 +25,8 @@ This is a development checkpoint, not a completed submission.
 
 ## Gates before collecting more
 
-1. Establish that the source results are accessible without account login.
-   The later Codex browser redirected to sign-in; its sample is kept separate
-   under ignored tmp/. Matching older public captures does not prove the
-   authenticated workflow meets the assignment's public-only restriction.
+1. Public access has been verified for two pages after normal account logout;
+   see PUBLIC_ACCESS.md. Continue only while pages remain public and permitted.
 2. Run the standalone Python collector successfully against permitted public
    pages on a small batch. Browser capture plus Python parsing is not proof
    of standalone end-to-end collection.
