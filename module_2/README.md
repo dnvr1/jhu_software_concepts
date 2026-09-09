@@ -1,9 +1,11 @@
 # Module 2: Web Scraping
 
 Latest checkpoint: **1,000 unique source entries**, collection paused for
-reevaluation. See CHECKPOINT_1000.md: structured-field checks passed, but a
-comment-only score extraction case needs review before scaling. The LLM file
-still contains the earlier 420 records and must be refreshed before submission.
+reevaluation. See SCORE_POLICY.md: narrative score extraction now retains
+excerpts, scales and review flags. Both source and LLM files contain 1,000
+matching records; all source fields are preserved in the LLM output. 70 tests
+and 17,001 source-field comparisons pass. Five ambiguous score mentions remain
+review-only. No further collection has started.
 The implementation history below includes earlier 420-record snapshots.
 
 This Python project collects public GradCafe admission listings, preserves source
@@ -192,8 +194,10 @@ Basic cleaning decodes entities, removes markup, normalizes display whitespace,
 and converts numeric score strings. Original raw fields are retained. All absent
 values use `null`; no outcome, missing year, score, or institution is guessed.
 An exact whole-comment declaration of GRE quantitative/verbal/writing scores
-can fill missing metrics, with provenance; it never overrides a badge or scans
-narrative prose. Quantitative is separate from the generic `gre` field, and a
+can fill missing metrics, with provenance; it never overrides a badge. Schema 3
+also preserves labeled narrative mentions and fills only unique unambiguous
+missing scores. See SCORE_POLICY.md for scale and ambiguity handling.
+Quantitative is separate from the generic `gre` field, and a
 total score is never inferred. After the 40-record audit, all 420 records were
 rebuilt from saved HTML with consistent score provenance. A fresh local LLM run
 preserves every refreshed source field. The old snapshot is backed up under

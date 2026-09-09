@@ -2,6 +2,10 @@
 
 This is a development checkpoint, not a completed submission.
 
+Latest: 1,000 source entries and 1,000 matching local LLM outputs. Narrative
+score handling is documented in SCORE_POLICY.md; 70 tests pass. Earlier counts
+below describe prior checkpoints. Collection has not resumed beyond 1,000.
+
 ## Verified
 
 - Tested interpreter: Python 3.12.6, Windows x64.

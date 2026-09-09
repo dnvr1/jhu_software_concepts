@@ -3,8 +3,8 @@
   "manifest": {
     "sha256": "c0b54cc42dae18e8b04aa68b33c73d72b52195ab9e0aefede9f1857b243b8cea",
     "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xMSAxMDoxNTo1MCIsImFkbWl0aWQiOjEwMjAzMzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
-    "captured_at": "2026-09-09T01:00:06.917642+00:00",
-    "method": "saved public browser HTML",
+    "captured_at": "2026-09-09T09:39:32.729659+00:00",
+    "method": "offline schema migration from saved HTML",
     "parsed_count": 20,
     "new_count": 20,
     "archive": "page-000007.html",
@@ -39,7 +39,15 @@
       "degree": "PhD",
       "raw_program": "Communication and Culture PhD",
       "raw_text": "Toronto Metropolitan University Communication and Culture PhD Jun 10, 2026 Accepted on Jun 09 Total comments\nAccepted on Jun 09 Fall 2026 Other\nWaitlisted March 31 and accepted June 9!!!! Beyond overjoyed!!! I got an email saying they are pleased to inform that the program has reached a final decision regarding my application and that they look forward to my positive response within the deadline date noted in the communication. Then 20 ish minutes later posted my acceptance letter in the Student Services portal.",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xMSAxMDoxNTo1MCIsImFkbWl0aWQiOjEwMjAzMzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xMSAxMDoxNTo1MCIsImFkbWl0aWQiOjEwMjAzMzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Data Science and Engineering, University of Illinois Chicago (UIC)",
@@ -69,7 +77,15 @@
       "degree": "Masters",
       "raw_program": "Data Science and Engineering Masters",
       "raw_text": "University of Illinois Chicago (UIC) Data Science and Engineering Masters Jun 10, 2026 Accepted on Jun 10 Total comments\nAccepted on Jun 10 Spring 2026 International",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xMSAxMDoxNTo1MCIsImFkbWl0aWQiOjEwMjAzMzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xMSAxMDoxNTo1MCIsImFkbWl0aWQiOjEwMjAzMzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Political Economy, Kings College London",
@@ -99,7 +115,15 @@
       "degree": "Masters",
       "raw_program": "Political Economy Masters",
       "raw_text": "Kings College London Political Economy Masters Jun 10, 2026 Accepted on Apr 23 Total comments\nAccepted on Apr 23 Fall 2026 International GPA 3.25",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xMSAxMDoxNTo1MCIsImFkbWl0aWQiOjEwMjAzMzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xMSAxMDoxNTo1MCIsImFkbWl0aWQiOjEwMjAzMzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Physics, University of Roma La Sapienza",
@@ -129,7 +153,15 @@
       "degree": "Masters",
       "raw_program": "Physics Masters",
       "raw_text": "University of Roma La Sapienza Physics Masters Jun 10, 2026 Rejected on Jun 03 Total comments\nRejected on Jun 03 Fall 2026 Other GPA 3.80\nInternational (Turkey), 2 years of research experience, minor in Maths.",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xMSAxMDoxNTo1MCIsImFkbWl0aWQiOjEwMjAzMzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xMSAxMDoxNTo1MCIsImFkbWl0aWQiOjEwMjAzMzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "ERASMUS MUNDUS JOINT MASTERS IN EUROPEAN FORESTRY, UNIVERSITY OF THE EASTERN FINLAND",
@@ -159,7 +191,15 @@
       "degree": "Masters",
       "raw_program": "ERASMUS MUNDUS JOINT MASTERS IN EUROPEAN FORESTRY Masters",
       "raw_text": "UNIVERSITY OF THE EASTERN FINLAND ERASMUS MUNDUS JOINT MASTERS IN EUROPEAN FORESTRY Masters Jun 10, 2026 Accepted on Mar 01 Total comments\nAccepted on Mar 01 Fall 2026 International GPA 3.49",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xMSAxMDoxNTo1MCIsImFkbWl0aWQiOjEwMjAzMzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xMSAxMDoxNTo1MCIsImFkbWl0aWQiOjEwMjAzMzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Statistics, Columbia University",
@@ -189,7 +229,15 @@
       "degree": "Masters",
       "raw_program": "Statistics Masters",
       "raw_text": "Columbia University Statistics Masters Jun 10, 2026 Accepted on Nov 06 Total comments\nAccepted on Nov 06 Spring 2026 American GPA 3.65\nSubmitted two weeks after application was open, since admission was rolling-based there could be more bias for earlier applications. Later learned that the spring 2026 cohort was about 50 people, and also the last time the program will have a spring cohort.",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xMSAxMDoxNTo1MCIsImFkbWl0aWQiOjEwMjAzMzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xMSAxMDoxNTo1MCIsImFkbWl0aWQiOjEwMjAzMzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Agricultural Economics, Mississippi State University",
@@ -219,7 +267,15 @@
       "degree": "Masters",
       "raw_program": "Agricultural Economics Masters",
       "raw_text": "Mississippi State University Agricultural Economics Masters Jun 09, 2026 Accepted on Mar 07 Total comments\nAccepted on Mar 07 Fall 2025 International GRE 162 GRE V 157 GRE AW 4.50 GPA 3.75",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xMSAxMDoxNTo1MCIsImFkbWl0aWQiOjEwMjAzMzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xMSAxMDoxNTo1MCIsImFkbWl0aWQiOjEwMjAzMzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Agricultural Economics, University of Kentucky",
@@ -249,7 +305,15 @@
       "degree": "Masters",
       "raw_program": "Agricultural Economics Masters",
       "raw_text": "University of Kentucky Agricultural Economics Masters Jun 09, 2026 Accepted on Mar 07 Total comments\nAccepted on Mar 07 Fall 2025 International GRE 162 GRE V 157 GRE AW 4.50 GPA 3.75",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xMSAxMDoxNTo1MCIsImFkbWl0aWQiOjEwMjAzMzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xMSAxMDoxNTo1MCIsImFkbWl0aWQiOjEwMjAzMzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Agricultural and Resource Economics, University of Tennessee, Knoxville",
@@ -279,7 +343,15 @@
       "degree": "Masters",
       "raw_program": "Agricultural and Resource Economics Masters",
       "raw_text": "University of Tennessee, Knoxville Agricultural and Resource Economics Masters Jun 09, 2026 Accepted on Mar 12 Total comments\nAccepted on Mar 12 Fall 2025 International GRE 162 GRE V 157 GRE AW 4.50 GPA 3.75",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xMSAxMDoxNTo1MCIsImFkbWl0aWQiOjEwMjAzMzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xMSAxMDoxNTo1MCIsImFkbWl0aWQiOjEwMjAzMzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Information, University of Toronto",
@@ -309,7 +381,15 @@
       "degree": "Masters",
       "raw_program": "Information Masters",
       "raw_text": "University of Toronto Information Masters Jun 09, 2026 Rejected on Jun 09 Total comments\nRejected on Jun 09 Fall 2026 Other\nIt seems that everyone who wasn't accepted initially got waitlisted. A whole wave of us got rejected today.\n\n",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xMSAxMDoxNTo1MCIsImFkbWl0aWQiOjEwMjAzMzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xMSAxMDoxNTo1MCIsImFkbWl0aWQiOjEwMjAzMzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Economics, Southern Methodist University",
@@ -339,7 +419,15 @@
       "degree": "PhD",
       "raw_program": "Economics PhD",
       "raw_text": "Southern Methodist University Economics PhD Jun 09, 2026 Accepted on Mar 09 Total comments\nAccepted on Mar 09 Fall 2026 International GRE 163 GRE V 145 GRE AW 3.50 GPA 3.64",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xMSAxMDoxNTo1MCIsImFkbWl0aWQiOjEwMjAzMzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xMSAxMDoxNTo1MCIsImFkbWl0aWQiOjEwMjAzMzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Data Science, Ecole Polytechnique Federale De Lausanne (EPFL)",
@@ -369,7 +457,15 @@
       "degree": "Masters",
       "raw_program": "Data Science Masters",
       "raw_text": "Ecole Polytechnique Federale De Lausanne (EPFL) Data Science Masters Jun 09, 2026 Accepted on Jun 03 Total comments\nAccepted on Jun 03 Fall 2026 International GPA 4.00\nbachelor in data science from a not very recognized american uni. probably covered most of the requirements. Thesis built upon work from EPFL which made for a good statement of purpose. Letters of Recommendation were very strong. some research experience at a uni lab and research internship at Ivy League School. super stoked to be able to go, EPFL was my top choice.",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xMSAxMDoxNTo1MCIsImFkbWl0aWQiOjEwMjAzMzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xMSAxMDoxNTo1MCIsImFkbWl0aWQiOjEwMjAzMzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Physics, University of Cambridge",
@@ -399,7 +495,15 @@
       "degree": "PhD",
       "raw_program": "Physics PhD",
       "raw_text": "University of Cambridge Physics PhD Jun 08, 2026 Rejected on Jun 05 Total comments\nRejected on Jun 05 Fall 2026 International",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xMSAxMDoxNTo1MCIsImFkbWl0aWQiOjEwMjAzMzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xMSAxMDoxNTo1MCIsImFkbWl0aWQiOjEwMjAzMzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Administration of justice, Texas Southern University",
@@ -429,7 +533,15 @@
       "degree": "PhD",
       "raw_program": "Administration of justice PhD",
       "raw_text": "Texas Southern University Administration of justice PhD Jun 07, 2026 Accepted on Jun 06 Total comments\nAccepted on Jun 06 Fall 2026 International\nThere is no news about Funding yet.",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xMSAxMDoxNTo1MCIsImFkbWl0aWQiOjEwMjAzMzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xMSAxMDoxNTo1MCIsImFkbWl0aWQiOjEwMjAzMzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Business Administration, Islamic Azad University, Fars Science & Research Branch",
@@ -459,7 +571,15 @@
       "degree": "Masters",
       "raw_program": "Business Administration Masters",
       "raw_text": "Islamic Azad University, Fars Science & Research Branch Business Administration Masters Jun 07, 2026 Accepted on Jun 07 Total comments\nAccepted on Jun 07 Fall 2026 American",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xMSAxMDoxNTo1MCIsImFkbWl0aWQiOjEwMjAzMzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xMSAxMDoxNTo1MCIsImFkbWl0aWQiOjEwMjAzMzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Pure Mathematics, Isfahan University of Technology",
@@ -489,7 +609,15 @@
       "degree": "Masters",
       "raw_program": "Pure Mathematics Masters",
       "raw_text": "Isfahan University of Technology Pure Mathematics Masters Jun 07, 2026 Accepted on Jun 07 Total comments\nAccepted on Jun 07 Fall 2026 International",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xMSAxMDoxNTo1MCIsImFkbWl0aWQiOjEwMjAzMzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xMSAxMDoxNTo1MCIsImFkbWl0aWQiOjEwMjAzMzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Manufacturing Engineering, Tabriz University",
@@ -519,7 +647,15 @@
       "degree": "Masters",
       "raw_program": "Manufacturing Engineering Masters",
       "raw_text": "Tabriz University Manufacturing Engineering Masters Jun 07, 2026 Accepted on Jun 07 Total comments\nAccepted on Jun 07 Fall 2026 International GPA 3.60",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xMSAxMDoxNTo1MCIsImFkbWl0aWQiOjEwMjAzMzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xMSAxMDoxNTo1MCIsImFkbWl0aWQiOjEwMjAzMzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Naval Architecture and Marine Engineering, Rivers State University of Science and Technology",
@@ -549,7 +685,15 @@
       "degree": "Masters",
       "raw_program": "Naval Architecture and Marine Engineering Masters",
       "raw_text": "Rivers State University of Science and Technology Naval Architecture and Marine Engineering Masters Jun 07, 2026 Wait listed on Jun 07 Total comments\nWait listed on Jun 07 Fall 2026 International GPA 2.30",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xMSAxMDoxNTo1MCIsImFkbWl0aWQiOjEwMjAzMzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xMSAxMDoxNTo1MCIsImFkbWl0aWQiOjEwMjAzMzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Physics, University of Birmingham",
@@ -579,7 +723,15 @@
       "degree": "PhD",
       "raw_program": "Physics PhD",
       "raw_text": "University of Birmingham Physics PhD Jun 06, 2026 Rejected on Jun 02 Total comments\nRejected on Jun 02 Fall 2026 American\nHEP-ex BSc was top British uni, 55% (2:2) MSc was mid British uni, 71% (distinction) Only relevant experience is BSc and MSc project. No publications, talks, etc. Not sure how strong my LORs are. Email notification",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xMSAxMDoxNTo1MCIsImFkbWl0aWQiOjEwMjAzMzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xMSAxMDoxNTo1MCIsImFkbWl0aWQiOjEwMjAzMzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Architecture, University of Guilan",
@@ -609,7 +761,16 @@
       "degree": "MBA",
       "raw_program": "Architecture MBA",
       "raw_text": "University of Guilan Architecture MBA Jun 06, 2026 Accepted on Jun 06 Total comments\nAccepted on Jun 06 Spring 2026 International\n",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xMSAxMDoxNTo1MCIsImFkbWl0aWQiOjEwMjAzMzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xMSAxMDoxNTo1MCIsImFkbWl0aWQiOjEwMjAzMzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     }
-  ]
+  ],
+  "parser_schema_version": 3
 }

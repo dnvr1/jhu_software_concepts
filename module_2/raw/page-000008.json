@@ -3,8 +3,8 @@
   "manifest": {
     "sha256": "916f4a9cfe0981a4df23175c095f6a01592ade13e4ec051c67e4e97fa8113ab7",
     "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wNiAxOTowMjozNCIsImFkbWl0aWQiOjEwMjAzMTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
-    "captured_at": "2026-09-09T01:00:06.954623+00:00",
-    "method": "saved public browser HTML",
+    "captured_at": "2026-09-09T09:39:32.769168+00:00",
+    "method": "offline schema migration from saved HTML",
     "parsed_count": 20,
     "new_count": 20,
     "archive": "page-000008.html",
@@ -39,7 +39,15 @@
       "degree": "Masters",
       "raw_program": "Instructional designe Masters",
       "raw_text": "All school Instructional designe Masters Jun 06, 2026 Accepted on Jun 06 Total comments\nAccepted on Jun 06 Fall 2026 International",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wNiAxOTowMjozNCIsImFkbWl0aWQiOjEwMjAzMTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wNiAxOTowMjozNCIsImFkbWl0aWQiOjEwMjAzMTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Mathematics, University of Bonn",
@@ -69,7 +77,15 @@
       "degree": "Masters",
       "raw_program": "Mathematics Masters",
       "raw_text": "University of Bonn Mathematics Masters Jun 06, 2026 Rejected on Jun 06 Total comments\nRejected on Jun 06 Fall 2026 International GPA 3.36",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wNiAxOTowMjozNCIsImFkbWl0aWQiOjEwMjAzMTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wNiAxOTowMjozNCIsImFkbWl0aWQiOjEwMjAzMTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Public Policy, University of Massachusetts Boston",
@@ -99,7 +115,15 @@
       "degree": "PhD",
       "raw_program": "Public Policy PhD",
       "raw_text": "University of Massachusetts Boston Public Policy PhD Jun 05, 2026 Rejected on Jun 01 Total comments\nRejected on Jun 01 Fall 2026 International GRE V 150 GRE AW 2.50 GPA 3.03\ndidn't notice me. i just check the portal by myself and find a decision letter.",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wNiAxOTowMjozNCIsImFkbWl0aWQiOjEwMjAzMTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wNiAxOTowMjozNCIsImFkbWl0aWQiOjEwMjAzMTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Astronomy and Astrophysics, University of Manchester",
@@ -129,7 +153,15 @@
       "degree": "PhD",
       "raw_program": "Astronomy and Astrophysics PhD",
       "raw_text": "University of Manchester Astronomy and Astrophysics PhD Jun 05, 2026 Rejected on Jun 04 Total comments\nRejected on Jun 04 Fall 2026 International",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wNiAxOTowMjozNCIsImFkbWl0aWQiOjEwMjAzMTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wNiAxOTowMjozNCIsImFkbWl0aWQiOjEwMjAzMTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Counseling, Northwestern University",
@@ -159,7 +191,15 @@
       "degree": "Masters",
       "raw_program": "Counseling Masters",
       "raw_text": "Northwestern University Counseling Masters Jun 04, 2026 Interview on May 18 Total comments\nInterview on May 18 Fall 2026 American GPA 2.70",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wNiAxOTowMjozNCIsImFkbWl0aWQiOjEwMjAzMTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wNiAxOTowMjozNCIsImFkbWl0aWQiOjEwMjAzMTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Clinical Mental Health Counseling, Texas Tech University Health Sciences Center",
@@ -189,7 +229,15 @@
       "degree": "Masters",
       "raw_program": "Clinical Mental Health Counseling Masters",
       "raw_text": "Texas Tech University Health Sciences Center Clinical Mental Health Counseling Masters Jun 04, 2026 Rejected on May 27 Total comments\nRejected on May 27 Fall 2026 American GPA 4.00\nWas invited to submit a video interview. Rejected around 10 days later anyway. I'm a psychology major but I didn't have any practical background in mental health so if I were to guess that would be the biggest reason.",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wNiAxOTowMjozNCIsImFkbWl0aWQiOjEwMjAzMTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wNiAxOTowMjozNCIsImFkbWl0aWQiOjEwMjAzMTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Robotics, Ecole Polytechnique Federale De Lausanne (EPFL)",
@@ -219,7 +267,15 @@
       "degree": "Masters",
       "raw_program": "Robotics Masters",
       "raw_text": "Ecole Polytechnique Federale De Lausanne (EPFL) Robotics Masters Jun 04, 2026 Rejected on Jun 03 Total comments\nRejected on Jun 03 Fall 2026 International\nFrom dutch university 8.4/10 average, TA-ships, ETH exchange 5/6.0, recommendation letters both from ETH and dutch teachers.",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wNiAxOTowMjozNCIsImFkbWl0aWQiOjEwMjAzMTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wNiAxOTowMjozNCIsImFkbWl0aWQiOjEwMjAzMTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Neuroscience, CUNY Graduate Center",
@@ -249,7 +305,15 @@
       "degree": "PhD",
       "raw_program": "Neuroscience PhD",
       "raw_text": "CUNY Graduate Center Neuroscience PhD Jun 04, 2026 Rejected on Jun 04 Total comments\nRejected on Jun 04 Fall 2026 American\nemail to check portal. kinda figured it would be a rejection with it being this late.",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wNiAxOTowMjozNCIsImFkbWl0aWQiOjEwMjAzMTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wNiAxOTowMjozNCIsImFkbWl0aWQiOjEwMjAzMTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Applied Physics, Columbia University",
@@ -279,7 +343,15 @@
       "degree": "Masters",
       "raw_program": "Applied Physics Masters",
       "raw_text": "Columbia University Applied Physics Masters Jun 04, 2026 Accepted on Mar 11 Total comments\nAccepted on Mar 11 Fall 2026 International GPA 3.80\nno GRE.",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wNiAxOTowMjozNCIsImFkbWl0aWQiOjEwMjAzMTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wNiAxOTowMjozNCIsImFkbWl0aWQiOjEwMjAzMTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Biomedical Engineering, University of Utah",
@@ -309,7 +381,15 @@
       "degree": "PhD",
       "raw_program": "Biomedical Engineering PhD",
       "raw_text": "University of Utah Biomedical Engineering PhD Jun 04, 2026 Accepted on Mar 26 Total comments\nAccepted on Mar 26 Fall 2026 International GRE 170 GRE V 160 GRE AW 3.00 GPA 3.47\nMBBS in China\n\n",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wNiAxOTowMjozNCIsImFkbWl0aWQiOjEwMjAzMTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wNiAxOTowMjozNCIsImFkbWl0aWQiOjEwMjAzMTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Data Science, Ecole Polytechnique Federale De Lausanne (EPFL)",
@@ -339,7 +419,15 @@
       "degree": "Masters",
       "raw_program": "Data Science Masters",
       "raw_text": "Ecole Polytechnique Federale De Lausanne (EPFL) Data Science Masters Jun 04, 2026 Accepted on Jun 03 Total comments\nAccepted on Jun 03 Fall 2026 International GPA 3.54\nDouble degree in Physics and Biomedical Engineering. Research interships at ETH Zürich and the University of Cambridge. 4 papers published, (2 top tier conferences and 2 high-impact journals).",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wNiAxOTowMjozNCIsImFkbWl0aWQiOjEwMjAzMTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wNiAxOTowMjozNCIsImFkbWl0aWQiOjEwMjAzMTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Robotics, Ecole Polytechnique Federale De Lausanne (EPFL)",
@@ -369,7 +457,15 @@
       "degree": "Masters",
       "raw_program": "Robotics Masters",
       "raw_text": "Ecole Polytechnique Federale De Lausanne (EPFL) Robotics Masters Jun 04, 2026 Rejected on Jun 04 Total comments\nRejected on Jun 04 Fall 2026 International GPA 3.20",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wNiAxOTowMjozNCIsImFkbWl0aWQiOjEwMjAzMTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wNiAxOTowMjozNCIsImFkbWl0aWQiOjEwMjAzMTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "HECAP One Year dipolma, Abdus Salam international centre for theoretical physics",
@@ -399,7 +495,15 @@
       "degree": "Other",
       "raw_program": "HECAP One Year dipolma Other",
       "raw_text": "Abdus Salam international centre for theoretical physics HECAP One Year dipolma Other Jun 03, 2026 Rejected on Jun 03 Total comments\nRejected on Jun 03 Fall 2026 International",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wNiAxOTowMjozNCIsImFkbWl0aWQiOjEwMjAzMTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wNiAxOTowMjozNCIsImFkbWl0aWQiOjEwMjAzMTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Computer and Information Technology, Purdue University",
@@ -429,7 +533,15 @@
       "degree": "PhD",
       "raw_program": "Computer and Information Technology PhD",
       "raw_text": "Purdue University Computer and Information Technology PhD Jun 03, 2026 Accepted on May 13 Total comments\nAccepted on May 13 Fall 2026 International",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wNiAxOTowMjozNCIsImFkbWl0aWQiOjEwMjAzMTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wNiAxOTowMjozNCIsImFkbWl0aWQiOjEwMjAzMTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Quantum Science and Engineering, Ecole Polytechnique Federale De Lausanne (EPFL)",
@@ -459,7 +571,15 @@
       "degree": "Masters",
       "raw_program": "Quantum Science and Engineering Masters",
       "raw_text": "Ecole Polytechnique Federale De Lausanne (EPFL) Quantum Science and Engineering Masters Jun 03, 2026 Accepted on Jun 03 Total comments\nAccepted on Jun 03 Fall 2026 American GPA 3.70\nphysics w honors, 2.5 years research in two labs, T5 US uni for physics",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wNiAxOTowMjozNCIsImFkbWl0aWQiOjEwMjAzMTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wNiAxOTowMjozNCIsImFkbWl0aWQiOjEwMjAzMTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Geography and Geographic Information Science, Wageningen University",
@@ -489,7 +609,15 @@
       "degree": "PhD",
       "raw_program": "Geography and Geographic Information Science PhD",
       "raw_text": "Wageningen University Geography and Geographic Information Science PhD Jun 03, 2026 Rejected on Jun 03 Total comments\nRejected on Jun 03 Fall 2026 International",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wNiAxOTowMjozNCIsImFkbWl0aWQiOjEwMjAzMTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wNiAxOTowMjozNCIsImFkbWl0aWQiOjEwMjAzMTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Physics, University of Massachusetts Amherst",
@@ -519,7 +647,15 @@
       "degree": "Masters",
       "raw_program": "Physics Masters",
       "raw_text": "University of Massachusetts Amherst Physics Masters Jun 03, 2026 Accepted on Feb 02 Total comments\nAccepted on Feb 02 Fall 2026 International GPA 3.39",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wNiAxOTowMjozNCIsImFkbWl0aWQiOjEwMjAzMTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wNiAxOTowMjozNCIsImFkbWl0aWQiOjEwMjAzMTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Applied Physics, Ecole Polytechnique Federale De Lausanne (EPFL)",
@@ -549,7 +685,15 @@
       "degree": "Masters",
       "raw_program": "Applied Physics Masters",
       "raw_text": "Ecole Polytechnique Federale De Lausanne (EPFL) Applied Physics Masters Jun 03, 2026 Rejected on Jun 03 Total comments\nRejected on Jun 03 Fall 2026 International GPA 3.30",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wNiAxOTowMjozNCIsImFkbWl0aWQiOjEwMjAzMTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wNiAxOTowMjozNCIsImFkbWl0aWQiOjEwMjAzMTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Data Science, Ecole Polytechnique Federale De Lausanne (EPFL)",
@@ -579,7 +723,15 @@
       "degree": "Masters",
       "raw_program": "Data Science Masters",
       "raw_text": "Ecole Polytechnique Federale De Lausanne (EPFL) Data Science Masters Jun 03, 2026 Rejected on Jun 03 Total comments\nRejected on Jun 03 Fall 2026 International GPA 3.75\nHonors Student with extra research track and 2 years work exprience in DS",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wNiAxOTowMjozNCIsImFkbWl0aWQiOjEwMjAzMTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wNiAxOTowMjozNCIsImFkbWl0aWQiOjEwMjAzMTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Mathematics, Ecole Polytechnique Federale De Lausanne (EPFL)",
@@ -609,7 +761,16 @@
       "degree": "Masters",
       "raw_program": "Mathematics Masters",
       "raw_text": "Ecole Polytechnique Federale De Lausanne (EPFL) Mathematics Masters Jun 03, 2026 Accepted on Jun 03 Total comments\nAccepted on Jun 03 Fall 2026 International GPA 3.90\n",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wNiAxOTowMjozNCIsImFkbWl0aWQiOjEwMjAzMTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wNiAxOTowMjozNCIsImFkbWl0aWQiOjEwMjAzMTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     }
-  ]
+  ],
+  "parser_schema_version": 3
 }

@@ -3,8 +3,8 @@
   "manifest": {
     "sha256": "1ade1fa08d5df48f2d4459caa36fae9649d849055837e81a7f0b7ec3bcf63922",
     "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNy0wOCAwNzoxODoyOCIsImFkbWl0aWQiOjEwMjAzOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
-    "captured_at": "2026-09-09T01:00:06.802293+00:00",
-    "method": "saved public browser HTML",
+    "captured_at": "2026-09-09T09:39:32.623149+00:00",
+    "method": "offline schema migration from saved HTML",
     "parsed_count": 20,
     "new_count": 20,
     "archive": "page-000004.html",
@@ -39,7 +39,15 @@
       "degree": "MFA",
       "raw_program": "Screenwriting MFA",
       "raw_text": "California State University, Fullerton Screenwriting MFA Jul 07, 2026 Rejected on Jul 07 Total comments\nRejected on Jul 07 Fall 2026 American GPA 3.26\nDid my best!! but miss me with the rolling admissions stuff by letting people know so late!!!! sent my application in March and barely getting notified in July",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNy0wOCAwNzoxODoyOCIsImFkbWl0aWQiOjEwMjAzOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNy0wOCAwNzoxODoyOCIsImFkbWl0aWQiOjEwMjAzOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Chemical Engineering, Columbia University",
@@ -69,7 +77,15 @@
       "degree": "PhD",
       "raw_program": "Chemical Engineering PhD",
       "raw_text": "Columbia University Chemical Engineering PhD Jul 07, 2026 Rejected on Jul 06 Total comments\nRejected on Jul 06 Fall 2026 American GPA 3.62\n7 years work experience, 5 in government research, first authorships",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNy0wOCAwNzoxODoyOCIsImFkbWl0aWQiOjEwMjAzOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNy0wOCAwNzoxODoyOCIsImFkbWl0aWQiOjEwMjAzOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Social Work, Hunter Silberman School of Social Work",
@@ -99,7 +115,15 @@
       "degree": "Other",
       "raw_program": "Social Work Other",
       "raw_text": "Hunter Silberman School of Social Work Social Work Other Jul 06, 2026 Interview on Jul 02 Total comments\nInterview on Jul 02 Fall 2026 American GPA 3.00",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNy0wOCAwNzoxODoyOCIsImFkbWl0aWQiOjEwMjAzOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNy0wOCAwNzoxODoyOCIsImFkbWl0aWQiOjEwMjAzOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "History, Yale University",
@@ -129,7 +153,15 @@
       "degree": "Masters",
       "raw_program": "History Masters",
       "raw_text": "Yale University History Masters Jul 05, 2026 Accepted on Mar 04 Total comments\nAccepted on Mar 04 Fall 2026 American\nWill be going in the fall! Has anyone else gotten in/ will be going? Reach out!",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNy0wOCAwNzoxODoyOCIsImFkbWl0aWQiOjEwMjAzOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNy0wOCAwNzoxODoyOCIsImFkbWl0aWQiOjEwMjAzOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "English Literature, University of Hong Kong (HKU)",
@@ -159,7 +191,27 @@
       "degree": "PhD",
       "raw_program": "English Literature PhD",
       "raw_text": "University of Hong Kong (HKU) English Literature PhD Jul 02, 2026 Accepted on Jul 02 Total comments\nAccepted on Jul 02 Fall 2026 International GPA 3.83\nMA GPA is 3.81. OMG, finally TvT.",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNy0wOCAwNzoxODoyOCIsImFkbWl0aWQiOjEwMjAzOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNy0wOCAwNzoxODoyOCIsImFkbWl0aWQiOjEwMjAzOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [
+        {
+          "field": "gpa",
+          "label": "GPA",
+          "value": 3.81,
+          "scale": null,
+          "excerpt": "GPA is 3.81",
+          "start": 3,
+          "end": 14,
+          "review_reason": "existing_field_preserved",
+          "used_for_field": false
+        }
+      ],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Landscape Ecology, ETH Zurich",
@@ -189,7 +241,15 @@
       "degree": "PhD",
       "raw_program": "Landscape Ecology PhD",
       "raw_text": "ETH Zurich Landscape Ecology PhD Jul 02, 2026 Rejected on Jul 01 Total comments\nRejected on Jul 01 Fall 2026 International",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNy0wOCAwNzoxODoyOCIsImFkbWl0aWQiOjEwMjAzOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNy0wOCAwNzoxODoyOCIsImFkbWl0aWQiOjEwMjAzOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Master of Public Administration, University of Georgia",
@@ -219,7 +279,15 @@
       "degree": "Masters",
       "raw_program": "Master of Public Administration Masters",
       "raw_text": "University of Georgia Master of Public Administration Masters Jul 02, 2026 Accepted on Jul 01 Total comments\nAccepted on Jul 01 Fall 2026 American GRE V 153 GRE AW 4.50 GPA 3.06",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNy0wOCAwNzoxODoyOCIsImFkbWl0aWQiOjEwMjAzOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNy0wOCAwNzoxODoyOCIsImFkbWl0aWQiOjEwMjAzOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Journalism and Public Affairs, American University",
@@ -249,7 +317,15 @@
       "degree": "Masters",
       "raw_program": "Journalism and Public Affairs Masters",
       "raw_text": "American University Journalism and Public Affairs Masters Jul 01, 2026 Rejected on Jul 01 Total comments\nRejected on Jul 01 Fall 2026 American\nAU has rolling admissions and I applied late(early June 2026) because I had issues finding letters of recommendation. I am very frustrated.",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNy0wOCAwNzoxODoyOCIsImFkbWl0aWQiOjEwMjAzOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNy0wOCAwNzoxODoyOCIsImFkbWl0aWQiOjEwMjAzOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "English and Literary Arts Creative Writing, Macau University of Science and Technology",
@@ -279,7 +355,15 @@
       "degree": "PhD",
       "raw_program": "English and Literary Arts Creative Writing PhD",
       "raw_text": "Macau University of Science and Technology English and Literary Arts Creative Writing PhD Jul 01, 2026 Wait listed on Jun 01 Total comments\nWait listed on Jun 01 Fall 2026 International GPA 3.50",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNy0wOCAwNzoxODoyOCIsImFkbWl0aWQiOjEwMjAzOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNy0wOCAwNzoxODoyOCIsImFkbWl0aWQiOjEwMjAzOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "English and Cultural Studies, University of Macau",
@@ -309,7 +393,15 @@
       "degree": "PhD",
       "raw_program": "English and Cultural Studies PhD",
       "raw_text": "University of Macau English and Cultural Studies PhD Jul 01, 2026 Rejected on Jun 01 Total comments\nRejected on Jun 01 Fall 2026 International GPA 3.50\n\n",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNy0wOCAwNzoxODoyOCIsImFkbWl0aWQiOjEwMjAzOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNy0wOCAwNzoxODoyOCIsImFkbWl0aWQiOjEwMjAzOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Computer Science, Toronto Metropolitan University",
@@ -339,7 +431,15 @@
       "degree": "Masters",
       "raw_program": "Computer Science Masters",
       "raw_text": "Toronto Metropolitan University Computer Science Masters Jun 30, 2026 Accepted on Jun 29 Total comments\nAccepted on Jun 29 Fall 2026 International GPA 3.63",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNy0wOCAwNzoxODoyOCIsImFkbWl0aWQiOjEwMjAzOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNy0wOCAwNzoxODoyOCIsImFkbWl0aWQiOjEwMjAzOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Physics, University of Pittsburgh",
@@ -369,7 +469,15 @@
       "degree": "PhD",
       "raw_program": "Physics PhD",
       "raw_text": "University of Pittsburgh Physics PhD Jun 29, 2026 Rejected on Mar 25 Total comments\nRejected on Mar 25 Fall 2026 American GPA 4.00\nBiophys theory/comp, 4.0 Physics/Math @ PUI",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNy0wOCAwNzoxODoyOCIsImFkbWl0aWQiOjEwMjAzOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNy0wOCAwNzoxODoyOCIsImFkbWl0aWQiOjEwMjAzOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Physics, University of Texas at Austin",
@@ -399,7 +507,15 @@
       "degree": "PhD",
       "raw_program": "Physics PhD",
       "raw_text": "University of Texas at Austin Physics PhD Jun 29, 2026 Rejected on Apr 15 Total comments\nRejected on Apr 15 Fall 2026 American GPA 4.00\nBiophys theory/comp, 4.0 Physics/Math @ PUI",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNy0wOCAwNzoxODoyOCIsImFkbWl0aWQiOjEwMjAzOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNy0wOCAwNzoxODoyOCIsImFkbWl0aWQiOjEwMjAzOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Physics, Northwestern University",
@@ -429,7 +545,15 @@
       "degree": "PhD",
       "raw_program": "Physics PhD",
       "raw_text": "Northwestern University Physics PhD Jun 29, 2026 Rejected on Mar 15 Total comments\nRejected on Mar 15 Fall 2026 American GPA 4.00\nBiophys theory/comp, 4.0 Physics/Math @ PUI",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNy0wOCAwNzoxODoyOCIsImFkbWl0aWQiOjEwMjAzOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNy0wOCAwNzoxODoyOCIsImFkbWl0aWQiOjEwMjAzOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Physics, Emory University",
@@ -459,7 +583,15 @@
       "degree": "PhD",
       "raw_program": "Physics PhD",
       "raw_text": "Emory University Physics PhD Jun 29, 2026 Rejected on Apr 14 Total comments\nRejected on Apr 14 Fall 2026 American GPA 4.00\nBiophys theory/comp, 4.0 Physics/Math @ PUI",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNy0wOCAwNzoxODoyOCIsImFkbWl0aWQiOjEwMjAzOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNy0wOCAwNzoxODoyOCIsImFkbWl0aWQiOjEwMjAzOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Physics, Johns Hopkins University",
@@ -489,7 +621,15 @@
       "degree": "PhD",
       "raw_program": "Physics PhD",
       "raw_text": "Johns Hopkins University Physics PhD Jun 29, 2026 Rejected on Mar 02 Total comments\nRejected on Mar 02 Fall 2026 American GPA 4.00\nBiophys theory/comp, 4.0 Physics/Math @ PUI",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNy0wOCAwNzoxODoyOCIsImFkbWl0aWQiOjEwMjAzOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNy0wOCAwNzoxODoyOCIsImFkbWl0aWQiOjEwMjAzOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "History of Art, Bryn Mawr College",
@@ -519,7 +659,15 @@
       "degree": "PhD",
       "raw_program": "History of Art PhD",
       "raw_text": "Bryn Mawr College History of Art PhD Jun 27, 2026 Rejected on Apr 23 Total comments\nRejected on Apr 23 Fall 2026 American GPA 3.97",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNy0wOCAwNzoxODoyOCIsImFkbWl0aWQiOjEwMjAzOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNy0wOCAwNzoxODoyOCIsImFkbWl0aWQiOjEwMjAzOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "History of Art, University of Pennsylvania",
@@ -549,7 +697,15 @@
       "degree": "PhD",
       "raw_program": "History of Art PhD",
       "raw_text": "University of Pennsylvania History of Art PhD Jun 27, 2026 Rejected on Feb 20 Total comments\nRejected on Feb 20 Fall 2026 American GPA 3.97",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNy0wOCAwNzoxODoyOCIsImFkbWl0aWQiOjEwMjAzOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNy0wOCAwNzoxODoyOCIsImFkbWl0aWQiOjEwMjAzOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "History of Art, New York University",
@@ -579,7 +735,15 @@
       "degree": "PhD",
       "raw_program": "History of Art PhD",
       "raw_text": "New York University History of Art PhD Jun 27, 2026 Rejected on Feb 23 Total comments\nRejected on Feb 23 Fall 2026 American GPA 3.97\nRejected from Institute of Fine Arts History of Art and Archaeology PhD program, offered admission to MA.",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNy0wOCAwNzoxODoyOCIsImFkbWl0aWQiOjEwMjAzOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNy0wOCAwNzoxODoyOCIsImFkbWl0aWQiOjEwMjAzOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "History of Art, Harvard University",
@@ -609,7 +773,16 @@
       "degree": "PhD",
       "raw_program": "History of Art PhD",
       "raw_text": "Harvard University History of Art PhD Jun 27, 2026 Rejected on Mar 09 Total comments\nRejected on Mar 09 Fall 2026 American GPA 3.97\n",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNy0wOCAwNzoxODoyOCIsImFkbWl0aWQiOjEwMjAzOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNy0wOCAwNzoxODoyOCIsImFkbWl0aWQiOjEwMjAzOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     }
-  ]
+  ],
+  "parser_schema_version": 3
 }

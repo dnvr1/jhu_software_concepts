@@ -3,8 +3,8 @@
   "manifest": {
     "sha256": "011210a241c8e47bd171638075c3e2f62faa3adf7a890c4f3edd4e531e6dd50b",
     "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0wOCAwNDowODozNiIsImFkbWl0aWQiOjEwMjA0MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
-    "captured_at": "2026-09-09T01:00:06.769128+00:00",
-    "method": "saved public browser HTML",
+    "captured_at": "2026-09-09T09:39:32.589639+00:00",
+    "method": "offline schema migration from saved HTML",
     "parsed_count": 20,
     "new_count": 20,
     "archive": "page-000003.html",
@@ -39,7 +39,15 @@
       "degree": "PhD",
       "raw_program": "Management Information Systems PhD",
       "raw_text": "Banking University of Ho Chi Minh City Management Information Systems PhD Aug 08, 2026 Rejected on Aug 08 Total comments\nRejected on Aug 08 Spring 2027 International GRE 165 GRE V 160 GRE AW 5.50 GPA 3.20",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0wOCAwNDowODozNiIsImFkbWl0aWQiOjEwMjA0MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0wOCAwNDowODozNiIsImFkbWl0aWQiOjEwMjA0MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Leadership Communication, Kansas State University",
@@ -69,7 +77,15 @@
       "degree": "PhD",
       "raw_program": "Leadership Communication PhD",
       "raw_text": "Kansas State University Leadership Communication PhD Aug 07, 2026 Accepted on Aug 07 Total comments\nAccepted on Aug 07 Fall 2026 International GPA 3.81\nI put my master's CGPA. Also, I was accepted in spring but deffered my admission to Fall because of Funding.",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0wOCAwNDowODozNiIsImFkbWl0aWQiOjEwMjA0MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0wOCAwNDowODozNiIsImFkbWl0aWQiOjEwMjA0MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Computer Science online, University of Texas at Austin",
@@ -99,7 +115,15 @@
       "degree": "Masters",
       "raw_program": "Computer Science online Masters",
       "raw_text": "University of Texas at Austin Computer Science online Masters Aug 06, 2026 Accepted on Jul 30 Total comments\nAccepted on Jul 30 Spring 2027 American GPA 2.80\nI had awesome recommendations letters, and showed improvement to raise my gpa.",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0wOCAwNDowODozNiIsImFkbWl0aWQiOjEwMjA0MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0wOCAwNDowODozNiIsImFkbWl0aWQiOjEwMjA0MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Mathematics, Federal University of Technology, Minna",
@@ -129,7 +153,15 @@
       "degree": "Masters",
       "raw_program": "Mathematics Masters",
       "raw_text": "Federal University of Technology, Minna Mathematics Masters Aug 05, 2026 Accepted on Aug 05 Total comments\nAccepted on Aug 05 Spring 2027 International GPA 3.19\ni am from Nigeria and I study in Nigeria University. i am looking for Masters Program that match my qualification",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0wOCAwNDowODozNiIsImFkbWl0aWQiOjEwMjA0MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0wOCAwNDowODozNiIsImFkbWl0aWQiOjEwMjA0MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Energy Systems and Engineering, Iran University of Science and Technology Tehran",
@@ -159,7 +191,15 @@
       "degree": "Masters",
       "raw_program": "Energy Systems and Engineering Masters",
       "raw_text": "Iran University of Science and Technology Tehran Energy Systems and Engineering Masters Aug 05, 2026 Accepted on Aug 05 Total comments\nAccepted on Aug 05 Spring 2027 International GPA 3.70",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0wOCAwNDowODozNiIsImFkbWl0aWQiOjEwMjA0MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0wOCAwNDowODozNiIsImFkbWl0aWQiOjEwMjA0MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Chemistry, North Carolina State University",
@@ -189,7 +229,15 @@
       "degree": "PhD",
       "raw_program": "Chemistry PhD",
       "raw_text": "North Carolina State University Chemistry PhD Aug 05, 2026 Rejected on Aug 05 Total comments\nRejected on Aug 05 Fall 2026 American\nRejected as the semester starts. Ghosted outside of this contact even after I asked in march for an update. The portal says “we have denied your request for admission.” Absolute joke…",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0wOCAwNDowODozNiIsImFkbWl0aWQiOjEwMjA0MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0wOCAwNDowODozNiIsImFkbWl0aWQiOjEwMjA0MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Advanced Neuroimaging, University College London",
@@ -219,7 +267,15 @@
       "degree": "Masters",
       "raw_program": "Advanced Neuroimaging Masters",
       "raw_text": "University College London Advanced Neuroimaging Masters Aug 04, 2026 Accepted on Jul 28 Total comments\nAccepted on Jul 28 Fall 2026 American GPA 3.80\n3+ years of undergrad/1 year post grad research+neuroimaging experience, no journal/peer-reviewed publications, 60+ undergrad senior honors thesis published on school department website",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0wOCAwNDowODozNiIsImFkbWl0aWQiOjEwMjA0MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0wOCAwNDowODozNiIsImFkbWl0aWQiOjEwMjA0MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Journalism, Columbia University",
@@ -249,7 +305,15 @@
       "degree": "Masters",
       "raw_program": "Journalism Masters",
       "raw_text": "Columbia University Journalism Masters Aug 04, 2026 Accepted on Mar 14 Total comments\nAccepted on Mar 14 Fall 2026 American GPA 3.93\nAccepted into Stabile, ended up declining admission.",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0wOCAwNDowODozNiIsImFkbWl0aWQiOjEwMjA0MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0wOCAwNDowODozNiIsImFkbWl0aWQiOjEwMjA0MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Journalism, Erasmus Mundus Scholarship",
@@ -279,7 +343,15 @@
       "degree": "Masters",
       "raw_program": "Journalism Masters",
       "raw_text": "Erasmus Mundus Scholarship Journalism Masters Aug 04, 2026 Accepted on Mar 01 Total comments\nAccepted on Mar 01 Fall 2026 American GPA 3.93\nAccepted without scholarship, ended up declining admission.",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0wOCAwNDowODozNiIsImFkbWl0aWQiOjEwMjA0MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0wOCAwNDowODozNiIsImFkbWl0aWQiOjEwMjA0MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Journalism, University of California, Berkeley",
@@ -309,7 +381,15 @@
       "degree": "Masters",
       "raw_program": "Journalism Masters",
       "raw_text": "University of California, Berkeley Journalism Masters Aug 04, 2026 Accepted on Feb 11 Total comments\nAccepted on Feb 11 Fall 2026 American GPA 3.93\n\n",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0wOCAwNDowODozNiIsImFkbWl0aWQiOjEwMjA0MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0wOCAwNDowODozNiIsImFkbWl0aWQiOjEwMjA0MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Mechanical Engineering, Auburn University",
@@ -339,7 +419,15 @@
       "degree": "PhD",
       "raw_program": "Mechanical Engineering PhD",
       "raw_text": "Auburn University Mechanical Engineering PhD Aug 04, 2026 Accepted on Jul 05 Total comments\nAccepted on Jul 05 Fall 2026 American GPA 3.70",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0wOCAwNDowODozNiIsImFkbWl0aWQiOjEwMjA0MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0wOCAwNDowODozNiIsImFkbWl0aWQiOjEwMjA0MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Business Administration - Strategic Management - DBA, Southeastern Oklahoma State University",
@@ -369,7 +457,15 @@
       "degree": "Other",
       "raw_program": "Business Administration - Strategic Management - DBA Other",
       "raw_text": "Southeastern Oklahoma State University Business Administration - Strategic Management - DBA Other Aug 03, 2026 Accepted on Jul 30 Total comments\nAccepted on Jul 30 Fall 2026 American\nDoctor of Business Administration - DBA",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0wOCAwNDowODozNiIsImFkbWl0aWQiOjEwMjA0MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0wOCAwNDowODozNiIsImFkbWl0aWQiOjEwMjA0MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Aerospace Engineering, University of Florida",
@@ -399,7 +495,15 @@
       "degree": "Masters",
       "raw_program": "Aerospace Engineering Masters",
       "raw_text": "University of Florida Aerospace Engineering Masters Aug 03, 2026 Accepted on Jul 31 Total comments\nAccepted on Jul 31 Fall 2026 American",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0wOCAwNDowODozNiIsImFkbWl0aWQiOjEwMjA0MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0wOCAwNDowODozNiIsImFkbWl0aWQiOjEwMjA0MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Physics, Louisiana State University",
@@ -429,7 +533,15 @@
       "degree": "PhD",
       "raw_program": "Physics PhD",
       "raw_text": "Louisiana State University Physics PhD Jul 31, 2026 Rejected on Jul 31 Total comments\nRejected on Jul 31 Fall 2026 American GPA 3.30\n3.6 Master's GPA, professor encouraged me to apply and insinuated I was likely to have an interview in February. Somehow was just rejected today?",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0wOCAwNDowODozNiIsImFkbWl0aWQiOjEwMjA0MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0wOCAwNDowODozNiIsImFkbWl0aWQiOjEwMjA0MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Business Administration - Organizational Leadership - DBA, Southeastern Oklahoma State University",
@@ -459,7 +571,15 @@
       "degree": "Other",
       "raw_program": "Business Administration - Organizational Leadership - DBA Other",
       "raw_text": "Southeastern Oklahoma State University Business Administration - Organizational Leadership - DBA Other Jul 30, 2026 Accepted on Jul 29 Total comments\nAccepted on Jul 29 Fall 2026 American",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0wOCAwNDowODozNiIsImFkbWl0aWQiOjEwMjA0MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0wOCAwNDowODozNiIsImFkbWl0aWQiOjEwMjA0MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Aeronautics & Astronautics, Purdue University",
@@ -489,7 +609,15 @@
       "degree": "Masters",
       "raw_program": "Aeronautics & Astronautics Masters",
       "raw_text": "Purdue University Aeronautics & Astronautics Masters Jul 30, 2026 Accepted on Feb 24 Total comments\nAccepted on Feb 24 Fall 2026 International GRE 162 GRE V 150 GRE AW 3.50 GPA 3.82",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0wOCAwNDowODozNiIsImFkbWl0aWQiOjEwMjA0MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0wOCAwNDowODozNiIsImFkbWl0aWQiOjEwMjA0MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "English, University of Oxford",
@@ -519,7 +647,15 @@
       "degree": "Masters",
       "raw_program": "English Masters",
       "raw_text": "University of Oxford English Masters Jul 29, 2026 Accepted on Jul 16 Total comments\nAccepted on Jul 16 Fall 2026 Other\nWaitlisted in February. Remained second on the waitlist at every notification for five months until receiving offer.",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0wOCAwNDowODozNiIsImFkbWl0aWQiOjEwMjA0MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0wOCAwNDowODozNiIsImFkbWl0aWQiOjEwMjA0MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Chemistry, University of Southern Mississippi",
@@ -549,7 +685,15 @@
       "degree": "PhD",
       "raw_program": "Chemistry PhD",
       "raw_text": "University of Southern Mississippi Chemistry PhD Jul 28, 2026 Accepted on Jul 28 Total comments\nAccepted on Jul 28 Fall 2026 International GPA 3.87",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0wOCAwNDowODozNiIsImFkbWl0aWQiOjEwMjA0MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0wOCAwNDowODozNiIsImFkbWl0aWQiOjEwMjA0MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Biomedical Engineering, Columbia University",
@@ -579,7 +723,15 @@
       "degree": "PhD",
       "raw_program": "Biomedical Engineering PhD",
       "raw_text": "Columbia University Biomedical Engineering PhD Jul 27, 2026 Wait listed on Jul 20 Total comments\nWait listed on Jul 20 Fall 2026 American",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0wOCAwNDowODozNiIsImFkbWl0aWQiOjEwMjA0MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0wOCAwNDowODozNiIsImFkbWl0aWQiOjEwMjA0MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Philosophy, University of Connecticut",
@@ -609,7 +761,16 @@
       "degree": "PhD",
       "raw_program": "Philosophy PhD",
       "raw_text": "University of Connecticut Philosophy PhD Jul 23, 2026 Rejected on Jul 23 Total comments\nRejected on Jul 23 Fall 2026 American GPA 3.99\ne-mail to check portal. Date is correct, no idea why Uconn sends these out so late. This is not a rejection from a waitlist, I applied before the deadline and heard nothing until today. Final results - 26 R / 1 WL (+1 Silent WL) (both ending in rejections) / 1A\n",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0wOCAwNDowODozNiIsImFkbWl0aWQiOjEwMjA0MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0wOCAwNDowODozNiIsImFkbWl0aWQiOjEwMjA0MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     }
-  ]
+  ],
+  "parser_schema_version": 3
 }

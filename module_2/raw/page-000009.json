@@ -3,8 +3,8 @@
   "manifest": {
     "sha256": "721db363b831d19a7952fca125dc51960fe4f323439ced622cbaf2bb52230aac",
     "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wMyAwOToyNTo1NiIsImFkbWl0aWQiOjEwMjAyOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
-    "captured_at": "2026-09-09T01:00:06.990368+00:00",
-    "method": "saved public browser HTML",
+    "captured_at": "2026-09-09T09:39:32.806172+00:00",
+    "method": "offline schema migration from saved HTML",
     "parsed_count": 20,
     "new_count": 20,
     "archive": "page-000009.html",
@@ -39,7 +39,15 @@
       "degree": "Masters",
       "raw_program": "Mathematics Masters",
       "raw_text": "ETH Zurich Mathematics Masters Jun 03, 2026 Accepted on Mar 11 Total comments\nAccepted on Mar 11 Fall 2026 International GPA 3.87",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wMyAwOToyNTo1NiIsImFkbWl0aWQiOjEwMjAyOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wMyAwOToyNTo1NiIsImFkbWl0aWQiOjEwMjAyOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Biology, Western University",
@@ -69,7 +77,15 @@
       "degree": "Masters",
       "raw_program": "Biology Masters",
       "raw_text": "Western University Biology Masters Jun 02, 2026 Accepted on Jun 02 Total comments\nAccepted on Jun 02 Fall 2026 Other GPA 3.70\nCanadian domestic applicant. Additional biotech diploma with 3.97 GPA, 8 months research experience, lab tech internship, previous TAship, and 1 year of overseas teaching experience",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wMyAwOToyNTo1NiIsImFkbWl0aWQiOjEwMjAyOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wMyAwOToyNTo1NiIsImFkbWl0aWQiOjEwMjAyOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Integrative Biology, University of South Floridaa",
@@ -99,7 +115,15 @@
       "degree": "Masters",
       "raw_program": "Integrative Biology Masters",
       "raw_text": "University of South Floridaa Integrative Biology Masters Jun 02, 2026 Accepted on Jun 02 Total comments\nAccepted on Jun 02 Fall 2026 Other GPA 3.75\nApplied back in November. I already had lost all the hopes. Dangs!! Fully funded RA; so excited!............ IELTS;8, Paper 1 in Q3 journal as first Author, 1 year of experience",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wMyAwOToyNTo1NiIsImFkbWl0aWQiOjEwMjAyOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wMyAwOToyNTo1NiIsImFkbWl0aWQiOjEwMjAyOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Social Psychology, University of Victoria",
@@ -129,7 +153,15 @@
       "degree": "PhD",
       "raw_program": "Social Psychology PhD",
       "raw_text": "University of Victoria Social Psychology PhD Jun 02, 2026 Rejected on May 29 Total comments\nRejected on May 29 Fall 2026 International GPA 3.99",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wMyAwOToyNTo1NiIsImFkbWl0aWQiOjEwMjAyOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wMyAwOToyNTo1NiIsImFkbWl0aWQiOjEwMjAyOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Speech Language Pathology, University of Virginia",
@@ -159,7 +191,15 @@
       "degree": "Masters",
       "raw_program": "Speech Language Pathology Masters",
       "raw_text": "University of Virginia Speech Language Pathology Masters Jun 02, 2026 Accepted on Feb 10 Total comments\nAccepted on Feb 10 Fall 2026 American GPA 3.54\nOut-of-field major, 4.0 in CSD pre-reqs. 4 strong LORs from student teaching advisors and professors.",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wMyAwOToyNTo1NiIsImFkbWl0aWQiOjEwMjAyOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wMyAwOToyNTo1NiIsImFkbWl0aWQiOjEwMjAyOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Speech Language Pathology, Appalachian State University",
@@ -189,7 +229,15 @@
       "degree": "Masters",
       "raw_program": "Speech Language Pathology Masters",
       "raw_text": "Appalachian State University Speech Language Pathology Masters Jun 01, 2026 Accepted on Jun 01 Total comments\nAccepted on Jun 01 Fall 2026 American GPA 3.44",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wMyAwOToyNTo1NiIsImFkbWl0aWQiOjEwMjAyOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wMyAwOToyNTo1NiIsImFkbWl0aWQiOjEwMjAyOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Chemistry, Case Western Reserve University",
@@ -219,7 +267,15 @@
       "degree": "PhD",
       "raw_program": "Chemistry PhD",
       "raw_text": "Case Western Reserve University Chemistry PhD Jun 01, 2026 Rejected on May 19 Total comments\nRejected on May 19 Fall 2026 International",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wMyAwOToyNTo1NiIsImFkbWl0aWQiOjEwMjAyOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wMyAwOToyNTo1NiIsImFkbWl0aWQiOjEwMjAyOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Chemistry, Georgia State University",
@@ -249,7 +305,15 @@
       "degree": "PhD",
       "raw_program": "Chemistry PhD",
       "raw_text": "Georgia State University Chemistry PhD Jun 01, 2026 Rejected on May 29 Total comments\nRejected on May 29 Fall 2026 International\nSubmitted my application in November before the priority deadline, and paid the application fee. On the day of the priority deadline, they extended the deadline further. They waived the application fee for all applicants who had not submitted their applications and wished to apply later. Due to a system error, my application was not under review, but the portal was showing both under review and awaiting materials status. When I reached out to one of the advisors on May 12, they corrected their error and finally got a rejection letter on 29th May. From these circumstances, I can assume that my application did not get a proper review. Before May, I had reached out to the official email of the College of Arts and Sciences, which was the only communication method for them regarding the application, but I never got any response.",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wMyAwOToyNTo1NiIsImFkbWl0aWQiOjEwMjAyOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wMyAwOToyNTo1NiIsImFkbWl0aWQiOjEwMjAyOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Mathematics, Northeastern University",
@@ -279,7 +343,15 @@
       "degree": "PhD",
       "raw_program": "Mathematics PhD",
       "raw_text": "Northeastern University Mathematics PhD Jun 01, 2026 Rejected on May 18 Total comments\nRejected on May 18 Fall 2026 American GPA 3.68\nVery difficult to get in touch with anyone at this school, the 7th person I emailed said I was unlikely to be admitted (back in April). Not sure why it took them until May to notify me but okay. The offered an unfunded, non certificate option...sort of insulting? Why even bother offering that lol",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wMyAwOToyNTo1NiIsImFkbWl0aWQiOjEwMjAyOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wMyAwOToyNTo1NiIsImFkbWl0aWQiOjEwMjAyOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Bioinformatics, San Jose State University",
@@ -309,7 +381,15 @@
       "degree": "Masters",
       "raw_program": "Bioinformatics Masters",
       "raw_text": "San Jose State University Bioinformatics Masters May 31, 2026 Rejected on May 31 Total comments\nRejected on May 31 Fall 2026 American GPA 3.20\n\n",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wMyAwOToyNTo1NiIsImFkbWl0aWQiOjEwMjAyOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wMyAwOToyNTo1NiIsImFkbWl0aWQiOjEwMjAyOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Environmental Economics, Stockholm University",
@@ -339,7 +419,15 @@
       "degree": "PhD",
       "raw_program": "Environmental Economics PhD",
       "raw_text": "Stockholm University Environmental Economics PhD May 31, 2026 Accepted on May 31 Total comments\nAccepted on May 31 Fall 2026 International",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wMyAwOToyNTo1NiIsImFkbWl0aWQiOjEwMjAyOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wMyAwOToyNTo1NiIsImFkbWl0aWQiOjEwMjAyOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Global Health, Meharry Medical College",
@@ -369,7 +457,15 @@
       "degree": "PhD",
       "raw_program": "Global Health PhD",
       "raw_text": "Meharry Medical College Global Health PhD May 30, 2026 Accepted on May 29 Total comments\nAccepted on May 29 Fall 2026 American GPA 3.90",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wMyAwOToyNTo1NiIsImFkbWl0aWQiOjEwMjAyOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wMyAwOToyNTo1NiIsImFkbWl0aWQiOjEwMjAyOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Public Policy, University of Massachusetts",
@@ -399,7 +495,15 @@
       "degree": "PhD",
       "raw_program": "Public Policy PhD",
       "raw_text": "University of Massachusetts Public Policy PhD May 29, 2026 Wait listed on May 29 Total comments\nWait listed on May 29 Fall 2026 International",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wMyAwOToyNTo1NiIsImFkbWl0aWQiOjEwMjAyOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wMyAwOToyNTo1NiIsImFkbWl0aWQiOjEwMjAyOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Engineering Science, University of Oxford",
@@ -429,7 +533,15 @@
       "degree": "PhD",
       "raw_program": "Engineering Science PhD",
       "raw_text": "University of Oxford Engineering Science PhD May 29, 2026 Accepted on Apr 17 Total comments\nAccepted on Apr 17 Fall 2026 Other\nApplying as a (home student) Oxford undergrad. Didn't receive the offer until super late...!",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wMyAwOToyNTo1NiIsImFkbWl0aWQiOjEwMjAyOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wMyAwOToyNTo1NiIsImFkbWl0aWQiOjEwMjAyOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Mechanical Engineering, Rice University",
@@ -459,7 +571,27 @@
       "degree": "PhD",
       "raw_program": "Mechanical Engineering PhD",
       "raw_text": "Rice University Mechanical Engineering PhD May 29, 2026 Accepted on May 08 Total comments\nAccepted on May 08 Fall 2026 International GPA 3.84\nDuke Master of Science in ME, GPA: 3.85",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wMyAwOToyNTo1NiIsImFkbWl0aWQiOjEwMjAyOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wMyAwOToyNTo1NiIsImFkbWl0aWQiOjEwMjAyOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [
+        {
+          "field": "gpa",
+          "label": "GPA",
+          "value": 3.85,
+          "scale": null,
+          "excerpt": "GPA: 3.85",
+          "start": 30,
+          "end": 39,
+          "review_reason": "existing_field_preserved",
+          "used_for_field": false
+        }
+      ],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Computer Science, Georgia Institute of Technology",
@@ -489,7 +621,15 @@
       "degree": "PhD",
       "raw_program": "Computer Science PhD",
       "raw_text": "Georgia Institute of Technology Computer Science PhD May 29, 2026 Rejected on May 29 Total comments\nRejected on May 29 Fall 2026 American GPA 3.90",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wMyAwOToyNTo1NiIsImFkbWl0aWQiOjEwMjAyOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wMyAwOToyNTo1NiIsImFkbWl0aWQiOjEwMjAyOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Computer Science and Engineering, University of Delaware",
@@ -519,7 +659,15 @@
       "degree": "PhD",
       "raw_program": "Computer Science and Engineering PhD",
       "raw_text": "University of Delaware Computer Science and Engineering PhD May 29, 2026 Wait listed on May 29 Total comments\nWait listed on May 29 Fall 2026 International GPA 3.50",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wMyAwOToyNTo1NiIsImFkbWl0aWQiOjEwMjAyOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wMyAwOToyNTo1NiIsImFkbWl0aWQiOjEwMjAyOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Neuroscience, McGill University",
@@ -549,7 +697,15 @@
       "degree": "Masters",
       "raw_program": "Neuroscience Masters",
       "raw_text": "McGill University Neuroscience Masters May 29, 2026 Accepted on May 25 Total comments\nAccepted on May 25 Fall 2026 International",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wMyAwOToyNTo1NiIsImFkbWl0aWQiOjEwMjAyOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wMyAwOToyNTo1NiIsImFkbWl0aWQiOjEwMjAyOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Consumer Science, Ohio State University",
@@ -579,7 +735,15 @@
       "degree": "Masters",
       "raw_program": "Consumer Science Masters",
       "raw_text": "Ohio State University Consumer Science Masters May 29, 2026 Accepted on May 15 Total comments\nAccepted on May 15 Fall 2026 International GPA 3.84\nI was really surprised! The email was sent at 10 p.m. local time. To be honest, as an international student, I had already given up hope haha.",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wMyAwOToyNTo1NiIsImFkbWl0aWQiOjEwMjAyOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wMyAwOToyNTo1NiIsImFkbWl0aWQiOjEwMjAyOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Economics, Queen's University",
@@ -609,7 +773,16 @@
       "degree": "Masters",
       "raw_program": "Economics Masters",
       "raw_text": "Queen's University Economics Masters May 28, 2026 Rejected on May 28 Total comments\nRejected on May 28 Fall 2026 Other GPA 3.50\nAdvanced Macro: A+ Advanced Micro: A Econometrics: B+ Cal 1, 2, and Linear Alg. Got ghosted without any response.\n",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wMyAwOToyNTo1NiIsImFkbWl0aWQiOjEwMjAyOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wMyAwOToyNTo1NiIsImFkbWl0aWQiOjEwMjAyOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     }
-  ]
+  ],
+  "parser_schema_version": 3
 }

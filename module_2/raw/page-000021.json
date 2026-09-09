@@ -3,8 +3,8 @@
   "manifest": {
     "sha256": "e61b5b6d3ad961848c921618397718a7b656f9d501d04c3a7ea39c2fb0c70b87",
     "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wMSAxODo0MzoyNyIsImFkbWl0aWQiOjEwMjAwNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
-    "captured_at": "2026-09-09T01:00:07.502600+00:00",
-    "method": "saved public browser HTML",
+    "captured_at": "2026-09-09T09:39:33.318738+00:00",
+    "method": "offline schema migration from saved HTML",
     "parsed_count": 20,
     "new_count": 20,
     "archive": "page-000021.html",
@@ -39,7 +39,15 @@
       "degree": "PhD",
       "raw_program": "Technology and Social Behavior PhD",
       "raw_text": "Northwestern University Technology and Social Behavior PhD May 01, 2026 Rejected on May 01 Total comments\nRejected on May 01 Fall 2026 American\nGeneric rejection letter",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wMSAxODo0MzoyNyIsImFkbWl0aWQiOjEwMjAwNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wMSAxODo0MzoyNyIsImFkbWl0aWQiOjEwMjAwNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Technology and Social Behavior, Northwestern University",
@@ -69,7 +77,15 @@
       "degree": "PhD",
       "raw_program": "Technology and Social Behavior PhD",
       "raw_text": "Northwestern University Technology and Social Behavior PhD May 01, 2026 Rejected on May 01 Total comments\nRejected on May 01 Fall 2026 American GPA 3.91\nI expected a rejection at this point but it’s insulting for results to have taken this long.",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wMSAxODo0MzoyNyIsImFkbWl0aWQiOjEwMjAwNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wMSAxODo0MzoyNyIsImFkbWl0aWQiOjEwMjAwNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Media, Technology, and Society, Northwestern University",
@@ -99,7 +115,15 @@
       "degree": "PhD",
       "raw_program": "Media, Technology, and Society PhD",
       "raw_text": "Northwestern University Media, Technology, and Society PhD May 01, 2026 Rejected on May 01 Total comments\nRejected on May 01 Fall 2026 American GPA 3.98\nGPA Masters. Absolutely insulting for them to string along any applicant until May 1st. Zero notification beforehand, they didn't answer any emails sent to them about the process, nothing. Waiting almost six months for a decision to a school is an incredibly red flag, I would never apply here again. Terrible end to an even worse cycle 0.5a/0w/0i/5.5r",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wMSAxODo0MzoyNyIsImFkbWl0aWQiOjEwMjAwNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wMSAxODo0MzoyNyIsImFkbWl0aWQiOjEwMjAwNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Master of Computer Science, University of Western Ontario",
@@ -129,7 +153,15 @@
       "degree": "Masters",
       "raw_program": "Master of Computer Science Masters",
       "raw_text": "University of Western Ontario Master of Computer Science Masters May 01, 2026 Rejected on May 01 Total comments\nRejected on May 01 Fall 2026 International GPA 3.85",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wMSAxODo0MzoyNyIsImFkbWl0aWQiOjEwMjAwNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wMSAxODo0MzoyNyIsImFkbWl0aWQiOjEwMjAwNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Anthropology, Simon Fraser University",
@@ -159,7 +191,15 @@
       "degree": "Masters",
       "raw_program": "Anthropology Masters",
       "raw_text": "Simon Fraser University Anthropology Masters May 01, 2026 Wait listed on Apr 29 Total comments\nWait listed on Apr 29 Fall 2026 International",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wMSAxODo0MzoyNyIsImFkbWl0aWQiOjEwMjAwNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wMSAxODo0MzoyNyIsImFkbWl0aWQiOjEwMjAwNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Chemistry, Baylor University",
@@ -189,7 +229,15 @@
       "degree": "PhD",
       "raw_program": "Chemistry PhD",
       "raw_text": "Baylor University Chemistry PhD May 01, 2026 Rejected on Apr 29 Total comments\nRejected on Apr 29 Fall 2026 International GPA 3.61\nThank you for your interest in graduate studies at Baylor University. The faculty in the Chemistry - PhD program has carefully reviewed your application for admission to the Graduate School. We regret to inform you that your application was declined. We hope you will be successful in an alternate plan to achieve your graduate education. If you have any questions, you may email the department contact.",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wMSAxODo0MzoyNyIsImFkbWl0aWQiOjEwMjAwNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wMSAxODo0MzoyNyIsImFkbWl0aWQiOjEwMjAwNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Computer Science, University of California, San Diego",
@@ -219,7 +267,15 @@
       "degree": "Masters",
       "raw_program": "Computer Science Masters",
       "raw_text": "University of California, San Diego Computer Science Masters May 01, 2026 Rejected on Apr 10 Total comments\nRejected on Apr 10 Fall 2026 International GPA 3.62",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wMSAxODo0MzoyNyIsImFkbWl0aWQiOjEwMjAwNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wMSAxODo0MzoyNyIsImFkbWl0aWQiOjEwMjAwNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Computer Science, University of California (UCLA)",
@@ -249,7 +305,15 @@
       "degree": "Masters",
       "raw_program": "Computer Science Masters",
       "raw_text": "University of California (UCLA) Computer Science Masters May 01, 2026 Rejected on Apr 28 Total comments\nRejected on Apr 28 Fall 2026 International GPA 3.62",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wMSAxODo0MzoyNyIsImFkbWl0aWQiOjEwMjAwNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wMSAxODo0MzoyNyIsImFkbWl0aWQiOjEwMjAwNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Political Science, Department of political science University of Toronto",
@@ -279,7 +343,15 @@
       "degree": "PhD",
       "raw_program": "Political Science PhD",
       "raw_text": "Department of political science University of Toronto Political Science PhD May 01, 2026 Accepted on May 01 Total comments\nAccepted on May 01 Fall 2026 Other GPA 3.50",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wMSAxODo0MzoyNyIsImFkbWl0aWQiOjEwMjAwNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wMSAxODo0MzoyNyIsImFkbWl0aWQiOjEwMjAwNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Mathematics and Statistics, McGill University",
@@ -309,7 +381,15 @@
       "degree": "Masters",
       "raw_program": "Mathematics and Statistics Masters",
       "raw_text": "McGill University Mathematics and Statistics Masters May 01, 2026 Rejected on May 01 Total comments\nRejected on May 01 Fall 2026 International GPA 3.58\nUofT undergrad, math and cs double major\n\n",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wMSAxODo0MzoyNyIsImFkbWl0aWQiOjEwMjAwNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wMSAxODo0MzoyNyIsImFkbWl0aWQiOjEwMjAwNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Masters of Visual Studies (studio), University of Toronto",
@@ -339,7 +419,15 @@
       "degree": "MFA",
       "raw_program": "Masters of Visual Studies (studio) MFA",
       "raw_text": "University of Toronto Masters of Visual Studies (studio) MFA May 01, 2026 Rejected on Apr 30 Total comments\nRejected on Apr 30 Fall 2026 Other GPA 3.80\nNot a high GPA but still shocked at the rejection. Lots of experience worldwide with group and solo exhibitions in galleries. 3 residencies and lots of relevant work experience. Got an email saying to check the portal and there was a rejection letter.",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wMSAxODo0MzoyNyIsImFkbWl0aWQiOjEwMjAwNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wMSAxODo0MzoyNyIsImFkbWl0aWQiOjEwMjAwNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Master of Visual Studies in Curatorial Studies, University of Toronto",
@@ -369,7 +457,15 @@
       "degree": "Masters",
       "raw_program": "Master of Visual Studies in Curatorial Studies Masters",
       "raw_text": "University of Toronto Master of Visual Studies in Curatorial Studies Masters May 01, 2026 Rejected on May 01 Total comments\nRejected on May 01 Fall 2026 International GPA 3.99\nCanadian citizen, undergrad from American University.",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wMSAxODo0MzoyNyIsImFkbWl0aWQiOjEwMjAwNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wMSAxODo0MzoyNyIsImFkbWl0aWQiOjEwMjAwNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Indigenous Studies, University of Alaska Fairbanks",
@@ -399,7 +495,15 @@
       "degree": "PhD",
       "raw_program": "Indigenous Studies PhD",
       "raw_text": "University of Alaska Fairbanks Indigenous Studies PhD Apr 30, 2026 Accepted on Apr 30 Total comments\nAccepted on Apr 30 Fall 2026 American\nChecked the portal, no email. I will accept this offer. :)",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wMSAxODo0MzoyNyIsImFkbWl0aWQiOjEwMjAwNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wMSAxODo0MzoyNyIsImFkbWl0aWQiOjEwMjAwNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Criminology and Criminal Justice, Northeastern University",
@@ -429,7 +533,15 @@
       "degree": "Masters",
       "raw_program": "Criminology and Criminal Justice Masters",
       "raw_text": "Northeastern University Criminology and Criminal Justice Masters Apr 30, 2026 Accepted on Apr 30 Total comments\nAccepted on Apr 30 Fall 2026 American GPA 3.79",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wMSAxODo0MzoyNyIsImFkbWl0aWQiOjEwMjAwNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wMSAxODo0MzoyNyIsImFkbWl0aWQiOjEwMjAwNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Computer Science, Brandeis University",
@@ -459,7 +571,15 @@
       "degree": "PhD",
       "raw_program": "Computer Science PhD",
       "raw_text": "Brandeis University Computer Science PhD Apr 30, 2026 Accepted on Apr 30 Total comments\nAccepted on Apr 30 Fall 2026 American GPA 3.95\nInterview on the 27th, acceptance email on the 30th",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wMSAxODo0MzoyNyIsImFkbWl0aWQiOjEwMjAwNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wMSAxODo0MzoyNyIsImFkbWl0aWQiOjEwMjAwNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Astronomy, University of California, Riverside",
@@ -489,7 +609,15 @@
       "degree": "PhD",
       "raw_program": "Astronomy PhD",
       "raw_text": "University of California, Riverside Astronomy PhD Apr 30, 2026 Rejected on Apr 30 Total comments\nRejected on Apr 30 Fall 2026 American GPA 3.46\nEmail to check status update in portal.",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wMSAxODo0MzoyNyIsImFkbWl0aWQiOjEwMjAwNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wMSAxODo0MzoyNyIsImFkbWl0aWQiOjEwMjAwNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Criminal Justice, Boston University",
@@ -519,7 +647,15 @@
       "degree": "Masters",
       "raw_program": "Criminal Justice Masters",
       "raw_text": "Boston University Criminal Justice Masters Apr 30, 2026 Accepted on Apr 17 Total comments\nAccepted on Apr 17 Fall 2026 American GPA 3.79",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wMSAxODo0MzoyNyIsImFkbWl0aWQiOjEwMjAwNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wMSAxODo0MzoyNyIsImFkbWl0aWQiOjEwMjAwNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Black Studies, Northwestern University",
@@ -549,7 +685,15 @@
       "degree": "PhD",
       "raw_program": "Black Studies PhD",
       "raw_text": "Northwestern University Black Studies PhD Apr 30, 2026 Rejected on Apr 30 Total comments\nRejected on Apr 30 Fall 2026 American\nI wouldn’t have known about my rejection had I not emailed, which is disappointing. I urge anyone else still waiting to reach out.",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wMSAxODo0MzoyNyIsImFkbWl0aWQiOjEwMjAwNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wMSAxODo0MzoyNyIsImFkbWl0aWQiOjEwMjAwNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Statistics, University of Toronto",
@@ -579,7 +723,15 @@
       "degree": "Masters",
       "raw_program": "Statistics Masters",
       "raw_text": "University of Toronto Statistics Masters Apr 30, 2026 Rejected on Apr 30 Total comments\nRejected on Apr 30 Fall 2026 Other\nDomestic applicant. Received an email notification that there is a status update. This program is a long shot for me due to a lack of good theoretical grades, so I'm not surprised that I got declined.",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wMSAxODo0MzoyNyIsImFkbWl0aWQiOjEwMjAwNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wMSAxODo0MzoyNyIsImFkbWl0aWQiOjEwMjAwNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "English, University of Denver",
@@ -609,7 +761,16 @@
       "degree": "PhD",
       "raw_program": "English PhD",
       "raw_text": "University of Denver English PhD Apr 30, 2026 Rejected on Apr 28 Total comments\nRejected on Apr 28 Fall 2026 American\nWas on the waitlist and received official deny via email and portal status\n",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wMSAxODo0MzoyNyIsImFkbWl0aWQiOjEwMjAwNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wMSAxODo0MzoyNyIsImFkbWl0aWQiOjEwMjAwNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     }
-  ]
+  ],
+  "parser_schema_version": 3
 }

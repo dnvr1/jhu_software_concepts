@@ -1,5 +1,10 @@
 # 1,000-record collection and reevaluation
 
+Follow-up: the narrative gap below has been addressed with schema-3 extraction,
+exact source evidence, and review flags. See SCORE_POLICY.md. The LLM output
+has been refreshed to all 1,000 records with source fields preserved. This
+document retains the original checkpoint findings for traceability.
+
 Collection stopped successfully at exactly 1,000 records across 50 saved pages.
 580 records were added to the earlier 420. All 1,000 applicant URLs are unique;
 all are backed by saved HTML, and all saved HTML hashes match their manifests.

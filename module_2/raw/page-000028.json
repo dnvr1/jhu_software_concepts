@@ -3,8 +3,8 @@
   "manifest": {
     "sha256": "5e0a7ee7a03cee3bc6a9c0420a20d00b6a9668a00c8609ed7f26bd6c9351f887",
     "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yNyAxOToxNjoxOCIsImFkbWl0aWQiOjEwMTk5MTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
-    "captured_at": "2026-09-09T08:40:27.563993+00:00",
-    "method": "normal manually verified Chromium DOM",
+    "captured_at": "2026-09-09T09:39:33.733389+00:00",
+    "method": "offline schema migration from saved HTML",
     "parsed_count": 20,
     "new_count": 20,
     "archive": "page-000028.html",
@@ -39,7 +39,15 @@
       "degree": "PhD",
       "raw_program": "Chemistry PhD",
       "raw_text": "Johns Hopkins University Chemistry PhD Apr 27, 2026 Rejected on Apr 27 Total comments\nRejected on Apr 27 Fall 2026 International\nThis is so late. Did they accept any international student this time?",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yNyAxOToxNjoxOCIsImFkbWl0aWQiOjEwMTk5MTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yNyAxOToxNjoxOCIsImFkbWl0aWQiOjEwMTk5MTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Pharmaceutical Sciences, Creighton University",
@@ -69,7 +77,15 @@
       "degree": "Masters",
       "raw_program": "Pharmaceutical Sciences Masters",
       "raw_text": "Creighton University Pharmaceutical Sciences Masters Apr 27, 2026 Accepted on Apr 27 Total comments\nAccepted on Apr 27 Fall 2026 International GRE 154 GRE V 148 GRE AW 3.00 GPA 3.93\nI hold a Bachelor of Pharmacy degree and have hands-on experience in pharmaceutical formulation. Duolingo English Test score of 120",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yNyAxOToxNjoxOCIsImFkbWl0aWQiOjEwMTk5MTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yNyAxOToxNjoxOCIsImFkbWl0aWQiOjEwMTk5MTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Pharmaceutical Sciences, University of Colorado Denver/Anschutz Medical Campus",
@@ -99,7 +115,15 @@
       "degree": "PhD",
       "raw_program": "Pharmaceutical Sciences PhD",
       "raw_text": "University of Colorado Denver/Anschutz Medical Campus Pharmaceutical Sciences PhD Apr 27, 2026 Rejected on Feb 27 Total comments\nRejected on Feb 27 Fall 2026 International GRE 154 GRE V 148 GRE AW 3.00 GPA 3.93\nI hold a Bachelor of Pharmacy degree and have hands-on experience in pharmaceutical formulation. Duolingo English Test score of 120",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yNyAxOToxNjoxOCIsImFkbWl0aWQiOjEwMTk5MTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yNyAxOToxNjoxOCIsImFkbWl0aWQiOjEwMTk5MTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Biochemistry, Quantitative Biology, Biophysics and Structural Biology (BQBS), Iowa State University",
@@ -129,7 +153,15 @@
       "degree": "PhD",
       "raw_program": "Biochemistry, Quantitative Biology, Biophysics and Structural Biology (BQBS) PhD",
       "raw_text": "Iowa State University Biochemistry, Quantitative Biology, Biophysics and Structural Biology (BQBS) PhD Apr 27, 2026 Rejected on Mar 27 Total comments\nRejected on Mar 27 Fall 2026 International GRE 154 GRE V 148 GRE AW 3.00 GPA 3.93\nI hold a Bachelor of Pharmacy degree and have hands-on experience in pharmaceutical formulation. Duolingo English Test score of 120",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yNyAxOToxNjoxOCIsImFkbWl0aWQiOjEwMTk5MTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yNyAxOToxNjoxOCIsImFkbWl0aWQiOjEwMTk5MTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Social Work, California State University, Northridge",
@@ -159,7 +191,15 @@
       "degree": "Masters",
       "raw_program": "Social Work Masters",
       "raw_text": "California State University, Northridge Social Work Masters Apr 27, 2026 Wait listed on Apr 21 Total comments\nWait listed on Apr 21 Fall 2026 American GPA 3.80\nThis for the TSENG online program.",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yNyAxOToxNjoxOCIsImFkbWl0aWQiOjEwMTk5MTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yNyAxOToxNjoxOCIsImFkbWl0aWQiOjEwMTk5MTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Pharmaceutical Sciences, University of Iowa",
@@ -189,7 +229,15 @@
       "degree": "PhD",
       "raw_program": "Pharmaceutical Sciences PhD",
       "raw_text": "University of Iowa Pharmaceutical Sciences PhD Apr 27, 2026 Interview on Apr 17 Total comments\nInterview on Apr 17 Fall 2026 International GRE 154 GRE V 148 GRE AW 3.00 GPA 3.93\nFaced the interview with one of the professors and the dean They gave me the rejection mail. I hold a Bachelor of Pharmacy degree and have hands-on experience in pharmaceutical formulation. Duolingo English Test score of 120",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yNyAxOToxNjoxOCIsImFkbWl0aWQiOjEwMTk5MTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yNyAxOToxNjoxOCIsImFkbWl0aWQiOjEwMTk5MTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Biology, University of Nebraska",
@@ -219,7 +267,15 @@
       "degree": "Masters",
       "raw_program": "Biology Masters",
       "raw_text": "University of Nebraska Biology Masters Apr 27, 2026 Rejected on Mar 03 Total comments\nRejected on Mar 03 Fall 2026 International GRE 154 GRE V 148 GRE AW 3.00 GPA 3.93\nI hold a Bachelor of Pharmacy degree and have hands-on experience in pharmaceutical formulation. Duolingo English Test score of 120",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yNyAxOToxNjoxOCIsImFkbWl0aWQiOjEwMTk5MTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yNyAxOToxNjoxOCIsImFkbWl0aWQiOjEwMTk5MTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "IGPBS, University of Nebraska Medical Center",
@@ -249,7 +305,15 @@
       "degree": "PhD",
       "raw_program": "IGPBS PhD",
       "raw_text": "University of Nebraska Medical Center IGPBS PhD Apr 27, 2026 Rejected on Dec 05 Total comments\nRejected on Dec 05 Fall 2026 International GRE 154 GRE V 148 GRE AW 3.00 GPA 3.93\nI hold a Bachelor of Pharmacy degree and have hands-on experience in pharmaceutical formulation. Duolingo English Test score of 120",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yNyAxOToxNjoxOCIsImFkbWl0aWQiOjEwMTk5MTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yNyAxOToxNjoxOCIsImFkbWl0aWQiOjEwMTk5MTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Pure Mathematics, University at Buffalo",
@@ -279,7 +343,15 @@
       "degree": "PhD",
       "raw_program": "Pure Mathematics PhD",
       "raw_text": "University at Buffalo Pure Mathematics PhD Apr 27, 2026 Rejected on Apr 27 Total comments\nRejected on Apr 27 Fall 2026 American GPA 4.00",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yNyAxOToxNjoxOCIsImFkbWl0aWQiOjEwMTk5MTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yNyAxOToxNjoxOCIsImFkbWl0aWQiOjEwMTk5MTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Chemistry, Brandeis University",
@@ -309,7 +381,15 @@
       "degree": "PhD",
       "raw_program": "Chemistry PhD",
       "raw_text": "Brandeis University Chemistry PhD Apr 27, 2026 Rejected on Apr 27 Total comments\nRejected on Apr 27 Fall 2026 American\nI have not had a lot of luck this application cycle and got and interview. The person was 5 minutes late to the call asked me no questions about my research. I was then asked if I had a pen and paper on me to then make me draw and ester and amide. Then draw the resonance for both. I was completely floored by this as I was told by my advisors and peers that is not how they typically go. After I was asked about other schools and when I said I was still waiting to hear back I was told that I should keep trying them and it was said with a dismissive tone that told me they had already made their decision. After I received an email from the department coordinate saying: Thank you for reaching out. The committee is unable to admit you to the PhD program at this time. Will you be willing to switch to an MA program? There is no stipend for the MA program and you need to pay tuition. Please let me know as soon as possible if you are interested. Honestly the whole thing felt unprofessional.\n\n",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yNyAxOToxNjoxOCIsImFkbWl0aWQiOjEwMTk5MTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yNyAxOToxNjoxOCIsImFkbWl0aWQiOjEwMTk5MTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "American Studies, George Washington University",
@@ -339,7 +419,15 @@
       "degree": "MFA",
       "raw_program": "American Studies MFA",
       "raw_text": "George Washington University American Studies MFA Apr 27, 2026 Accepted on Apr 06 Total comments\nAccepted on Apr 06 Fall 2026 American GPA 3.84",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yNyAxOToxNjoxOCIsImFkbWl0aWQiOjEwMTk5MTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yNyAxOToxNjoxOCIsImFkbWl0aWQiOjEwMTk5MTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Statistics, University of Connecticut",
@@ -369,7 +457,15 @@
       "degree": "PhD",
       "raw_program": "Statistics PhD",
       "raw_text": "University of Connecticut Statistics PhD Apr 27, 2026 Accepted on Apr 25 Total comments\nAccepted on Apr 25 Fall 2026 International\nno funding",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yNyAxOToxNjoxOCIsImFkbWl0aWQiOjEwMTk5MTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yNyAxOToxNjoxOCIsImFkbWl0aWQiOjEwMTk5MTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Agricultural Economics, Louisiana State University",
@@ -399,7 +495,15 @@
       "degree": "PhD",
       "raw_program": "Agricultural Economics PhD",
       "raw_text": "Louisiana State University Agricultural Economics PhD Apr 27, 2026 Wait listed on Apr 23 Total comments\nWait listed on Apr 23 Fall 2026 International\nI messaged the department and received the information",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yNyAxOToxNjoxOCIsImFkbWl0aWQiOjEwMTk5MTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yNyAxOToxNjoxOCIsImFkbWl0aWQiOjEwMTk5MTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Agricultural Economics, Texas A&M University",
@@ -429,7 +533,15 @@
       "degree": "PhD",
       "raw_program": "Agricultural Economics PhD",
       "raw_text": "Texas A&M University Agricultural Economics PhD Apr 27, 2026 Wait listed on Apr 23 Total comments\nWait listed on Apr 23 Fall 2026 International",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yNyAxOToxNjoxOCIsImFkbWl0aWQiOjEwMTk5MTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yNyAxOToxNjoxOCIsImFkbWl0aWQiOjEwMTk5MTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Agricultural Economics, University of Georgia",
@@ -459,7 +571,15 @@
       "degree": "PhD",
       "raw_program": "Agricultural Economics PhD",
       "raw_text": "University of Georgia Agricultural Economics PhD Apr 27, 2026 Accepted on Feb 23 Total comments\nAccepted on Feb 23 Fall 2026 International\nNo , Funding",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yNyAxOToxNjoxOCIsImFkbWl0aWQiOjEwMTk5MTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yNyAxOToxNjoxOCIsImFkbWl0aWQiOjEwMTk5MTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Musicology, University of North Carolina (UNC)",
@@ -489,7 +609,15 @@
       "degree": "PhD",
       "raw_program": "Musicology PhD",
       "raw_text": "University of North Carolina (UNC) Musicology PhD Apr 27, 2026 Rejected on Apr 27 Total comments\nRejected on Apr 27 Fall 2026 American GPA 3.70",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yNyAxOToxNjoxOCIsImFkbWl0aWQiOjEwMTk5MTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yNyAxOToxNjoxOCIsImFkbWl0aWQiOjEwMTk5MTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Mathematics, University of North Carolina (UNC)",
@@ -519,7 +647,15 @@
       "degree": "PhD",
       "raw_program": "Mathematics PhD",
       "raw_text": "University of North Carolina (UNC) Mathematics PhD Apr 27, 2026 Rejected on Apr 27 Total comments\nRejected on Apr 27 Fall 2026 American GPA 3.70",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yNyAxOToxNjoxOCIsImFkbWl0aWQiOjEwMTk5MTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yNyAxOToxNjoxOCIsImFkbWl0aWQiOjEwMTk5MTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Robotics (ECE), Cornell University",
@@ -549,7 +685,15 @@
       "degree": "PhD",
       "raw_program": "Robotics (ECE) PhD",
       "raw_text": "Cornell University Robotics (ECE) PhD Apr 27, 2026 Rejected on Apr 27 Total comments\nRejected on Apr 27 Fall 2026 American GPA 4.00\nI submitted my application December 15 and it has been radio silence since. Already committed to my top choice school, not sure why Cornell took so long to send a rejection!",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yNyAxOToxNjoxOCIsImFkbWl0aWQiOjEwMTk5MTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yNyAxOToxNjoxOCIsImFkbWl0aWQiOjEwMTk5MTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Veterinary medicine, Cambridge University",
@@ -579,7 +723,15 @@
       "degree": "PhD",
       "raw_program": "Veterinary medicine PhD",
       "raw_text": "Cambridge University Veterinary medicine PhD Apr 27, 2026 Accepted on Mar 04 Total comments\nAccepted on Mar 04 Fall 2026 International GPA 2.75",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yNyAxOToxNjoxOCIsImFkbWl0aWQiOjEwMTk5MTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yNyAxOToxNjoxOCIsImFkbWl0aWQiOjEwMTk5MTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Interdisciplinary Life and Environmental Science, University of Oxford",
@@ -609,8 +761,16 @@
       "degree": "PhD",
       "raw_program": "Interdisciplinary Life and Environmental Science PhD",
       "raw_text": "University of Oxford Interdisciplinary Life and Environmental Science PhD Apr 27, 2026 Accepted on Mar 04 Total comments\nAccepted on Mar 04 Fall 2026 International GPA 2.75\n",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yNyAxOToxNjoxOCIsImFkbWl0aWQiOjEwMTk5MTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yNyAxOToxNjoxOCIsImFkbWl0aWQiOjEwMTk5MTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     }
   ],
-  "parser_schema_version": 2
+  "parser_schema_version": 3
 }

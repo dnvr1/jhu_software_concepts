@@ -3,8 +3,8 @@
   "manifest": {
     "sha256": "166a932f4a1c32a1123e18d2125bbd17489c2753c0e28b374ec2472fe3e7fdb6",
     "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0yNyAxNzo1OTozMCIsImFkbWl0aWQiOjEwMjA0NTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
-    "captured_at": "2026-09-09T01:00:06.737590+00:00",
-    "method": "saved public browser HTML",
+    "captured_at": "2026-09-09T09:39:32.557640+00:00",
+    "method": "offline schema migration from saved HTML",
     "parsed_count": 20,
     "new_count": 20,
     "archive": "page-000002.html",
@@ -39,7 +39,15 @@
       "degree": "Masters",
       "raw_program": "Physics Masters",
       "raw_text": "Ludwig Maximilian University of Munich (LMU) Physics Masters Aug 27, 2026 Accepted on Jul 28 Total comments\nAccepted on Jul 28 Fall 2026 Other GPA 3.78\nInternational, without GRE",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0yNyAxNzo1OTozMCIsImFkbWl0aWQiOjEwMjA0NTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0yNyAxNzo1OTozMCIsImFkbWl0aWQiOjEwMjA0NTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Political Science, McGill University",
@@ -69,7 +77,27 @@
       "degree": "Masters",
       "raw_program": "Political Science Masters",
       "raw_text": "McGill University Political Science Masters Aug 27, 2026 Accepted on Mar 09 Total comments\nAccepted on Mar 09 Fall 2026 International GPA 3.58\nQuebec applicant. McGill BA Honours in Economics & Finance. McGill MA (non-thesis) in Economics, GPA 3.55. Decided to go back to school after working in the private sector for three years.",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0yNyAxNzo1OTozMCIsImFkbWl0aWQiOjEwMjA0NTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0yNyAxNzo1OTozMCIsImFkbWl0aWQiOjEwMjA0NTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [
+        {
+          "field": "gpa",
+          "label": "GPA",
+          "value": 3.55,
+          "scale": null,
+          "excerpt": "GPA 3.55",
+          "start": 97,
+          "end": 105,
+          "review_reason": "existing_field_preserved",
+          "used_for_field": false
+        }
+      ],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Geological Sciences, University of British Columbia",
@@ -99,7 +127,15 @@
       "degree": "PhD",
       "raw_program": "Geological Sciences PhD",
       "raw_text": "University of British Columbia Geological Sciences PhD Aug 26, 2026 Accepted on Aug 21 Total comments\nAccepted on Aug 21 Spring 2027 American GPA 4.00",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0yNyAxNzo1OTozMCIsImFkbWl0aWQiOjEwMjA0NTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0yNyAxNzo1OTozMCIsImFkbWl0aWQiOjEwMjA0NTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Healthcare Policy and Research, St. John's University",
@@ -129,7 +165,15 @@
       "degree": "Masters",
       "raw_program": "Healthcare Policy and Research Masters",
       "raw_text": "St. John's University Healthcare Policy and Research Masters Aug 22, 2026 Accepted on Aug 21 Total comments\nAccepted on Aug 21 Fall 2026 American",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0yNyAxNzo1OTozMCIsImFkbWl0aWQiOjEwMjA0NTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0yNyAxNzo1OTozMCIsImFkbWl0aWQiOjEwMjA0NTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Electrical And Computer Engineering, University of Illinois Chicago (UIC)",
@@ -159,7 +203,15 @@
       "degree": "Masters",
       "raw_program": "Electrical And Computer Engineering Masters",
       "raw_text": "University of Illinois Chicago (UIC) Electrical And Computer Engineering Masters Aug 21, 2026 Accepted on Jun 22 Total comments\nAccepted on Jun 22 Spring 2027 American GPA 3.74\nDid not take the GRE",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0yNyAxNzo1OTozMCIsImFkbWl0aWQiOjEwMjA0NTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0yNyAxNzo1OTozMCIsImFkbWl0aWQiOjEwMjA0NTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Mechanical Engineering, University of Maryland, College Park",
@@ -189,7 +241,15 @@
       "degree": "PhD",
       "raw_program": "Mechanical Engineering PhD",
       "raw_text": "University of Maryland, College Park Mechanical Engineering PhD Aug 20, 2026 Accepted on Jul 17 Total comments\nAccepted on Jul 17 Fall 2026 International\nDid my MS in tier 1 US school, was working on submitting 2 papers. No GRE.",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0yNyAxNzo1OTozMCIsImFkbWl0aWQiOjEwMjA0NTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0yNyAxNzo1OTozMCIsImFkbWl0aWQiOjEwMjA0NTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Quantitative Finance, Washington University in St. Louis (WashU/WUSTL)",
@@ -219,7 +279,15 @@
       "degree": "Masters",
       "raw_program": "Quantitative Finance Masters",
       "raw_text": "Washington University in St. Louis (WashU/WUSTL) Quantitative Finance Masters Aug 20, 2026 Accepted on Feb 15 Total comments\nAccepted on Feb 15 Spring 2027 International GPA 3.85",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0yNyAxNzo1OTozMCIsImFkbWl0aWQiOjEwMjA0NTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0yNyAxNzo1OTozMCIsImFkbWl0aWQiOjEwMjA0NTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Business Administration - Strategic Management - DBA, Southeastern Oklahoma State University",
@@ -249,7 +317,15 @@
       "degree": "Other",
       "raw_program": "Business Administration - Strategic Management - DBA Other",
       "raw_text": "Southeastern Oklahoma State University Business Administration - Strategic Management - DBA Other Aug 19, 2026 Accepted on Jul 07 Total comments\nAccepted on Jul 07 Fall 2026 American\nDoctor of Business Administration - DBA",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0yNyAxNzo1OTozMCIsImFkbWl0aWQiOjEwMjA0NTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0yNyAxNzo1OTozMCIsImFkbWl0aWQiOjEwMjA0NTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Communication, Missouri State University",
@@ -279,7 +355,15 @@
       "degree": "Masters",
       "raw_program": "Communication Masters",
       "raw_text": "Missouri State University Communication Masters Aug 17, 2026 Accepted on Jul 01 Total comments\nAccepted on Jul 01 Fall 2026 American",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0yNyAxNzo1OTozMCIsImFkbWl0aWQiOjEwMjA0NTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0yNyAxNzo1OTozMCIsImFkbWl0aWQiOjEwMjA0NTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Electrical Engineering, Texas A&M University",
@@ -309,7 +393,15 @@
       "degree": "PhD",
       "raw_program": "Electrical Engineering PhD",
       "raw_text": "Texas A&M University Electrical Engineering PhD Aug 15, 2026 Accepted on Aug 10 Total comments\nAccepted on Aug 10 Fall 2026 American GRE 161 GRE V 153 GRE AW 0.60 GPA 3.73\nOnline PhD Advisor Match 4.5 Years Industry Experience 1.5 Years in Research & Development for Chip Design 1 year as a graduate researcher during Masters Master in EE and MEng in Computer Engineering before application No Publications\n\n",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0yNyAxNzo1OTozMCIsImFkbWl0aWQiOjEwMjA0NTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0yNyAxNzo1OTozMCIsImFkbWl0aWQiOjEwMjA0NTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Electrical And Computer Engineering, McGill University",
@@ -339,7 +431,15 @@
       "degree": "PhD",
       "raw_program": "Electrical And Computer Engineering PhD",
       "raw_text": "McGill University Electrical And Computer Engineering PhD Aug 15, 2026 Rejected on Apr 01 Total comments\nRejected on Apr 01 Fall 2026 International GPA 3.47\nI received an email to check the application portal, and there was the formal rejection letter.",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0yNyAxNzo1OTozMCIsImFkbWl0aWQiOjEwMjA0NTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0yNyAxNzo1OTozMCIsImFkbWl0aWQiOjEwMjA0NTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Pharmacology, Macau University of Science and Technology",
@@ -369,7 +469,15 @@
       "degree": "Masters",
       "raw_program": "Pharmacology Masters",
       "raw_text": "Macau University of Science and Technology Pharmacology Masters Aug 12, 2026 Wait listed on Aug 12 Total comments\nWait listed on Aug 12 Spring 2027 International GPA 3.52",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0yNyAxNzo1OTozMCIsImFkbWl0aWQiOjEwMjA0NTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0yNyAxNzo1OTozMCIsImFkbWl0aWQiOjEwMjA0NTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Computer Science, Indus University",
@@ -399,7 +507,15 @@
       "degree": "Masters",
       "raw_program": "Computer Science Masters",
       "raw_text": "Indus University Computer Science Masters Aug 11, 2026 Wait listed on Aug 11 Total comments\nWait listed on Aug 11 Spring 2027 Other GPA 3.60",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0yNyAxNzo1OTozMCIsImFkbWl0aWQiOjEwMjA0NTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0yNyAxNzo1OTozMCIsImFkbWl0aWQiOjEwMjA0NTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Philosophy, Université du Québec à Montréal",
@@ -429,7 +545,15 @@
       "degree": "PhD",
       "raw_program": "Philosophy PhD",
       "raw_text": "Université du Québec à Montréal Philosophy PhD Aug 10, 2026 Accepted on Aug 08 Total comments\nAccepted on Aug 08 Spring 2027 American\nI'm an American who speaks French. Seems like a really cool program... now let's find some funding for it!",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0yNyAxNzo1OTozMCIsImFkbWl0aWQiOjEwMjA0NTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0yNyAxNzo1OTozMCIsImFkbWl0aWQiOjEwMjA0NTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Quantum Science and Engineering, Banh Mi University",
@@ -459,7 +583,15 @@
       "degree": "PhD",
       "raw_program": "Quantum Science and Engineering PhD",
       "raw_text": "Banh Mi University Quantum Science and Engineering PhD Aug 09, 2026 Accepted on Aug 09 Total comments\nAccepted on Aug 09 Spring 2027 American\nI smoke here.",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0yNyAxNzo1OTozMCIsImFkbWl0aWQiOjEwMjA0NTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0yNyAxNzo1OTozMCIsImFkbWl0aWQiOjEwMjA0NTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Law, University of Toronto (Pissmaster)",
@@ -489,7 +621,15 @@
       "degree": "JD",
       "raw_program": "Law JD",
       "raw_text": "University of Toronto (Pissmaster) Law JD Aug 09, 2026 Accepted on Aug 09 Total comments\nAccepted on Aug 09 Spring 2027 American\nPissmaster recommended me and I got accepted. My LSAT is suck my piss.",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0yNyAxNzo1OTozMCIsImFkbWl0aWQiOjEwMjA0NTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0yNyAxNzo1OTozMCIsImFkbWl0aWQiOjEwMjA0NTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Law, Johns Hopkins University (Hot Piss Law)",
@@ -519,7 +659,15 @@
       "degree": "JD",
       "raw_program": "Law JD",
       "raw_text": "Johns Hopkins University (Hot Piss Law) Law JD Aug 09, 2026 Accepted on Aug 09 Total comments\nAccepted on Aug 09 Spring 2027 American\nWant to sue urinals for pissing in my pants.",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0yNyAxNzo1OTozMCIsImFkbWl0aWQiOjEwMjA0NTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0yNyAxNzo1OTozMCIsImFkbWl0aWQiOjEwMjA0NTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Sociology, Harvard University",
@@ -549,7 +697,15 @@
       "degree": "Masters",
       "raw_program": "Sociology Masters",
       "raw_text": "Harvard University Sociology Masters Aug 09, 2026 Accepted on Aug 09 Total comments\nAccepted on Aug 09 Fall 2026 American GPA 4.00\nThe sociology of communal piss. Liberal piss theory, conservative shit theory and how you can mix them into a diarrhea sludge. That was my SOP research proposal and it paid off. Anyways, I will go take a piss. My scholarship is toilet paper and a free urinal.",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0yNyAxNzo1OTozMCIsImFkbWl0aWQiOjEwMjA0NTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0yNyAxNzo1OTozMCIsImFkbWl0aWQiOjEwMjA0NTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Quantitative Economics and Finance, University of California, Santa Cruz",
@@ -579,7 +735,15 @@
       "degree": "Masters",
       "raw_program": "Quantitative Economics and Finance Masters",
       "raw_text": "University of California, Santa Cruz Quantitative Economics and Finance Masters Aug 09, 2026 Accepted on Apr 01 Total comments\nAccepted on Apr 01 Fall 2025 American GPA 3.52\nI had 1 prior internship as a Business Intelligence Engineer Intern. I was a UC Santa Cruz undergraduate student in my 3rd year when I submitted the application. I was offered $3,500 in funding for the year, based on \"academic merit,\" which is a weighted GPA calculation with emphasis on core econ courses. 19 students accepted admission for the 2025 Cohort. Some of my strong grades were AM 10 Linear Algebra: A Econ 100A Microeconomics: A+ Econ 100B Macroeconomics: A+ Econ 113 Econometrics: A- Econ 114 Adv. Quantitative Methods: A+ Econ 124 Machine Learning for Economics: A+ Econ 150 Public Finance: A Some of my weaker grades were: Stat 80B Data Visualization: C Math 11A Applied Calculus I: B- Am 11B Applied Calculus II: P Econ 104 Truth In Numbers: B",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0yNyAxNzo1OTozMCIsImFkbWl0aWQiOjEwMjA0NTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0yNyAxNzo1OTozMCIsImFkbWl0aWQiOjEwMjA0NTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Computer Science, University of California (UCLA)",
@@ -609,7 +773,16 @@
       "degree": "Masters",
       "raw_program": "Computer Science Masters",
       "raw_text": "University of California (UCLA) Computer Science Masters Aug 08, 2026 Accepted on Mar 25 Total comments\nAccepted on Mar 25 Fall 2026 International GPA 3.93\nUW-Madison triple majors in CS, Math, and Stats graduated in three years\n",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0yNyAxNzo1OTozMCIsImFkbWl0aWQiOjEwMjA0NTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0yNyAxNzo1OTozMCIsImFkbWl0aWQiOjEwMjA0NTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     }
-  ]
+  ],
+  "parser_schema_version": 3
 }

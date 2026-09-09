@@ -3,8 +3,8 @@
   "manifest": {
     "sha256": "2269f5d0d957941b000e7d3150272b8a408eb61192446b08a7b298754825a78f",
     "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xOSAxNjozOTo0OCIsImFkbWl0aWQiOjEwMjAzNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
-    "captured_at": "2026-09-09T01:00:06.876567+00:00",
-    "method": "saved public browser HTML",
+    "captured_at": "2026-09-09T09:39:32.696149+00:00",
+    "method": "offline schema migration from saved HTML",
     "parsed_count": 20,
     "new_count": 20,
     "archive": "page-000006.html",
@@ -39,7 +39,15 @@
       "degree": "Masters",
       "raw_program": "Computational Neuroscience Masters",
       "raw_text": "Technische Universität Berlin Computational Neuroscience Masters Jun 18, 2026 Accepted on Jun 11 Total comments\nAccepted on Jun 11 Fall 2026 International GPA 3.60\n- Bsc. Artificial Intelligence at Johannes Kepler Universität with 1.6 Austrian GPA, roughly 3.6 in the American grading system - Three-month research internship at Max Planck Institute for Human Cognitive and Brain Sciences Leipzig - Research assistant of a neuroscience professor at my university for three months",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xOSAxNjozOTo0OCIsImFkbWl0aWQiOjEwMjAzNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xOSAxNjozOTo0OCIsImFkbWl0aWQiOjEwMjAzNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Biomedical Engineering, University of Alberta",
@@ -69,7 +77,15 @@
       "degree": "Masters",
       "raw_program": "Biomedical Engineering Masters",
       "raw_text": "University of Alberta Biomedical Engineering Masters Jun 17, 2026 Accepted on Jun 15 Total comments\nAccepted on Jun 15 Fall 2026 Other GPA 3.72\nDomestic applicant.",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xOSAxNjozOTo0OCIsImFkbWl0aWQiOjEwMjAzNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xOSAxNjozOTo0OCIsImFkbWl0aWQiOjEwMjAzNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Statistics, Boston University",
@@ -99,7 +115,15 @@
       "degree": "Masters",
       "raw_program": "Statistics Masters",
       "raw_text": "Boston University Statistics Masters Jun 17, 2026 Accepted on Jun 16 Total comments\nAccepted on Jun 16 Fall 2026 American",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xOSAxNjozOTo0OCIsImFkbWl0aWQiOjEwMjAzNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xOSAxNjozOTo0OCIsImFkbWl0aWQiOjEwMjAzNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Computer Science, Ohio State University",
@@ -129,7 +153,15 @@
       "degree": "PhD",
       "raw_program": "Computer Science PhD",
       "raw_text": "Ohio State University Computer Science PhD Jun 17, 2026 Rejected on Jun 17 Total comments\nRejected on Jun 17 Fall 2026 American GPA 3.90\nI had to call OSU. I finally got a call back on 6/16 from a very rude person, who informed me that I should have known that if I had not recieved an offer of admission by 4/15 that I should have assumed a denial. \"OSU does not have time to send out denial letters.\"",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xOSAxNjozOTo0OCIsImFkbWl0aWQiOjEwMjAzNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xOSAxNjozOTo0OCIsImFkbWl0aWQiOjEwMjAzNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Social Work, Dalhousie University",
@@ -159,7 +191,15 @@
       "degree": "Masters",
       "raw_program": "Social Work Masters",
       "raw_text": "Dalhousie University Social Work Masters Jun 17, 2026 Rejected on Feb 11 Total comments\nRejected on Feb 11 Fall 2026 International GPA 3.97\nDomestic applicant, advanced standing",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xOSAxNjozOTo0OCIsImFkbWl0aWQiOjEwMjAzNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xOSAxNjozOTo0OCIsImFkbWl0aWQiOjEwMjAzNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Social Work, York University",
@@ -189,7 +229,15 @@
       "degree": "Masters",
       "raw_program": "Social Work Masters",
       "raw_text": "York University Social Work Masters Jun 17, 2026 Accepted on Apr 01 Total comments\nAccepted on Apr 01 Fall 2026 International GPA 3.97\nDomestic student, advanced standing",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xOSAxNjozOTo0OCIsImFkbWl0aWQiOjEwMjAzNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xOSAxNjozOTo0OCIsImFkbWl0aWQiOjEwMjAzNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Aeronautics & Astronautics, University of Washington",
@@ -219,7 +267,15 @@
       "degree": "PhD",
       "raw_program": "Aeronautics & Astronautics PhD",
       "raw_text": "University of Washington Aeronautics & Astronautics PhD Jun 17, 2026 Wait listed on Apr 22 Total comments\nWait listed on Apr 22 Fall 2026 American\nWaitlisted in April and now it’s mid-June… has ANYONE gotten into this program??",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xOSAxNjozOTo0OCIsImFkbWl0aWQiOjEwMjAzNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xOSAxNjozOTo0OCIsImFkbWl0aWQiOjEwMjAzNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Computer Science, University of South Carolina",
@@ -249,7 +305,15 @@
       "degree": "PhD",
       "raw_program": "Computer Science PhD",
       "raw_text": "University of South Carolina Computer Science PhD Jun 16, 2026 Rejected on Jun 16 Total comments\nRejected on Jun 16 Fall 2026 American GPA 3.90\nI had to call the Graduate Director, he was very polite in his rejection. University of South Carolina made no effort to contact me regarding their decision.",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xOSAxNjozOTo0OCIsImFkbWl0aWQiOjEwMjAzNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xOSAxNjozOTo0OCIsImFkbWl0aWQiOjEwMjAzNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Economics and Public Policy, Ferdowsi University of Mashhad",
@@ -279,7 +343,15 @@
       "degree": "Other",
       "raw_program": "Economics and Public Policy Other",
       "raw_text": "Ferdowsi University of Mashhad Economics and Public Policy Other Jun 15, 2026 Accepted on Jun 15 Total comments\nAccepted on Jun 15 Spring 2026 International GPA 3.50\nBachelor's Degree",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xOSAxNjozOTo0OCIsImFkbWl0aWQiOjEwMjAzNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xOSAxNjozOTo0OCIsImFkbWl0aWQiOjEwMjAzNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Animal Biosciences, University of Guelph",
@@ -309,7 +381,15 @@
       "degree": "Other",
       "raw_program": "Animal Biosciences Other",
       "raw_text": "University of Guelph Animal Biosciences Other Jun 15, 2026 Accepted on Jun 12 Total comments\nAccepted on Jun 12 Fall 2026 Other\nCourse based Masters of Animal Biosciences\n\n",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xOSAxNjozOTo0OCIsImFkbWl0aWQiOjEwMjAzNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xOSAxNjozOTo0OCIsImFkbWl0aWQiOjEwMjAzNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Management and Human Resources, Northern Arizona University",
@@ -339,7 +419,15 @@
       "degree": "Masters",
       "raw_program": "Management and Human Resources Masters",
       "raw_text": "Northern Arizona University Management and Human Resources Masters Jun 15, 2026 Wait listed on Jun 15 Total comments\nWait listed on Jun 15 Fall 2026 International GPA 3.00",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xOSAxNjozOTo0OCIsImFkbWl0aWQiOjEwMjAzNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xOSAxNjozOTo0OCIsImFkbWl0aWQiOjEwMjAzNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Computer science, New York University",
@@ -369,7 +457,15 @@
       "degree": "Masters",
       "raw_program": "Computer science Masters",
       "raw_text": "New York University Computer science Masters Jun 15, 2026 Accepted on Jun 15 Total comments\nAccepted on Jun 15 Fall 2026 Other",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xOSAxNjozOTo0OCIsImFkbWl0aWQiOjEwMjAzNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xOSAxNjozOTo0OCIsImFkbWl0aWQiOjEwMjAzNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Urban Planning, Khayyam university",
@@ -399,7 +495,15 @@
       "degree": "Masters",
       "raw_program": "Urban Planning Masters",
       "raw_text": "Khayyam university Urban Planning Masters Jun 13, 2026 Accepted on Jun 13 Total comments\nAccepted on Jun 13 Fall 2026 International GPA 3.60",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xOSAxNjozOTo0OCIsImFkbWl0aWQiOjEwMjAzNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xOSAxNjozOTo0OCIsImFkbWl0aWQiOjEwMjAzNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Atmospheric Science, Universität Hamburg",
@@ -429,7 +533,15 @@
       "degree": "Masters",
       "raw_program": "Atmospheric Science Masters",
       "raw_text": "Universität Hamburg Atmospheric Science Masters Jun 12, 2026 Accepted on May 18 Total comments\nAccepted on May 18 Fall 2026 International",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xOSAxNjozOTo0OCIsImFkbWl0aWQiOjEwMjAzNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xOSAxNjozOTo0OCIsImFkbWl0aWQiOjEwMjAzNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Computer Science, University of California, Davis",
@@ -459,7 +571,15 @@
       "degree": "PhD",
       "raw_program": "Computer Science PhD",
       "raw_text": "University of California, Davis Computer Science PhD Jun 11, 2026 Rejected on Jun 10 Total comments\nRejected on Jun 10 Fall 2026 International GPA 3.80\n2 professor development happened last week of May, one said he has no funding, so discussed thesis-based master's option, the other took his sweet time to schedule a call and finally got on a call on June 10th, stating his interest to hire me as a PhD student in his lab and offering TA. He gave me a task to write a summary on one of his projects, while working on it, on the same day, i received a reject. I have filed for appeal. Please suggest what more I can do.",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xOSAxNjozOTo0OCIsImFkbWl0aWQiOjEwMjAzNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xOSAxNjozOTo0OCIsImFkbWl0aWQiOjEwMjAzNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Mathematics in Data Science, Technische Universität München",
@@ -479,17 +599,43 @@
       "gre_aw": null,
       "gre_quantitative": null,
       "score_provenance": {
-        "gpa": null,
+        "gpa": "comment_labeled_narrative",
         "gre": null,
         "gre_v": null,
         "gre_aw": null,
         "gre_quantitative": null
       },
-      "gpa": null,
+      "gpa": 1.2,
       "degree": "Masters",
       "raw_program": "Mathematics in Data Science Masters",
       "raw_text": "Technische Universität München Mathematics in Data Science Masters Jun 11, 2026 Accepted on Jun 11 Total comments\nAccepted on Jun 11 Fall 2026 International\nDirect admission, 80/100 with a GPA of 1.2 according to the VPD. EU student (Italy)",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xOSAxNjozOTo0OCIsImFkbWl0aWQiOjEwMjAzNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xOSAxNjozOTo0OCIsImFkbWl0aWQiOjEwMjAzNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [
+        {
+          "field": "gpa",
+          "label": "GPA",
+          "value": 1.2,
+          "scale": null,
+          "excerpt": "GPA of 1.2",
+          "start": 32,
+          "end": 42,
+          "review_reason": null,
+          "used_for_field": true
+        }
+      ],
+      "score_context": {
+        "gpa": {
+          "label": "GPA",
+          "scale": null,
+          "excerpt": "GPA of 1.2",
+          "start": 32,
+          "end": 42
+        },
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Mathematics, Ecole Polytechnique Federale De Lausanne (EPFL)",
@@ -519,7 +665,15 @@
       "degree": "Masters",
       "raw_program": "Mathematics Masters",
       "raw_text": "Ecole Polytechnique Federale De Lausanne (EPFL) Mathematics Masters Jun 11, 2026 Accepted on Jun 03 Total comments\nAccepted on Jun 03 Fall 2026 International",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xOSAxNjozOTo0OCIsImFkbWl0aWQiOjEwMjAzNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xOSAxNjozOTo0OCIsImFkbWl0aWQiOjEwMjAzNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Mathematics, Imperial College London",
@@ -549,7 +703,15 @@
       "degree": "PhD",
       "raw_program": "Mathematics PhD",
       "raw_text": "Imperial College London Mathematics PhD Jun 11, 2026 Accepted on Jun 09 Total comments\nAccepted on Jun 09 Fall 2026 International\nFully funded, Overseas tuition covered",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xOSAxNjozOTo0OCIsImFkbWl0aWQiOjEwMjAzNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xOSAxNjozOTo0OCIsImFkbWl0aWQiOjEwMjAzNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Mathematics, University of Warwick",
@@ -579,7 +741,15 @@
       "degree": "PhD",
       "raw_program": "Mathematics PhD",
       "raw_text": "University of Warwick Mathematics PhD Jun 11, 2026 Accepted on Jun 05 Total comments\nAccepted on Jun 05 Fall 2026 International\nFully funded MPhil/PhD",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xOSAxNjozOTo0OCIsImFkbWl0aWQiOjEwMjAzNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xOSAxNjozOTo0OCIsImFkbWl0aWQiOjEwMjAzNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Mechanical Engineering, Isfahan University of Technology",
@@ -609,7 +779,16 @@
       "degree": "Masters",
       "raw_program": "Mechanical Engineering Masters",
       "raw_text": "Isfahan University of Technology Mechanical Engineering Masters Jun 11, 2026 Accepted on Jun 11 Total comments\nAccepted on Jun 11 Fall 2026 International GPA 3.60\n",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xOSAxNjozOTo0OCIsImFkbWl0aWQiOjEwMjAzNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xOSAxNjozOTo0OCIsImFkbWl0aWQiOjEwMjAzNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     }
-  ]
+  ],
+  "parser_schema_version": 3
 }

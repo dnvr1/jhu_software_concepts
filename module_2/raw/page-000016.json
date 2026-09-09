@@ -3,8 +3,8 @@
   "manifest": {
     "sha256": "980f9b9f7b28e5369836e5cbcb649511b2c823c5cb25b79c1707e91878e62c8d",
     "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wNyAyMzo1MTo1OCIsImFkbWl0aWQiOjEwMjAxNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
-    "captured_at": "2026-09-09T01:00:07.270359+00:00",
-    "method": "saved public browser HTML",
+    "captured_at": "2026-09-09T09:39:33.087707+00:00",
+    "method": "offline schema migration from saved HTML",
     "parsed_count": 20,
     "new_count": 20,
     "archive": "page-000016.html",
@@ -39,7 +39,15 @@
       "degree": "Masters",
       "raw_program": "Classical Archaeology Masters",
       "raw_text": "University of British Columbia Classical Archaeology Masters May 07, 2026 Rejected on May 07 Total comments\nRejected on May 07 Fall 2026 Other\nCanadian (domestic student). It was a long wait, as I submitted my application in October 2025. Wishing all the best to others who applied to this program. I have accepted an offer in the UK.",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wNyAyMzo1MTo1OCIsImFkbWl0aWQiOjEwMjAxNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wNyAyMzo1MTo1OCIsImFkbWl0aWQiOjEwMjAxNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Hydrologic Sciences, University of California, Davis",
@@ -69,7 +77,15 @@
       "degree": "Masters",
       "raw_program": "Hydrologic Sciences Masters",
       "raw_text": "University of California, Davis Hydrologic Sciences Masters May 07, 2026 Rejected on May 07 Total comments\nRejected on May 07 Fall 2026 International\nWas told that I was \"high on the list\" for an offer, then got rejected LOLOL. But life goes on",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wNyAyMzo1MTo1OCIsImFkbWl0aWQiOjEwMjAxNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wNyAyMzo1MTo1OCIsImFkbWl0aWQiOjEwMjAxNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Industrial Engineering, Northeastern University",
@@ -99,7 +115,15 @@
       "degree": "PhD",
       "raw_program": "Industrial Engineering PhD",
       "raw_text": "Northeastern University Industrial Engineering PhD May 07, 2026 Rejected on May 07 Total comments\nRejected on May 07 Fall 2026 International",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wNyAyMzo1MTo1OCIsImFkbWl0aWQiOjEwMjAxNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wNyAyMzo1MTo1OCIsImFkbWl0aWQiOjEwMjAxNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Law, Hamad Bin Khalifa University",
@@ -129,7 +153,15 @@
       "degree": "JD",
       "raw_program": "Law JD",
       "raw_text": "Hamad Bin Khalifa University Law JD May 07, 2026 Accepted on May 06 Total comments\nAccepted on May 06 Fall 2026 American",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wNyAyMzo1MTo1OCIsImFkbWl0aWQiOjEwMjAxNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wNyAyMzo1MTo1OCIsImFkbWl0aWQiOjEwMjAxNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Biomedical Engineering, Virginia Tech",
@@ -159,7 +191,15 @@
       "degree": "PhD",
       "raw_program": "Biomedical Engineering PhD",
       "raw_text": "Virginia Tech Biomedical Engineering PhD May 07, 2026 Rejected on May 06 Total comments\nRejected on May 06 Fall 2026 American",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wNyAyMzo1MTo1OCIsImFkbWl0aWQiOjEwMjAxNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wNyAyMzo1MTo1OCIsImFkbWl0aWQiOjEwMjAxNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "English, SUNY Buffalo",
@@ -189,7 +229,15 @@
       "degree": "PhD",
       "raw_program": "English PhD",
       "raw_text": "SUNY Buffalo English PhD May 07, 2026 Rejected on May 06 Total comments\nRejected on May 06 Fall 2026 International\nA very strange time to receive a response",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wNyAyMzo1MTo1OCIsImFkbWl0aWQiOjEwMjAxNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wNyAyMzo1MTo1OCIsImFkbWl0aWQiOjEwMjAxNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Built Environment: Sustainable Heritage (Heritage Science), University College London",
@@ -219,7 +267,15 @@
       "degree": "Masters",
       "raw_program": "Built Environment: Sustainable Heritage (Heritage Science) Masters",
       "raw_text": "University College London Built Environment: Sustainable Heritage (Heritage Science) Masters May 07, 2026 Accepted on Apr 30 Total comments\nAccepted on Apr 30 Fall 2026 International",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wNyAyMzo1MTo1OCIsImFkbWl0aWQiOjEwMjAxNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wNyAyMzo1MTo1OCIsImFkbWl0aWQiOjEwMjAxNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Political Economy Research, Kings College London",
@@ -249,7 +305,15 @@
       "degree": "PhD",
       "raw_program": "Political Economy Research PhD",
       "raw_text": "Kings College London Political Economy Research PhD May 07, 2026 Accepted on Apr 27 Total comments\nAccepted on Apr 27 Fall 2026 International",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wNyAyMzo1MTo1OCIsImFkbWl0aWQiOjEwMjAxNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wNyAyMzo1MTo1OCIsImFkbWl0aWQiOjEwMjAxNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Applied Mathematics (Scientific Computing and Machine Learning), Imperial College London",
@@ -279,7 +343,15 @@
       "degree": "Masters",
       "raw_program": "Applied Mathematics (Scientific Computing and Machine Learning) Masters",
       "raw_text": "Imperial College London Applied Mathematics (Scientific Computing and Machine Learning) Masters May 07, 2026 Accepted on May 07 Total comments\nAccepted on May 07 Fall 2026 International\n85% avg from A tier (Just below Oxbridge, Imperial and Warwick) university in Maths BSc, Quantitative Trading internship at a top firm, working on paper with professor but no pubs",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wNyAyMzo1MTo1OCIsImFkbWl0aWQiOjEwMjAxNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wNyAyMzo1MTo1OCIsImFkbWl0aWQiOjEwMjAxNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Creative Writing Poetry, University of Notre Dame",
@@ -309,7 +381,15 @@
       "degree": "MFA",
       "raw_program": "Creative Writing Poetry MFA",
       "raw_text": "University of Notre Dame Creative Writing Poetry MFA May 07, 2026 Accepted on Apr 20 Total comments\nAccepted on Apr 20 Fall 2026 International\nReceived an interview invitation from Paul Cummings via E-mail around Mid-Feb, was waitlisted roughly two weeks after the interview and received an offer late-April. Decent funding but unfortunately have to decline. ND's CW department is definitely one of the most professional I've met from this season they are SO SO NICE. Good luck to those who are still on the WL!\n\n",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wNyAyMzo1MTo1OCIsImFkbWl0aWQiOjEwMjAxNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wNyAyMzo1MTo1OCIsImFkbWl0aWQiOjEwMjAxNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Management Science and Engineering, Columbia University in the City of New York",
@@ -339,7 +419,15 @@
       "degree": "Masters",
       "raw_program": "Management Science and Engineering Masters",
       "raw_text": "Columbia University in the City of New York Management Science and Engineering Masters May 07, 2026 Accepted on Mar 10 Total comments\nAccepted on Mar 10 Fall 2026 International GPA 3.86",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wNyAyMzo1MTo1OCIsImFkbWl0aWQiOjEwMjAxNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wNyAyMzo1MTo1OCIsImFkbWl0aWQiOjEwMjAxNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Computer Science, Stevens Institute of Technology",
@@ -369,7 +457,15 @@
       "degree": "PhD",
       "raw_program": "Computer Science PhD",
       "raw_text": "Stevens Institute of Technology Computer Science PhD May 07, 2026 Rejected on May 06 Total comments\nRejected on May 06 Fall 2026 International GPA 3.50\ncry",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wNyAyMzo1MTo1OCIsImFkbWl0aWQiOjEwMjAxNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wNyAyMzo1MTo1OCIsImFkbWl0aWQiOjEwMjAxNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Computer Science, University College Dublin",
@@ -399,7 +495,15 @@
       "degree": "Masters",
       "raw_program": "Computer Science Masters",
       "raw_text": "University College Dublin Computer Science Masters May 07, 2026 Accepted on Apr 02 Total comments\nAccepted on Apr 02 Spring 2026 International GPA 3.30\nMS Computer Science (Neogtiated Learning)",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wNyAyMzo1MTo1OCIsImFkbWl0aWQiOjEwMjAxNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wNyAyMzo1MTo1OCIsImFkbWl0aWQiOjEwMjAxNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "JD, Hamad Bin Khalifa University",
@@ -429,7 +533,15 @@
       "degree": "JD",
       "raw_program": "JD JD",
       "raw_text": "Hamad Bin Khalifa University JD JD May 07, 2026 Accepted on May 07 Total comments\nAccepted on May 07 Fall 2026 American",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wNyAyMzo1MTo1OCIsImFkbWl0aWQiOjEwMjAxNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wNyAyMzo1MTo1OCIsImFkbWl0aWQiOjEwMjAxNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Cellular and Molecular Biology, University of Maryland Baltimore",
@@ -459,7 +571,15 @@
       "degree": "Masters",
       "raw_program": "Cellular and Molecular Biology Masters",
       "raw_text": "University of Maryland Baltimore Cellular and Molecular Biology Masters May 07, 2026 Interview on May 04 Total comments\nInterview on May 04 Fall 2026 American GPA 3.93\nCBMS MS Program. Post bacc at NIH for 2 years plus additional research experience.",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wNyAyMzo1MTo1OCIsImFkbWl0aWQiOjEwMjAxNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wNyAyMzo1MTo1OCIsImFkbWl0aWQiOjEwMjAxNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Biochemistry and Molecular Biology, University of Maryland Baltimore",
@@ -489,7 +609,15 @@
       "degree": "Masters",
       "raw_program": "Biochemistry and Molecular Biology Masters",
       "raw_text": "University of Maryland Baltimore Biochemistry and Molecular Biology Masters May 07, 2026 Accepted on May 06 Total comments\nAccepted on May 06 Fall 2026 American GPA 3.93",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wNyAyMzo1MTo1OCIsImFkbWl0aWQiOjEwMjAxNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wNyAyMzo1MTo1OCIsImFkbWl0aWQiOjEwMjAxNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Earth Science, University of California (UCSB)",
@@ -519,7 +647,15 @@
       "degree": "PhD",
       "raw_program": "Earth Science PhD",
       "raw_text": "University of California (UCSB) Earth Science PhD May 06, 2026 Rejected on May 06 Total comments\nRejected on May 06 Fall 2026 International GPA 3.92",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wNyAyMzo1MTo1OCIsImFkbWl0aWQiOjEwMjAxNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wNyAyMzo1MTo1OCIsImFkbWl0aWQiOjEwMjAxNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Mechanical Engineering, University of Illinois Chicago(UIC)",
@@ -549,7 +685,15 @@
       "degree": "PhD",
       "raw_program": "Mechanical Engineering PhD",
       "raw_text": "University of Illinois Chicago(UIC) Mechanical Engineering PhD May 06, 2026 Rejected on May 06 Total comments\nRejected on May 06 Fall 2026 International GPA 3.44\nUnder review with department > Additional Review Required > goes blank for a few hours > Deny. Folks, that's how it works at UIC! US MS - 3.90 & a few publications aren't enough in this brutal season. Priority deadline is a joke. Nowadays I regret studying Mechanical all these years. Worst decision of my life. Advice for young people (especially Internationals) - If you're planning to have a career in the industries, go for ISE, Automotive, Civil, Electrical etc. If enrolled, switch from Mechanical ASAP. Sooner or later, you'll regret picking Mechanical, pretty much anywhere on this planet.",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wNyAyMzo1MTo1OCIsImFkbWl0aWQiOjEwMjAxNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wNyAyMzo1MTo1OCIsImFkbWl0aWQiOjEwMjAxNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Mechanical Engineering, University of Illinois Chicago(UIC)",
@@ -579,7 +723,15 @@
       "degree": "PhD",
       "raw_program": "Mechanical Engineering PhD",
       "raw_text": "University of Illinois Chicago(UIC) Mechanical Engineering PhD May 06, 2026 Rejected on May 06 Total comments\nRejected on May 06 Spring 2026 International GPA 3.44\nUnder review with department > Additional Review Required > goes blank for a few hours > Deny. Folks, that's how it works at UIC! US MS - 3.90 & a few publications aren't enough in this brutal season. Priority deadline is a joke. Nowadays I regret studying Mechanical all these years. Worst decision of my life. Advice for young people (especially Internationals) - If you're planning to have a career in the industries, go for ISE, Automotive, Civil, Electrical etc. If enrolled, switch from Mechanical ASAP. Sooner or later, you'll regret picking Mechanical, pretty much anywhere on this planet.",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wNyAyMzo1MTo1OCIsImFkbWl0aWQiOjEwMjAxNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wNyAyMzo1MTo1OCIsImFkbWl0aWQiOjEwMjAxNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Anthropology, CUNY Hunter College",
@@ -609,7 +761,16 @@
       "degree": "Masters",
       "raw_program": "Anthropology Masters",
       "raw_text": "CUNY Hunter College Anthropology Masters May 06, 2026 Accepted on Apr 26 Total comments\nAccepted on Apr 26 Fall 2026 American GPA 3.76\n",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wNyAyMzo1MTo1OCIsImFkbWl0aWQiOjEwMjAxNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wNyAyMzo1MTo1OCIsImFkbWl0aWQiOjEwMjAxNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     }
-  ]
+  ],
+  "parser_schema_version": 3
 }

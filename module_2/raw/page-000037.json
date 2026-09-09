@@ -3,8 +3,8 @@
   "manifest": {
     "sha256": "992906ce6a831e4470b5d15f0e1bad62af5798274ef00a465354423675a16bd3",
     "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yMiAwMjoyNTowMCIsImFkbWl0aWQiOjEwMTk3MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
-    "captured_at": "2026-09-09T08:41:30.698279+00:00",
-    "method": "normal manually verified Chromium DOM",
+    "captured_at": "2026-09-09T09:39:34.303888+00:00",
+    "method": "offline schema migration from saved HTML",
     "parsed_count": 20,
     "new_count": 20,
     "archive": "page-000037.html",
@@ -39,7 +39,15 @@
       "degree": "Masters",
       "raw_program": "Philosophy Masters",
       "raw_text": "California State University, Los Angeles Philosophy Masters Apr 22, 2026 Accepted on Apr 21 Total comments\nAccepted on Apr 21 Fall 2026 American\n1a(MA)/0w/6r(all PhD)/0p. Wow, the dream is still alive. In terms of funding, (based on my financial aid offer for 26-27) I received an institutional grant that covers roughly 50% of my tuition per semester as a full time student. It is not a lavish, fully funded PhD offer, but I am wholly set on enrolling. I couldn't be happier to have this opportunity to return to my studies.",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yMiAwMjoyNTowMCIsImFkbWl0aWQiOjEwMTk3MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yMiAwMjoyNTowMCIsImFkbWl0aWQiOjEwMTk3MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Computer Science, University of Rochester",
@@ -69,7 +77,15 @@
       "degree": "PhD",
       "raw_program": "Computer Science PhD",
       "raw_text": "University of Rochester Computer Science PhD Apr 22, 2026 Rejected on Apr 20 Total comments\nRejected on Apr 20 Fall 2026 American GPA 3.88",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yMiAwMjoyNTowMCIsImFkbWl0aWQiOjEwMTk3MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yMiAwMjoyNTowMCIsImFkbWl0aWQiOjEwMTk3MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Clinical Mental Health Counseling, George Washington University",
@@ -99,7 +115,15 @@
       "degree": "Masters",
       "raw_program": "Clinical Mental Health Counseling Masters",
       "raw_text": "George Washington University Clinical Mental Health Counseling Masters Apr 22, 2026 Accepted on Feb 15 Total comments\nAccepted on Feb 15 Fall 2026 American GPA 3.70",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yMiAwMjoyNTowMCIsImFkbWl0aWQiOjEwMTk3MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yMiAwMjoyNTowMCIsImFkbWl0aWQiOjEwMTk3MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Plant Pathology, North Carolina State University",
@@ -129,7 +153,15 @@
       "degree": "PhD",
       "raw_program": "Plant Pathology PhD",
       "raw_text": "North Carolina State University Plant Pathology PhD Apr 22, 2026 Rejected on Apr 21 Total comments\nRejected on Apr 21 Fall 2026 International\nI received an email prompting me to check the portal.",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yMiAwMjoyNTowMCIsImFkbWl0aWQiOjEwMTk3MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yMiAwMjoyNTowMCIsImFkbWl0aWQiOjEwMTk3MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Communication Sciences And Disorders, Cleveland State University",
@@ -159,7 +191,15 @@
       "degree": "Masters",
       "raw_program": "Communication Sciences And Disorders Masters",
       "raw_text": "Cleveland State University Communication Sciences And Disorders Masters Apr 22, 2026 Accepted on Apr 15 Total comments\nAccepted on Apr 15 Fall 2026 American GPA 3.27",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yMiAwMjoyNTowMCIsImFkbWl0aWQiOjEwMTk3MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yMiAwMjoyNTowMCIsImFkbWl0aWQiOjEwMTk3MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Fine Art, University of California, San Diego",
@@ -189,7 +229,15 @@
       "degree": "MFA",
       "raw_program": "Fine Art MFA",
       "raw_text": "University of California, San Diego Fine Art MFA Apr 22, 2026 Rejected on Apr 21 Total comments\nRejected on Apr 21 Fall 2026 American\nSubmitted application early January, email to check status update in portal on April 21",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yMiAwMjoyNTowMCIsImFkbWl0aWQiOjEwMTk3MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yMiAwMjoyNTowMCIsImFkbWl0aWQiOjEwMTk3MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Biomedical Science, University of Texas MD Anderson Cancer Center",
@@ -219,7 +267,15 @@
       "degree": "Masters",
       "raw_program": "Biomedical Science Masters",
       "raw_text": "University of Texas MD Anderson Cancer Center Biomedical Science Masters Apr 21, 2026 Rejected on Apr 21 Total comments\nRejected on Apr 21 Fall 2026 American GPA 2.70\n3 papers with 3 more under review. 2 presentations. Secured funding and position with present PI.",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yMiAwMjoyNTowMCIsImFkbWl0aWQiOjEwMTk3MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yMiAwMjoyNTowMCIsImFkbWl0aWQiOjEwMTk3MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Material Science And Engineering, Johns Hopkins University",
@@ -249,7 +305,38 @@
       "degree": "PhD",
       "raw_program": "Material Science And Engineering PhD",
       "raw_text": "Johns Hopkins University Material Science And Engineering PhD Apr 21, 2026 Rejected on Apr 21 Total comments\nRejected on Apr 21 Fall 2026 International GPA 3.64\nBS GPA (3.64), MS GPA (3.65), No GRE",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yMiAwMjoyNTowMCIsImFkbWl0aWQiOjEwMTk3MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yMiAwMjoyNTowMCIsImFkbWl0aWQiOjEwMTk3MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [
+        {
+          "field": "gpa",
+          "label": "GPA",
+          "value": 3.64,
+          "scale": null,
+          "excerpt": "GPA (3.64",
+          "start": 3,
+          "end": 12,
+          "review_reason": "existing_field_preserved",
+          "used_for_field": false
+        },
+        {
+          "field": "gpa",
+          "label": "GPA",
+          "value": 3.65,
+          "scale": null,
+          "excerpt": "GPA (3.65",
+          "start": 18,
+          "end": 27,
+          "review_reason": "existing_field_preserved",
+          "used_for_field": false
+        }
+      ],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Creative Writing Nonfiction, University of New Mexico",
@@ -279,7 +366,15 @@
       "degree": "MFA",
       "raw_program": "Creative Writing Nonfiction MFA",
       "raw_text": "University of New Mexico Creative Writing Nonfiction MFA Apr 21, 2026 Rejected on Apr 17 Total comments\nRejected on Apr 17 Fall 2026 American GPA 4.00\nWas waitlisted on March 4, rejected on April 17",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yMiAwMjoyNTowMCIsImFkbWl0aWQiOjEwMTk3MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yMiAwMjoyNTowMCIsImFkbWl0aWQiOjEwMTk3MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Psychology, Princeton University",
@@ -309,7 +404,15 @@
       "degree": "PhD",
       "raw_program": "Psychology PhD",
       "raw_text": "Princeton University Psychology PhD Apr 21, 2026 Rejected on Feb 20 Total comments\nRejected on Feb 20 Fall 2026 American GPA 3.70\n\n",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yMiAwMjoyNTowMCIsImFkbWl0aWQiOjEwMTk3MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yMiAwMjoyNTowMCIsImFkbWl0aWQiOjEwMTk3MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Psychology, University of Pennsylvania",
@@ -339,7 +442,15 @@
       "degree": "PhD",
       "raw_program": "Psychology PhD",
       "raw_text": "University of Pennsylvania Psychology PhD Apr 21, 2026 Rejected on Mar 06 Total comments\nRejected on Mar 06 Fall 2026 American GPA 3.70",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yMiAwMjoyNTowMCIsImFkbWl0aWQiOjEwMTk3MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yMiAwMjoyNTowMCIsImFkbWl0aWQiOjEwMTk3MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Economics, York University",
@@ -369,7 +480,15 @@
       "degree": "PhD",
       "raw_program": "Economics PhD",
       "raw_text": "York University Economics PhD Apr 21, 2026 Rejected on Apr 21 Total comments\nRejected on Apr 21 Fall 2026 International GPA 3.58\nPortal changed, no email.",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yMiAwMjoyNTowMCIsImFkbWl0aWQiOjEwMTk3MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yMiAwMjoyNTowMCIsImFkbWl0aWQiOjEwMTk3MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Physics, Stevens Institute of Technology",
@@ -399,7 +518,15 @@
       "degree": "PhD",
       "raw_program": "Physics PhD",
       "raw_text": "Stevens Institute of Technology Physics PhD Apr 21, 2026 Wait listed on Apr 21 Total comments\nWait listed on Apr 21 Fall 2026 American GPA 3.70\nEmail from program director. Said that I was in if I could get funding from professors",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yMiAwMjoyNTowMCIsImFkbWl0aWQiOjEwMTk3MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yMiAwMjoyNTowMCIsImFkbWl0aWQiOjEwMTk3MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Sociology, Boston University",
@@ -429,7 +556,15 @@
       "degree": "Masters",
       "raw_program": "Sociology Masters",
       "raw_text": "Boston University Sociology Masters Apr 21, 2026 Accepted on Apr 21 Total comments\nAccepted on Apr 21 Fall 2026 American GPA 3.92",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yMiAwMjoyNTowMCIsImFkbWl0aWQiOjEwMTk3MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yMiAwMjoyNTowMCIsImFkbWl0aWQiOjEwMTk3MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Developmental Psychology, Howard University",
@@ -459,7 +594,15 @@
       "degree": "PhD",
       "raw_program": "Developmental Psychology PhD",
       "raw_text": "Howard University Developmental Psychology PhD Apr 21, 2026 Rejected on Apr 21 Total comments\nRejected on Apr 21 Fall 2026 American",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yMiAwMjoyNTowMCIsImFkbWl0aWQiOjEwMTk3MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yMiAwMjoyNTowMCIsImFkbWl0aWQiOjEwMTk3MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Cancer Biology, University of Texas MD Anderson Cancer Center",
@@ -489,7 +632,15 @@
       "degree": "Masters",
       "raw_program": "Cancer Biology Masters",
       "raw_text": "University of Texas MD Anderson Cancer Center Cancer Biology Masters Apr 21, 2026 Rejected on Apr 21 Total comments\nRejected on Apr 21 Fall 2026 American",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yMiAwMjoyNTowMCIsImFkbWl0aWQiOjEwMTk3MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yMiAwMjoyNTowMCIsImFkbWl0aWQiOjEwMTk3MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Audiology, University of Florida",
@@ -519,7 +670,15 @@
       "degree": "Other",
       "raw_program": "Audiology Other",
       "raw_text": "University of Florida Audiology Other Apr 21, 2026 Rejected on Apr 20 Total comments\nRejected on Apr 20 Fall 2026 American\nAuD/ Was waitlisted on 3/6 and then rejected on 4/20",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yMiAwMjoyNTowMCIsImFkbWl0aWQiOjEwMTk3MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yMiAwMjoyNTowMCIsImFkbWl0aWQiOjEwMTk3MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Electrical And Computer Engineering, University of Florida",
@@ -549,7 +708,15 @@
       "degree": "PhD",
       "raw_program": "Electrical And Computer Engineering PhD",
       "raw_text": "University of Florida Electrical And Computer Engineering PhD Apr 21, 2026 Rejected on Mar 31 Total comments\nRejected on Mar 31 Fall 2026 International GPA 3.40\nGiven MSc with an Achievement Fellowship",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yMiAwMjoyNTowMCIsImFkbWl0aWQiOjEwMTk3MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yMiAwMjoyNTowMCIsImFkbWl0aWQiOjEwMTk3MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Computer Science, Columbia University",
@@ -579,7 +746,38 @@
       "degree": "Masters",
       "raw_program": "Computer Science Masters",
       "raw_text": "Columbia University Computer Science Masters Apr 21, 2026 Accepted on Apr 21 Total comments\nAccepted on Apr 21 Fall 2026 International GRE 165 GRE V 164 GRE AW 4.00 GPA 3.70\nGPA 5.49/6 - Top 10 European university, Duolingo English Test - 140/160, GRE - 329/340. 3-month internship, 1 semester research project, Internship and research in the field I want to specialize in, No publications",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yMiAwMjoyNTowMCIsImFkbWl0aWQiOjEwMTk3MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yMiAwMjoyNTowMCIsImFkbWl0aWQiOjEwMTk3MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [
+        {
+          "field": "gpa",
+          "label": "GPA",
+          "value": 5.49,
+          "scale": 6.0,
+          "excerpt": "GPA 5.49/6",
+          "start": 0,
+          "end": 10,
+          "review_reason": "existing_field_preserved",
+          "used_for_field": false
+        },
+        {
+          "field": "gre",
+          "label": "GRE",
+          "value": 329.0,
+          "scale": 340.0,
+          "excerpt": "GRE - 329/340",
+          "start": 74,
+          "end": 87,
+          "review_reason": "existing_field_preserved",
+          "used_for_field": false
+        }
+      ],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     },
     {
       "program": "Business Administration, University of Michigan",
@@ -609,8 +807,16 @@
       "degree": "PhD",
       "raw_program": "Business Administration PhD",
       "raw_text": "University of Michigan Business Administration PhD Apr 21, 2026 Rejected on Apr 21 Total comments\nRejected on Apr 21 Fall 2026 International GPA 3.89\n",
-      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yMiAwMjoyNTowMCIsImFkbWl0aWQiOjEwMTk3MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yMiAwMjoyNTowMCIsImFkbWl0aWQiOjEwMTk3MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "comment_score_mentions": [],
+      "score_context": {
+        "gpa": null,
+        "gre": null,
+        "gre_v": null,
+        "gre_aw": null,
+        "gre_quantitative": null
+      }
     }
   ],
-  "parser_schema_version": 2
+  "parser_schema_version": 3
 }
