@@ -280,7 +280,9 @@ class GradCafeScraper:
         be cleared through this method.
         """
         reason = self.state.get("stop_reason")
-        if not reason or not reason.startswith("Unrecognized applicant row layout"):
+        if not reason or not reason.startswith(
+            "Unrecognized applicant row layout"
+        ):
             raise ValueError("Current stop is not a parser-layout review stop")
         history = self.state.setdefault("stop_history", [])
         history.append(
