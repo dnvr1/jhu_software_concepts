@@ -15,3 +15,14 @@ One controlled resume is authorized from the saved checkpoint with a slower
 10-second delay. This is not a challenge bypass: verification was manual, the
 page is public and anonymous, and the prior rejection remains documented. A
 new rejection, challenge, login requirement, or access change is a stop condition.
+
+At 10,220 records, the local Chrome DevTools WebSocket ended with Windows error
+10054. This was a browser-control transport failure: there was no HTTP denial,
+challenge, rate-limit response, or robots-policy change. The saved checkpoint
+and all 10,220 unique records remained intact. At the user's explicit direction,
+the existing anonymous Chrome profile was reviewed again on September 9, 2026:
+the public robots.txt policy was readable and the exact saved next-page cursor
+loaded as a GradCafe admissions-results page. A narrowly scoped recovery method
+recorded that evidence in checkpoint history and resumed one collector at the
+unchanged 10-second delay. It cannot clear access, policy, challenge, HTTP, rate
+limit, or unrelated transport stops.

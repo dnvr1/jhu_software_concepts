@@ -162,6 +162,46 @@ def test_only_reviewed_parser_stop_can_be_resolved(scraper):
     assert scraper.state["stop_history"][-1]["resolution"].endswith("null")
 
 
+def test_reviewed_browser_transport_stop_can_be_resolved(scraper):
+    scraper.record_stop(
+        "[WinError 10054] An existing connection was forcibly closed "
+        "by the remote host"
+    )
+    scraper.resolve_browser_transport_stop(
+        "Verified public robots policy and checkpoint page in Chrome"
+    )
+    assert scraper.state["stop_reason"] is None
+    assert scraper.state["stop_history"][-1]["type"] == (
+        "reviewed_browser_transport_recovery"
+    )
+
+
+@pytest.mark.parametrize(
+    "reason",
+    [
+        "HTTP 403",
+        "Cloudflare challenge detected",
+        "Rate limit response",
+        "[WinError 10061] No connection could be made",
+    ],
+)
+def test_transport_recovery_cannot_clear_other_stops(scraper, reason):
+    scraper.record_stop(reason)
+    with pytest.raises(ValueError):
+        scraper.resolve_browser_transport_stop("reviewed")
+    assert scraper.state["stop_reason"] == reason
+
+
+def test_transport_recovery_requires_evidence(scraper):
+    scraper.record_stop(
+        "[WinError 10054] An existing connection was forcibly closed "
+        "by the remote host"
+    )
+    with pytest.raises(ValueError):
+        scraper.resolve_browser_transport_stop("  ")
+    assert scraper.state["stop_reason"] is not None
+
+
 def test_first_actual_capture_matches_inspected_source(scraper):
     capture = (
         Path(__file__).resolve().parents[1]

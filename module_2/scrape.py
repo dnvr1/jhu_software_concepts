@@ -295,6 +295,45 @@ class GradCafeScraper:
         self.state["stop_reason"] = None
         self._checkpoint()
 
+    def resolve_browser_transport_stop(self, resolution: str) -> None:
+        """Clear a reviewed local Chrome connection failure only.
+
+        This recovery is intentionally limited to Windows error 10054, which
+        indicates that the local Chrome DevTools socket closed.  HTTP errors,
+        access challenges, rate limits, policy stops, and other failures must
+        remain blocking.
+
+        Args:
+            resolution: Human-readable evidence supporting the reviewed retry.
+
+        Raises:
+            ValueError: The saved stop is not the recognized transport error,
+                or no review evidence was supplied.
+        """
+        reason = self.state.get("stop_reason")
+        is_known_transport_stop = bool(
+            reason
+            and "[WinError 10054]" in reason
+            and "connection was forcibly closed" in reason.lower()
+        )
+        if not is_known_transport_stop:
+            raise ValueError(
+                "Current stop is not the reviewed Chrome transport failure"
+            )
+        if not resolution.strip():
+            raise ValueError("Transport recovery requires review evidence")
+        history = self.state.setdefault("stop_history", [])
+        history.append(
+            {
+                "time": self.state.get("updated_at"),
+                "reason": reason,
+                "resolution": resolution,
+                "type": "reviewed_browser_transport_recovery",
+            }
+        )
+        self.state["stop_reason"] = None
+        self._checkpoint()
+
     def _allowed(self, url: str) -> None:
         validate_public_url(url)
         if urlparse(url).path != "/robots.txt" and (
