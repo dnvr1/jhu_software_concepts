@@ -11,6 +11,23 @@ from urllib.parse import urljoin
 from bs4 import BeautifulSoup
 
 
+def _narrative_value(record, key, comment):
+    """Check the stored excerpt against source text and read its number."""
+    evidence = [
+        m
+        for m in record.get("comment_score_mentions", [])
+        if m["field"] == key and m["used_for_field"]
+    ]
+    if len(evidence) != 1:
+        return None
+    mention = evidence[0]
+    excerpt = (comment or "")[mention["start"] : mention["end"]]
+    numbers = re.findall(r"\d+(?:\.\d+)?", excerpt)
+    if excerpt == mention["excerpt"] and numbers:
+        return float(numbers[0])
+    return None
+
+
 # Keep independent source expectations together for review against the table.
 def audit(data_path, raw_dir):  # pylint: disable=too-many-locals
     """Read saved evidence without invoking the production parsing code."""
@@ -127,6 +144,12 @@ def audit(data_path, raw_dir):  # pylint: disable=too-many-locals
                     if expected.get(key) is None:
                         expected[key] = float(value)
             for key, value in expected.items():
+                if (
+                    value is None
+                    and actual.get("score_provenance", {}).get(key)
+                    == "comment_labeled_narrative"
+                ):
+                    value = _narrative_value(actual, key, comment)
                 comparisons += 1
                 if actual.get(key) != value:
                     issues.append(

@@ -132,7 +132,8 @@ def test_program_title_cannot_supply_citizenship_or_scores(scraper):
     row = scraper.parse_html(html, result_url(1))[0]
     assert row["citizenship"] == "Other"
     assert row["gre"] is None
-    assert row["gpa"] is None
+    assert row["gpa"] == 4.0
+    assert row["score_provenance"]["gpa"] == "comment_labeled_narrative"
 
 
 def test_first_actual_capture_matches_inspected_source(scraper):

@@ -17,12 +17,13 @@ from urllib.robotparser import RobotFileParser
 
 from bs4 import BeautifulSoup
 from clean import clean_data, text_value
+from comment_scores import enrich_scores
 import storage
 from storage import save_json as _save_json
 
 BASE_URL = "https://www.thegradcafe.com/"
 USER_AGENT = "JHU-Module2-EducationalScraper/1.0"
-PARSER_SCHEMA_VERSION = 2
+PARSER_SCHEMA_VERSION = 3
 SCORE_FIELDS = {"gre", "gre_v", "gre_aw", "gre_quantitative", "gpa"}
 
 
@@ -30,8 +31,12 @@ def _validate_checkpoint_schema(records: list[dict], source: Path) -> None:
     """Reject stale/mixed score schemas before any recovery writes."""
     for record in records:
         provenance = record.get("score_provenance")
+        narrative_schema_valid = isinstance(
+            record.get("comment_score_mentions"), list
+        ) and isinstance(record.get("score_context"), dict)
         if (
             "gre_quantitative" not in record
+            or not narrative_schema_valid
             or not isinstance(provenance, dict)
             or set(provenance) != SCORE_FIELDS
             or any(
@@ -40,6 +45,7 @@ def _validate_checkpoint_schema(records: list[dict], source: Path) -> None:
                     None,
                     "structured_badge",
                     "comment_explicit_declaration",
+                    "comment_labeled_narrative",
                 }
                 for value in provenance.values()
             )
@@ -485,7 +491,7 @@ class GradCafeScraper:
             if item[key] is None:
                 item[key] = value
                 item["score_provenance"][key] = "comment_explicit_declaration"
-        return item
+        return enrich_scores(item)
 
     def parse_html(self, html: str, page_url: str) -> list[dict]:
         """Extract applicants from a visible public results table.
