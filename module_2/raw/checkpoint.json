@@ -1,0 +1,217 @@
+{
+  "completed_pages": {
+    "1": {
+      "sha256": "45d82ff9b5deff526b9be1c6ea807456fa72dad7788693955b00183583494c0c",
+      "source_url": "https://www.thegradcafe.com/survey",
+      "captured_at": "2026-09-09T01:00:06.703860+00:00",
+      "method": "saved public browser HTML",
+      "parsed_count": 20,
+      "new_count": 20,
+      "archive": "page-000001.html",
+      "next_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0yNyAxNzo1OTozMCIsImFkbWl0aWQiOjEwMjA0NTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+    },
+    "2": {
+      "sha256": "166a932f4a1c32a1123e18d2125bbd17489c2753c0e28b374ec2472fe3e7fdb6",
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0yNyAxNzo1OTozMCIsImFkbWl0aWQiOjEwMjA0NTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "captured_at": "2026-09-09T01:00:06.737590+00:00",
+      "method": "saved public browser HTML",
+      "parsed_count": 20,
+      "new_count": 20,
+      "archive": "page-000002.html",
+      "next_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0wOCAwNDowODozNiIsImFkbWl0aWQiOjEwMjA0MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+    },
+    "3": {
+      "sha256": "011210a241c8e47bd171638075c3e2f62faa3adf7a890c4f3edd4e531e6dd50b",
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0wOCAwNDowODozNiIsImFkbWl0aWQiOjEwMjA0MzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "captured_at": "2026-09-09T01:00:06.769128+00:00",
+      "method": "saved public browser HTML",
+      "parsed_count": 20,
+      "new_count": 20,
+      "archive": "page-000003.html",
+      "next_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNy0yMyAxOToxOTo0MiIsImFkbWl0aWQiOjEwMjA0MTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+    },
+    "4": {
+      "sha256": "1ade1fa08d5df48f2d4459caa36fae9649d849055837e81a7f0b7ec3bcf63922",
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNy0wOCAwNzoxODoyOCIsImFkbWl0aWQiOjEwMjAzOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "captured_at": "2026-09-09T01:00:06.802293+00:00",
+      "method": "saved public browser HTML",
+      "parsed_count": 20,
+      "new_count": 20,
+      "archive": "page-000004.html",
+      "next_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0yNyAyMDoxNzoyMyIsImFkbWl0aWQiOjEwMjAzNzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+    },
+    "5": {
+      "sha256": "a73a1c2daf9b947395e42060eaf5d301164a5c0383fc6d1bfea964aab135e2ce",
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0yNyAyMDoxNzoyMyIsImFkbWl0aWQiOjEwMjAzNzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "captured_at": "2026-09-09T01:00:06.836214+00:00",
+      "method": "saved public browser HTML",
+      "parsed_count": 20,
+      "new_count": 20,
+      "archive": "page-000005.html",
+      "next_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xOSAxNjozOTo0OCIsImFkbWl0aWQiOjEwMjAzNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+    },
+    "6": {
+      "sha256": "2269f5d0d957941b000e7d3150272b8a408eb61192446b08a7b298754825a78f",
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xOSAxNjozOTo0OCIsImFkbWl0aWQiOjEwMjAzNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "captured_at": "2026-09-09T01:00:06.876567+00:00",
+      "method": "saved public browser HTML",
+      "parsed_count": 20,
+      "new_count": 20,
+      "archive": "page-000006.html",
+      "next_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xMSAxMDoxNTo1MCIsImFkbWl0aWQiOjEwMjAzMzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+    },
+    "7": {
+      "sha256": "c0b54cc42dae18e8b04aa68b33c73d72b52195ab9e0aefede9f1857b243b8cea",
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0xMSAxMDoxNTo1MCIsImFkbWl0aWQiOjEwMjAzMzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "captured_at": "2026-09-09T01:00:06.917642+00:00",
+      "method": "saved public browser HTML",
+      "parsed_count": 20,
+      "new_count": 20,
+      "archive": "page-000007.html",
+      "next_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wNiAxOTowMjozNCIsImFkbWl0aWQiOjEwMjAzMTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+    },
+    "8": {
+      "sha256": "916f4a9cfe0981a4df23175c095f6a01592ade13e4ec051c67e4e97fa8113ab7",
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wNiAxOTowMjozNCIsImFkbWl0aWQiOjEwMjAzMTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "captured_at": "2026-09-09T01:00:06.954623+00:00",
+      "method": "saved public browser HTML",
+      "parsed_count": 20,
+      "new_count": 20,
+      "archive": "page-000008.html",
+      "next_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wMyAwOToyNTo1NiIsImFkbWl0aWQiOjEwMjAyOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+    },
+    "9": {
+      "sha256": "721db363b831d19a7952fca125dc51960fe4f323439ced622cbaf2bb52230aac",
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNi0wMyAwOToyNTo1NiIsImFkbWl0aWQiOjEwMjAyOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "captured_at": "2026-09-09T01:00:06.990368+00:00",
+      "method": "saved public browser HTML",
+      "parsed_count": 20,
+      "new_count": 20,
+      "archive": "page-000009.html",
+      "next_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0yOCAxNzo0NjoyOSIsImFkbWl0aWQiOjEwMjAyNzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+    },
+    "10": {
+      "sha256": "05eef3f7d46d164b9dfa3b357193e292ec305ca14090a763e1c76d08fb162688",
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0yOCAxNzo0NjoyOSIsImFkbWl0aWQiOjEwMjAyNzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "captured_at": "2026-09-09T01:00:07.030684+00:00",
+      "method": "saved public browser HTML",
+      "parsed_count": 20,
+      "new_count": 20,
+      "archive": "page-000010.html",
+      "next_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0yNCAyMDo1NDo1MCIsImFkbWl0aWQiOjEwMjAyNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+    },
+    "11": {
+      "sha256": "07c113832bf208294b328a70ca10674a091ef7158d1d9c28b267540ce05df1e9",
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0yNCAyMDo1NDo1MCIsImFkbWl0aWQiOjEwMjAyNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "captured_at": "2026-09-09T01:00:07.065547+00:00",
+      "method": "saved public browser HTML",
+      "parsed_count": 20,
+      "new_count": 20,
+      "archive": "page-000011.html",
+      "next_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0yMCAyMjoxNDo1MCIsImFkbWl0aWQiOjEwMjAyMzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+    },
+    "12": {
+      "sha256": "0e606a9271b3a03ba3cf33e0ef5b18cfde0a75015b294ed1e8fe77c749426e40",
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0yMCAyMjoxNDo1MCIsImFkbWl0aWQiOjEwMjAyMzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "captured_at": "2026-09-09T01:00:07.101958+00:00",
+      "method": "saved public browser HTML",
+      "parsed_count": 20,
+      "new_count": 20,
+      "archive": "page-000012.html",
+      "next_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0xNiAwMDo0MDo1MyIsImFkbWl0aWQiOjEwMjAyMTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+    },
+    "13": {
+      "sha256": "81c95eeac50f66586f2fe7fc1e4766931bcb5c9991213b72cd381eb3ee072ec1",
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0xNiAwMDo0MDo1MyIsImFkbWl0aWQiOjEwMjAyMTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "captured_at": "2026-09-09T01:00:07.138402+00:00",
+      "method": "saved public browser HTML",
+      "parsed_count": 20,
+      "new_count": 20,
+      "archive": "page-000013.html",
+      "next_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0xMyAxMjoxMToxNiIsImFkbWl0aWQiOjEwMjAxOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+    },
+    "14": {
+      "sha256": "ed5bda21bedb1ea9c2aee23d5a1a8706a4cdc6faf53f9a6101d1cf31a54883a7",
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0xMyAxMjoxMToxNiIsImFkbWl0aWQiOjEwMjAxOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "captured_at": "2026-09-09T01:00:07.186526+00:00",
+      "method": "saved public browser HTML",
+      "parsed_count": 20,
+      "new_count": 20,
+      "archive": "page-000014.html",
+      "next_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0xMSAyMjo0NTo1NyIsImFkbWl0aWQiOjEwMjAxNzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+    },
+    "15": {
+      "sha256": "098724fa5fb80aa628cecb934aec9ae93e6071ead8b0f58e830f609f20c67937",
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0xMSAyMjo0NTo1NyIsImFkbWl0aWQiOjEwMjAxNzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "captured_at": "2026-09-09T01:00:07.232746+00:00",
+      "method": "saved public browser HTML",
+      "parsed_count": 20,
+      "new_count": 20,
+      "archive": "page-000015.html",
+      "next_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wNyAyMzo1MTo1OCIsImFkbWl0aWQiOjEwMjAxNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+    },
+    "16": {
+      "sha256": "980f9b9f7b28e5369836e5cbcb649511b2c823c5cb25b79c1707e91878e62c8d",
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wNyAyMzo1MTo1OCIsImFkbWl0aWQiOjEwMjAxNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "captured_at": "2026-09-09T01:00:07.270359+00:00",
+      "method": "saved public browser HTML",
+      "parsed_count": 20,
+      "new_count": 20,
+      "archive": "page-000016.html",
+      "next_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wNiAyMTowNjowMyIsImFkbWl0aWQiOjEwMjAxMzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+    },
+    "17": {
+      "sha256": "f49c9f8c6e6bc0346e94440949289b23f6e00d65f939617c958f563e94a65f39",
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wNiAyMTowNjowMyIsImFkbWl0aWQiOjEwMjAxMzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "captured_at": "2026-09-09T01:00:07.323948+00:00",
+      "method": "saved public browser HTML",
+      "parsed_count": 20,
+      "new_count": 20,
+      "archive": "page-000017.html",
+      "next_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wNSAwMTozMToxMCIsImFkbWl0aWQiOjEwMjAxMTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+    },
+    "18": {
+      "sha256": "e869c78c947e59f8d004bccd7b116f082b50a16918c337d5055f55b449cc23fd",
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wNSAwMTozMToxMCIsImFkbWl0aWQiOjEwMjAxMTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "captured_at": "2026-09-09T01:00:07.362668+00:00",
+      "method": "saved public browser HTML",
+      "parsed_count": 20,
+      "new_count": 20,
+      "archive": "page-000018.html",
+      "next_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wNCAxNDo1NjowNSIsImFkbWl0aWQiOjEwMjAwOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+    },
+    "19": {
+      "sha256": "2fc9af4eedd102974ec758d7dcea90e11ed57aa0e4db072988c6e97bd51cba1b",
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wNCAxNDo1NjowNSIsImFkbWl0aWQiOjEwMjAwOTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "captured_at": "2026-09-09T01:00:07.406410+00:00",
+      "method": "saved public browser HTML",
+      "parsed_count": 20,
+      "new_count": 20,
+      "archive": "page-000019.html",
+      "next_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wMiAxODo1Njo1NSIsImFkbWl0aWQiOjEwMjAwNzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+    },
+    "20": {
+      "sha256": "35594bd2343eb9ae2d415e522dcb93b3bdf0ccb8f03df71b2dc936dac661030f",
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wMiAxODo1Njo1NSIsImFkbWl0aWQiOjEwMjAwNzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "captured_at": "2026-09-09T01:00:07.461006+00:00",
+      "method": "saved public browser HTML",
+      "parsed_count": 20,
+      "new_count": 20,
+      "archive": "page-000020.html",
+      "next_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wMSAxODo0MzoyNyIsImFkbWl0aWQiOjEwMjAwNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+    },
+    "21": {
+      "sha256": "e61b5b6d3ad961848c921618397718a7b656f9d501d04c3a7ea39c2fb0c70b87",
+      "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNS0wMSAxODo0MzoyNyIsImFkbWl0aWQiOjEwMjAwNTksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
+      "captured_at": "2026-09-09T01:00:07.502600+00:00",
+      "method": "saved public browser HTML",
+      "parsed_count": 20,
+      "new_count": 20,
+      "archive": "page-000021.html",
+      "next_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0zMCAyMDozODozNCIsImFkbWl0aWQiOjEwMjAwMzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+    }
+  },
+  "stop_reason": null,
+  "updated_at": "2026-09-09T01:00:07.516330+00:00",
+  "next_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0zMCAyMDozODozNCIsImFkbWl0aWQiOjEwMjAwMzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0"
+}
