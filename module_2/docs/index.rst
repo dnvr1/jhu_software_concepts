@@ -41,3 +41,21 @@ Shared JSON storage
 
 .. automodule:: storage
    :members:
+
+Narrative score evidence
+------------------------
+
+.. automodule:: comment_scores
+   :members:
+
+Independent source audit
+------------------------
+
+.. automodule:: audit_data
+   :members:
+
+Parallel local cleaning
+-----------------------
+
+.. automodule:: parallel_clean
+   :members:

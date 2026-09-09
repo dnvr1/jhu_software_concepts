@@ -12,8 +12,9 @@ PATTERN = re.compile(
 AMBIGUOUS = re.compile(
     r"\b(friend|someone|their|his|her|previous|previously|earlier|prior|"
     r"undergrad|undergraduate|bachelor|master|masters|BS|MS|BA|MA|"
-    r"minimum|required|requirement|target|aim|expected|hope|retake|"
-    r"not|no|without|less|above|below)\b|\b[BM]\.\s*[AS]\.",
+    r"minimum|requires?|required|requirements?|target|aim|expected|hope|retake|"
+    r"not|no|never|didnot|without|less|above|below)\b|\b[BM]\.\s*[AS]\."
+    r"|\b(?:didn|haven|hadn|wasn|isn)['’]t\b",
     re.I,
 )
 
