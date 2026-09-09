@@ -1,5 +1,11 @@
 # Module 2: Web Scraping
 
+Latest checkpoint: **1,000 unique source entries**, collection paused for
+reevaluation. See CHECKPOINT_1000.md: structured-field checks passed, but a
+comment-only score extraction case needs review before scaling. The LLM file
+still contains the earlier 420 records and must be refreshed before submission.
+The implementation history below includes earlier 420-record snapshots.
+
 This Python project collects public GradCafe admission listings, preserves source
 HTML and applicant text, and prepares the instructor's local LLM standardization
 step. The submitted data is a **partial collection**, not the required 30,000

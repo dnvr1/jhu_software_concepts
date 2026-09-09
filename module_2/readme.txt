@@ -5,6 +5,10 @@ Due date: Sunday, September 13, 2026; submit by 11:59 p.m. Eastern.
 User confirmed Sunday at midnight; 11:59 p.m. matches the assignment PDF.
 Repository: git@github.com:dnvr1/jhu_software_concepts.git
 
+Latest checkpoint: 1,000 unique source records; stopped for review. The LLM
+output remains at 420. See CHECKPOINT_1000.md for audit counts and a narrative
+score extraction gap to resolve before scaling. Historical counts follow.
+
 Approach:
 scrape.py uses urllib for URL construction, validation, robots.txt checking, and
 permitted requests. BeautifulSoup groups admission table rows and extracts the
