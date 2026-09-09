@@ -272,8 +272,12 @@ package is included, reach the required record count, run local standardization,
 review its outliers, and verify both JSON files. Confirm the repository is
 private and shared with the grader, make meaningful commits, push before the
 deadline, and submit the matching zipped `module_2` folder plus SSH URL through
-Canvas. Publishing and submission have not been performed by this implementation.
+Canvas. Two development checkpoints were pushed to private GitHub main:
+`4d4bc30` (code, tests, safeguards) and `fca0659` (420 refreshed source records,
+raw evidence, and local LLM output). Canvas submission has not been performed.
 
 Repository metadata was checked through GitHub: `dnvr1/jhu_software_concepts`
-is private. Module 2 publication and grader access remain pending; a configured
-remote alone does not mean these local files have been pushed.
+is private. Module 2 files are pushed; grader access remains unverified.
+The current suite passes 51 tests. Public-only live Python collection and the
+30,000-entry requirement are still unresolved; these commits are not a claim
+of assignment completion.

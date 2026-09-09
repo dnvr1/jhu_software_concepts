@@ -49,7 +49,8 @@ it was not a successful standalone Python collection run. That browser required
 sign-in, so no larger collection is authorized until unauthenticated public
 access is established. No authenticated data beyond that separate sample is to
 be collected. GitHub metadata confirms the repository is private; Module 2
-publication and grader access remain pending.
+files were pushed in code and data checkpoints (4d4bc30, fca0659). Grader access
+and Canvas submission remain pending. The current suite passes 51 tests.
 
 Model changes and four observed canonical additions are documented in
 llm_hosting/LOCAL_CHANGES.md. requirements-lock.txt reconstructs the verified

@@ -6,6 +6,9 @@ This is a development checkpoint, not a completed submission.
 
 - Tested interpreter: Python 3.12.6, Windows x64.
 - Root requirements.txt includes the complete pinned environment.
+- 51 automated tests pass; dependency check reports no broken requirements.
+- Refreshed 420-row source and local LLM outputs preserve every source field.
+- Incremental code and data commits were pushed: 4d4bc30 and fca0659.
 - GitHub repository dnvr1/jhu_software_concepts is private.
 - Python parser uses urllib, BeautifulSoup, regex, and string methods.
 - 420 unique source records are preserved with raw HTML and per-page journals.
