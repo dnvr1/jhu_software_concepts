@@ -11,6 +11,11 @@ from urllib.parse import urljoin
 from bs4 import BeautifulSoup
 
 
+def _source_text(node):
+    """Read semantic source text without HTML-layout whitespace artifacts."""
+    return re.sub(r"\s+", " ", node.get_text(" ", strip=True)).strip()
+
+
 def _narrative_value(record, key, comment):
     """Check the stored excerpt against source text and read its number."""
     evidence = [
@@ -65,11 +70,11 @@ def audit(data_path, raw_dir):  # pylint: disable=too-many-locals
                     {"url": url, "error": "Audit layout unsupported"}
                 )
                 continue
-            school = cells[0].get_text(" ", strip=True)
+            school = _source_text(cells[0])
             name, degree = [
-                span.get_text(" ", strip=True) or None for span in spans
+                _source_text(span) or None for span in spans
             ]
-            decision = cells[3].get_text(" ", strip=True)
+            decision = _source_text(cells[3])
             status, separator, date = decision.partition(" on ")
             date = date if separator else None
             following = []
@@ -80,10 +85,10 @@ def audit(data_path, raw_dir):  # pylint: disable=too-many-locals
             comments, badges = [], []
             for detail in following:
                 comments.extend(
-                    p.get_text(" ", strip=True) for p in detail.find_all("p")
+                    _source_text(p) for p in detail.find_all("p")
                 )
                 badges.extend(
-                    div.get_text(" ", strip=True)
+                    _source_text(div)
                     for div in detail.find_all("div")
                     if not div.find(["div", "p", "script", "iframe"])
                 )
@@ -93,7 +98,7 @@ def audit(data_path, raw_dir):  # pylint: disable=too-many-locals
                 "program_name": name,
                 "program": name + ", " + school if name else None,
                 "degree": degree,
-                "date_added": cells[2].get_text(" ", strip=True),
+                "date_added": _source_text(cells[2]),
                 "status": {"Wait listed": "Waitlisted"}.get(status, status),
                 "decision_date": date,
                 "acceptance_date": date if status == "Accepted" else None,

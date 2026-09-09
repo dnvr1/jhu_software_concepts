@@ -7,8 +7,8 @@ from audit_data import audit
 
 
 def test_audit_detects_changed_score_and_unbacked_entry(tmp_path):
-    html = """<table><tbody><tr><td>Example University</td>
-    <td><span>Example Program</span><span>Masters</span></td>
+    html = """<table><tbody><tr><td>Example  University</td>
+    <td><span>Example  Program</span><span>Masters</span></td>
     <td>Sep 08, 2026</td><td>Accepted on Sep 08</td>
     <td><a href='/result/1'>View</a></td></tr>
     <tr><td colspan='5'><div>Fall 2026</div><div>American</div>
@@ -40,7 +40,7 @@ def test_audit_detects_changed_score_and_unbacked_entry(tmp_path):
         "term": "Fall 2026",
         "citizenship": "American",
         "comments": None,
-        "raw_program": "Example Program Masters",
+        "raw_program": "Example  Program Masters",
         "gre": None,
         "gre_v": None,
         "gre_aw": None,
