@@ -14,8 +14,9 @@ is paused until unauthenticated public access and the Python workflow are verifi
 Student name: **Denver Clarke**. JHED ID: **dclar106**.
 Course: EN.605.256, Modern Software Concepts in Python.
 Assignment: Module 2 - Assignment: Web Scraping.
-Due date: the assignment PDF says Sunday at 11:59 p.m.; verify the dated Canvas
-deadline before submission. Repository SSH URL:
+Due date: Sunday, September 13, 2026. The user confirmed Sunday at midnight;
+the submission target is 11:59 p.m. Eastern that Sunday, consistent with the
+assignment PDF. Repository SSH URL:
 `git@github.com:dnvr1/jhu_software_concepts.git`.
 
 ## Setup
@@ -267,7 +268,7 @@ different GPA do not overwrite the labeled score. Public submissions may contain
 spam, false claims, unusual scores, or jokes. Such source entries are retained
 without asserting their truth or rewriting their contents.
 
-Before submitting, confirm the dated deadline and the supplied
+Before submitting, confirm the supplied
 package is included, reach the required record count, run local standardization,
 review its outliers, and verify both JSON files. Confirm the repository is
 private and shared with the grader, make meaningful commits, push before the

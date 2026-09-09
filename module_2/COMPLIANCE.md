@@ -38,7 +38,9 @@ This is a development checkpoint, not a completed submission.
 ## Gates before submission
 
 - Reach at least 30,000 genuine entries, then refresh and audit the LLM output.
-- Confirm the exact Canvas due date and grader repository access.
+- Submit by Sunday, September 13, 2026 at 11:59 p.m. Eastern (user-confirmed
+  Sunday midnight, using the PDF's 11:59 p.m. submission target).
+- Confirm grader repository access.
 - Push incremental verified changes; submit the matching archive and SSH URL
   only when the assignment is complete and submission is authorized.
 

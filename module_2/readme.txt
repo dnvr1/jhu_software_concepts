@@ -1,7 +1,8 @@
 Name: Denver Clarke
 JHED ID: dclar106
 Module: 2 - Assignment: Web Scraping, EN.605.256.
-Due date: Sunday at 11:59 p.m. in the provided PDF; confirm dated Canvas deadline.
+Due date: Sunday, September 13, 2026; submit by 11:59 p.m. Eastern.
+User confirmed Sunday at midnight; 11:59 p.m. matches the assignment PDF.
 Repository: git@github.com:dnvr1/jhu_software_concepts.git
 
 Approach:
