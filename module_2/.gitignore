@@ -9,3 +9,4 @@ llm_hosting/models/
 llm_hosting/.cache/
 docs/_build/
 .browser_profile/
+.chrome_browser_profile/
