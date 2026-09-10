@@ -161,10 +161,14 @@ def validate_public_url(url: str) -> str:
 
 
 class _CheckedRedirect(HTTPRedirectHandler):
+    """Validate every redirect target before urllib follows it."""
+
     def __init__(self, allowed):
+        """Store the URL-policy callback used for redirect validation."""
         self.allowed = allowed
 
     def redirect_request(self, req, fp, code, msg, headers, newurl):
+        """Reject a redirect unless its destination passes URL policy."""
         self.allowed(newurl)
         return super().redirect_request(req, fp, code, msg, headers, newurl)
 
@@ -179,6 +183,7 @@ class GradCafeScraper:
         delay: float = 6.0,
         timeout: float = 30.0,
     ):
+        """Load durable progress and configure cautious request limits."""
         if delay < 2:
             raise ValueError(
                 "Use a delay of at least 2 seconds; the default is 6 seconds."
@@ -247,6 +252,7 @@ class GradCafeScraper:
             )
 
     def _checkpoint(self) -> None:
+        """Atomically persist the current collection state and timestamp."""
         self.state["updated_at"] = datetime.now(timezone.utc).isoformat()
         _save_json(self.state, self.state_path)
 
@@ -374,6 +380,7 @@ class GradCafeScraper:
         self._checkpoint()
 
     def _allowed(self, url: str) -> None:
+        """Require a valid public URL permitted by the loaded robots policy."""
         validate_public_url(url)
         if urlparse(url).path != "/robots.txt" and (
             self.robots is None or not self.robots.can_fetch(USER_AGENT, url)
@@ -383,6 +390,7 @@ class GradCafeScraper:
             )
 
     def _request(self, url: str) -> tuple[bytes, str]:
+        """Make one paced request and reject unsafe or blocked responses."""
         self.ensure_live_allowed()
         self._allowed(url)
         remaining = self.delay - (time.monotonic() - self.last_request)
@@ -467,6 +475,7 @@ class GradCafeScraper:
 
     @staticmethod
     def _parse_entry(main_row, details, page_url: str) -> dict:
+        """Parse one listing and its detail row without inventing values."""
         cells = main_row.find_all("td", recursive=False)
         link = main_row.find("a", href=re.compile(r"(?:^|/)result/\d+"))
         if link is None:

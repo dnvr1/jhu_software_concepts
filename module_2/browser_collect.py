@@ -34,6 +34,7 @@ class BrowserPage:
     """A local CDP page with command IDs and document-rejection checks."""
 
     def __init__(self, socket_url: str, target_id: str | None = None):
+        """Connect to one local Chrome DevTools target and enable events."""
         self.target_id = target_id
         self.socket = websocket.create_connection(
             socket_url, timeout=30, suppress_origin=True
@@ -209,6 +210,7 @@ def _require_anonymous_public_page(snapshot: dict) -> None:
 
 
 def _browser_executable(name: str) -> str:
+    """Locate the requested Chrome or Edge executable on Windows."""
     executable = "msedge.exe" if name == "edge" else "chrome.exe"
     found = shutil.which(executable)
     if found:
@@ -229,11 +231,13 @@ def _browser_executable(name: str) -> str:
 
 
 def _tabs(port: int) -> list[dict]:
+    """Return debuggable browser targets from the loopback CDP endpoint."""
     with urlopen(f"http://127.0.0.1:{port}/json/list", timeout=5) as response:
         return json.load(response)
 
 
 def _find_page(port: int) -> BrowserPage:
+    """Find the verified GradCafe robots tab in the dedicated browser."""
     for tab in _tabs(port):
         parsed = urlparse(tab.get("url", ""))
         if (

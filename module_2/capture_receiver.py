@@ -39,6 +39,7 @@ def make_handler(directory: Path, token: str) -> type[BaseHTTPRequestHandler]:
         """Accept bounded local form submissions, with a per-run CSRF token."""
 
         def _reply(self, status: int, body: str) -> None:
+            """Send a hardened, non-cacheable HTML response to localhost."""
             encoded = body.encode("utf-8")
             self.send_response(status)
             self.send_header("Content-Type", "text/html; charset=utf-8")

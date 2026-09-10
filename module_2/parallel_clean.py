@@ -49,6 +49,7 @@ def run_batches(records, directory, workers, threads, batch_size=50):
         jobs.append((batch, folder))
 
     def execute(job):
+        """Run and validate one isolated local-model batch subprocess."""
         batch, folder = job
         result = subprocess.run(
             [
