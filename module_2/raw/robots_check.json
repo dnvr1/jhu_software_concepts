@@ -1,9 +1,9 @@
 {
   "source_url": "https://www.thegradcafe.com/robots.txt",
-  "checked_at": "2026-09-09T09:39:32.492348+00:00",
-  "method": "user-supplied saved robots file: robots.txt",
+  "checked_at": "2026-09-09T20:33:02.575761+00:00",
+  "method": "user-supplied saved robots file: browser-robots.txt",
   "user_agent": "JHU-Module2-EducationalScraper/1.0",
   "allowed_results": true,
   "sha256": "8f02e2e94dd52e15adc50c0f45d758cfc9284931cdd0f388cd8c7b6f7f73d33c",
-  "delay_seconds": 6.0
+  "delay_seconds": 10.0
 }

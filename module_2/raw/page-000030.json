@@ -3,7 +3,7 @@
   "manifest": {
     "sha256": "399e112550383ed2948ac614258fcb81f62108bf131c9b9a1d60bc0185ecd261",
     "source_url": "https://www.thegradcafe.com/survey?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yNSAxOTo1MTozOCIsImFkbWl0aWQiOjEwMTk4NzksIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0",
-    "captured_at": "2026-09-09T09:39:33.849903+00:00",
+    "captured_at": "2026-09-09T11:36:16.226185+00:00",
     "method": "offline schema migration from saved HTML",
     "parsed_count": 20,
     "new_count": 20,
@@ -772,5 +772,5 @@
       }
     }
   ],
-  "parser_schema_version": 3
+  "parser_schema_version": 4
 }
