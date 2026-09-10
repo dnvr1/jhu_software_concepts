@@ -6,10 +6,11 @@ when a public source rejects access. It can import visible HTML captured after
 the user completes normal browser verification. The cleaning adapter invokes
 the actual instructor-supplied local model package and preserves source fields.
 
-The collection is incomplete until at least 30,000 genuine records have been
-saved and the supplied model has produced the additional standardized fields.
-See README.md and readme.txt in the project root for setup, evidence, commands,
-data definitions, limitations, and submission requirements.
+The completed collection contains 30,000 genuine records, and the supplied
+local model produced two additional standardized fields for all 30,000 records
+without changing source fields. See README.md, FINAL_VALIDATION.md, and
+readme.txt in the project root for setup, evidence, commands, data definitions,
+limitations, and submission requirements.
 
 Scraper API
 -----------

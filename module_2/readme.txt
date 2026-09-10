@@ -1,71 +1,43 @@
 Name: Denver Clarke
 JHED ID: dclar106
-Module: 2 - Assignment: Web Scraping, EN.605.256.
-Due date: Sunday, September 13, 2026; submit by 11:59 p.m. Eastern.
-User confirmed Sunday at midnight; 11:59 p.m. matches the assignment PDF.
+Module: 2 - Assignment: Web Scraping, EN.605.256
+Due: Sunday, September 13, 2026 at 11:59 p.m. Eastern
 Repository: git@github.com:dnvr1/jhu_software_concepts.git
 
-Latest checkpoint: 1,000 unique source records and 1,000 matching LLM outputs.
-Narrative scores now have excerpts, scales and conservative review flags;
-three formerly missing scalar values were filled without changing any existing
-score. Five mentions remain review-only. See SCORE_POLICY.md. 70 tests pass.
-Collection remains paused. Historical counts follow.
+Final result:
+The Python collector saved 30,000 unique public GradCafe records in
+applicant_data.json. Each row is backed by one of 1,500 saved HTML pages and a
+page journal. The instructor-supplied local TinyLlama package then produced
+llm_extend_applicant_data.json with the same 30,000 rows plus
+llm-generated-program and llm-generated-university. No paid API was used.
 
 Approach:
-scrape.py uses urllib for URL construction, validation, robots.txt checking, and
-permitted requests. BeautifulSoup groups admission table rows and extracts the
-public applicant fields. For the currently verified browser workflow,
-capture_receiver.py saves the displayed HTML and its original URL locally;
-scrape.py imports these saved pages. Cursor Next links are taken from the source.
-Requests are throttled and collection stops on rejection or verification.
-Per-page HTML and JSON journals preserve evidence and allow safe resume after
-interruption. Applicant URLs deduplicate records. applicant_data.json is written
-atomically, with consistent null values for unavailable data.
+browser_collect.py attaches to a normal manually verified Chrome session.
+Python checks robots.txt, follows source cursor links, waits between pages,
+captures the displayed DOM, and stops on challenges, authentication, rejection,
+or an unfamiliar layout. It never automates verification. scrape.py uses urllib,
+BeautifulSoup, regex, and string operations for URL handling and parsing.
+Storage is atomic, page journals support safe resume, and URL identity prevents
+duplicates. Missing values are JSON null; raw program/listing text and source
+URLs remain available for traceability.
 
-clean.py performs conservative text cleaning and adapts the actual instructor
-llm_hosting/app.py local model, preserving all source fields while adding
-llm-generated-program and llm-generated-university. Model batches are cached for
-resume, and their record identities are checked before accepting model output.
-No paid API, secret key, or fabricated source/model data is used.
+Cleaning:
+parallel_clean.py ran the supplied local model with two workers and six threads
+per worker against a frozen source snapshot. It completed 600 restartable
+batches and validated all 30,000 outputs in 8,896.5 seconds. Every source field
+and row order is unchanged. Both required generated fields are populated on all
+rows. Eight listings with no usable source program are conservatively labeled
+Unknown in the generated program field instead of being invented.
 
-Known unfinished requirements:
-The genuine collection contains 420 rows, below the 30,000 target. The actual
-instructor package is included and a TinyLlama CPU run standardized all 420
-records. Every original field was verified unchanged in the extended JSON.
-Manual verification is needed when the site challenges
-the browser. The parser supports the actual inspected table layout and stops on
-unknown layouts. Displayed dates without years remain without years, and source
-abbreviations can remain unexpanded by the conservative model guard. Source
-spam/false claims remain source data, without asserting their truth.
+Verification:
+An independent HTML audit made 510,001 source-field comparisons with zero
+mismatches, checked all 1,500 page hashes, and found no duplicates or unbacked
+URLs. The software suite passes 89 tests, pip reports no broken requirements,
+runtime Pylint is 10.00/10, and Sphinx builds with warnings treated as errors.
+See README.md, FINAL_VALIDATION.md, SCORE_POLICY.md, and COMPLIANCE.md for full
+commands, field definitions, hashes, safeguards, and limitations.
 
-The standalone browser_collect.py launches or attaches to a normal dedicated
-Chrome/Edge session. After the user manually verifies the site, Python checks
-robots.txt before navigating to results, follows cursor links, and saves/resumes
-data. Test with --target 40 in a separate output/raw directory and audit all
-fields before increasing the target. No challenge or restriction is bypassed.
-The browser starts on robots.txt, not the results page. Do not sign in. Login
-and authenticated-account markers stop capture; recorded stops prevent retries.
-Old or mixed record schemas are rejected before recovery writes.
-
-All 420 primary records were replayed from saved HTML after the GRE audit fix,
-and the local LLM was rerun. Every refreshed source field is preserved in its
-extended counterpart. The previous snapshot is backed up locally under tmp/.
-
-The audited 40-record sample used Codex browser capture and Python parsing;
-it was not a successful standalone Python collection run. A later normal logout
-check confirmed two admissions pages load while signed out (PUBLIC_ACCESS.md).
-The standalone live Python test remains outstanding. No authenticated data beyond that separate sample is to
-be collected. GitHub metadata confirms the repository is private; Module 2
-files were pushed in code and data checkpoints (4d4bc30, fca0659). Grader access
-and Canvas submission remain pending. The current suite passes 51 tests.
-
-Model changes and four observed canonical additions are documented in
-llm_hosting/LOCAL_CHANGES.md. requirements-lock.txt reconstructs the verified
-Python 3.12.6 Windows environment, including the official llama.cpp CPU wheel.
-Root requirements.txt includes that lock file, so one installation covers the
-scraper, local model runtime, tests, and documentation tools.
-
-README.md contains complete installation/run/resume commands, robots evidence
-and provenance, field definitions, validation commands, edge cases, and final
-submission steps. docs/ contains buildable Sphinx API documentation. Tests use
-synthetic examples only within temporary test directories.
+Remaining user-controlled submission steps:
+Confirm grader access to the private repository, push the final verified commit,
+zip the matching module_2 folder, and submit the archive plus SSH URL in Canvas.
+Canvas submission has not been performed by Codex.

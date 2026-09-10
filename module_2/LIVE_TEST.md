@@ -1,5 +1,8 @@
 # Live Python collection checkpoint
 
+Historical checkpoint: the production collector subsequently completed 30,000
+records. See README.md and FINAL_VALIDATION.md for the final result.
+
 The normal Edge browser connection works without the Edge extension. Robots
 policy was checked by Python before results collection. No account login,
 challenge solver, or proxy was used.

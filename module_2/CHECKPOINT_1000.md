@@ -1,5 +1,8 @@
 # 1,000-record collection and reevaluation
 
+Historical checkpoint: collection and local cleaning subsequently completed at
+30,000 records. See README.md and FINAL_VALIDATION.md for the final result.
+
 Follow-up: the narrative gap below has been addressed with schema-3 extraction,
 exact source evidence, and review flags. See SCORE_POLICY.md. The LLM output
 has been refreshed to all 1,000 records with source fields preserved. This

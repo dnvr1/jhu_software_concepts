@@ -1,52 +1,55 @@
-# Module 2 compliance checkpoint
+# Module 2 compliance report
 
-This is a development checkpoint, not a completed submission.
+## Completed assignment requirements
 
-Latest: 1,000 source entries and 1,000 matching local LLM outputs. Narrative
-score handling is documented in SCORE_POLICY.md; 70 tests pass. Earlier counts
-below describe prior checkpoints. Collection has not resumed beyond 1,000.
+- Python collected 30,000 genuine public GradCafe entries with 30,000 unique
+  applicant URLs.
+- The requested program, university, comment, added date, URL, status, decision
+  dates, term, citizenship/origin, GRE values, degree, GPA, and GRE writing
+  fields use a consistent schema and JSON `null` for unavailable values.
+- Raw program/listing text, source URLs, 1,500 HTML pages, hashes, and page
+  journals preserve traceability.
+- `applicant_data.json` and `llm_extend_applicant_data.json` are valid JSON
+  arrays containing 30,000 records each.
+- The instructor's local TinyLlama package added the required standardized
+  program and university fields without changing any source field or row order.
+- urllib, BeautifulSoup, regex, and string operations perform URL management and
+  parsing. Browser rendering is limited to the normal manually verified public
+  session; challenge interaction is never automated.
+- Robots evidence is included in `screenshot.jpg`, with policy provenance and
+  access history documented in README.md and ACCESS_EVENTS.md.
+- Installation, execution, resume, validation, edge cases, and limitations are
+  documented. Sphinx API documentation builds with warnings as errors.
+- 89 automated tests pass; dependency checking passes; runtime Pylint is
+  10.00/10.
 
-## Verified
+## Data verification
 
-- Tested interpreter: Python 3.12.6, Windows x64.
-- Root requirements.txt includes the complete pinned environment.
-- 51 automated tests pass; dependency check reports no broken requirements.
-- Refreshed 420-row source and local LLM outputs preserve every source field.
-- Incremental code and data commits were pushed: 4d4bc30 and fca0659.
-- GitHub repository dnvr1/jhu_software_concepts is private.
-- Python parser uses urllib, BeautifulSoup, regex, and string methods.
-- 420 unique source records are preserved with raw HTML and per-page journals.
-- A separate 40-record source audit performed 760 field comparisons and
-  40 raw-text checks without table/badge mismatches or missing/duplicate rows.
-- One explicit comment declaration supplied missing GRE verbal and writing
-  scores. The parser now records 159 and 4, with provenance; quantitative 165
-  is separate from the site's generic GRE field. No total is invented.
-- Original program text, outcomes, dates, comments, and unusual score values
-  are retained. Missing values are JSON null.
-- Actual instructor-supplied local LLM runs add two standardized fields without
-  replacing original fields. No paid API or secret credentials are required.
-- Robots evidence and its transcription/provenance are included.
+The independent auditor does not call the production parser. It checked 510,001
+values against the saved HTML, all page hashes, all URL identities, and the
+source page supporting each record. It found zero mismatches, duplicates,
+unbacked URLs, or normalization defects. `FINAL_VALIDATION.md` records exact
+hashes, counts, outcome distribution, and model-preservation checks.
 
-## Gates before collecting more
+The data faithfully represents public applicant-submitted listings. That does
+not guarantee that each applicant claim is true. Unusual values, jokes, spam,
+missing years, and source abbreviations remain source data rather than being
+silently rewritten.
 
-1. Public access has been verified for two pages after normal account logout;
-   see PUBLIC_ACCESS.md. Continue only while pages remain public and permitted.
-2. Run the standalone Python collector successfully against permitted public
-   pages on a small batch. Browser capture plus Python parsing is not proof
-   of standalone end-to-end collection.
-3. Audit that batch against source HTML and verify safe resume. Never mix
-   old-parser journals with newly parsed rows or retry a recorded access block.
+## Ethical and access safeguards
 
-## Gates before submission
+The collector reads public pages only, honors the applicable robots policy,
+paces requests sequentially, and stops on authentication, rate limiting,
+verification, rejection, stale pagination, or an unknown layout. There is no
+Cloudflare solver, login automation, proxy rotation, restriction bypass, PII
+enrichment, or fabricated record path. The required manual verification step is
+preserved.
 
-- Reach at least 30,000 genuine entries, then refresh and audit the LLM output.
-- Submit by Sunday, September 13, 2026 at 11:59 p.m. Eastern (user-confirmed
-  Sunday midnight, using the PDF's 11:59 p.m. submission target).
-- Confirm grader repository access.
-- Push incremental verified changes; submit the matching archive and SSH URL
-  only when the assignment is complete and submission is authorized.
+## User-controlled steps before submission
 
-No Cloudflare solver, proxy rotation, login automation, or fabricated records
-are included. A blocked source is a stop condition, not a reason to switch
-transports. Source authenticity means faithful extraction, not a guarantee
-that applicant-submitted claims are true.
+- Confirm the private GitHub repository is shared with the grader.
+- Push the final verified data/documentation commit before the deadline.
+- Submit the matching `module_2` archive and SSH repository URL through Canvas.
+
+Canvas submission and grader access are not asserted because they require the
+student's account and final confirmation.

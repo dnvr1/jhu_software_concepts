@@ -39,5 +39,12 @@ Reproduce with `python parallel_clean.py --benchmark` in the project environment
 Fresh timestamp-independent temporary directories prevent accidental result-cache
 hits. Detailed local artifacts are in tmp/llm-bench-yeepafjp for this trial.
 
-The project test suite passes 56 tests, including order preservation, isolated
+The project test suite passes 89 tests, including order preservation, isolated
 batch output, CPU-thread limits, and failure-before-publication behavior.
+
+## Full production result
+
+The final two-worker, six-thread run processed and validated 30,000 frozen input
+records in 8,896.5 seconds. It produced 30,000 ordered outputs, preserved every
+source field, populated both required generated fields for every row, and made
+no website requests.

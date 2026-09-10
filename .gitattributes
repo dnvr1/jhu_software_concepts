@@ -1,0 +1,4 @@
+# Preserve evidence and final dataset bytes across platforms.
+module_2/applicant_data.json -text whitespace=cr-at-eol
+module_2/llm_extend_applicant_data.json -text whitespace=cr-at-eol
+module_2/raw/*.html -text

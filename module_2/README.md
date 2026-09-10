@@ -1,24 +1,17 @@
 # Module 2: Web Scraping
 
-Latest checkpoint: **1,000 unique source entries**, collection paused for
-reevaluation. See SCORE_POLICY.md: narrative score extraction now retains
-excerpts, scales and review flags. Both source and LLM files contain 1,000
-matching records; all source fields are preserved in the LLM output. 70 tests
-and 17,001 source-field comparisons pass. Five ambiguous score mentions remain
-review-only. No further collection has started.
-The implementation history below includes earlier 420-record snapshots.
+Final verified result: **30,000 unique public source entries** and **30,000
+matching local TinyLlama outputs**. Every source row is backed by saved HTML,
+all 30,000 applicant URLs are unique, and an independent audit made 510,001
+source-field comparisons with zero mismatches. The LLM output preserves every
+source field and source order while adding the two required generated fields.
+The test suite passes 89 tests. See `FINAL_VALIDATION.md` for hashes, counts,
+field coverage, and the exact validation scope.
 
 This Python project collects public GradCafe admission listings, preserves source
-HTML and applicant text, and prepares the instructor's local LLM standardization
-step. The submitted data is a **partial collection**, not the required 30,000
-records. The current snapshot contains **420 genuine public listings**, and
-`llm_extend_applicant_data.json` contains the same 420 records after a successful
-local TinyLlama run. Every original field was compared and preserved. No
-applicant records or LLM results are fabricated. A separate 40-record batch was
-captured through the Codex browser and audited against saved HTML. This is a
-parser test. Subsequent signed-out checks and a live Python collection/resume
-test passed for 60 records; see PUBLIC_ACCESS.md and LIVE_TEST.md. Bulk collection
-has not yet started.
+HTML and applicant text, and runs the instructor's local LLM standardization
+step. No applicant records or model results are fabricated. Historical bounded
+tests and checkpoints remain documented for traceability.
 
 Student name: **Denver Clarke**. JHED ID: **dclar106**.
 Course: EN.605.256, Modern Software Concepts in Python.
@@ -120,15 +113,15 @@ local debugging port is bound to loopback and the dedicated profile is ignored
 by Git. The browser stays open for the user after the script exits.
 
 After the small-batch source audit passes, increase `--target` on that same
-output/raw directory to resume. To extend the primary 420-record dataset after
-validation, use the default output/raw paths:
+output/raw directory to resume. The completed production command used the
+default output/raw paths:
 
 ```powershell
 .\.venv\Scripts\python.exe browser_collect.py --browser edge --target 30000
 ```
 
-The 30,000-record run has not been completed. Do not run both collection modes
-against the same output/checkpoint concurrently.
+The 30,000-record run completed. Do not run both collection modes against the
+same output/checkpoint concurrently.
 
 When direct public requests are permitted and no previous request has been
 blocked, the standalone collector is:
@@ -198,10 +191,10 @@ can fill missing metrics, with provenance; it never overrides a badge. Schema 3
 also preserves labeled narrative mentions and fills only unique unambiguous
 missing scores. See SCORE_POLICY.md for scale and ambiguity handling.
 Quantitative is separate from the generic `gre` field, and a
-total score is never inferred. After the 40-record audit, all 420 records were
-rebuilt from saved HTML with consistent score provenance. A fresh local LLM run
-preserves every refreshed source field. The old snapshot is backed up under
-ignored `tmp/before_compliance_refresh/`. See COMPLIANCE.md for audit scope.
+total score is never inferred. All 30,000 records were independently checked
+against the saved source pages with consistent score provenance. The final local
+LLM run preserves every source field. See COMPLIANCE.md and FINAL_VALIDATION.md
+for audit scope.
 The scraper refuses old or mixed journal schemas rather than silently combining
 them with new records; replay saved HTML into a separate directory to migrate.
 
@@ -217,7 +210,7 @@ credentials are required.
 .\.venv\Scripts\python.exe -m pip install --only-binary=llama-cpp-python --extra-index-url https://abetlen.github.io/llama-cpp-python/whl/cpu -r llm_hosting/requirements.txt
 ```
 
-Run the checked adapter (the verified run used `N_THREADS=8`):
+Run the checked adapter for a simple single-process execution:
 
 ```powershell
 .\.venv\Scripts\python.exe clean.py --file applicant_data.json --output llm_extend_applicant_data.json --llm-dir llm_hosting --batch-size 100
@@ -235,6 +228,17 @@ restart reuses them. Changing canonical lists or model configuration invalidates
 the cache. The final extended
 JSON is replaced only when every batch succeeds. The cache is not submission
 data and is ignored by Git.
+
+The completed optimized run used two workers with six CPU threads each against
+an immutable source snapshot:
+
+```powershell
+.\.venv\Scripts\python.exe parallel_clean.py --file tmp\final_30000_input_20260909.json --workers 2 --threads 6 --work-dir tmp\parallel-clean-final-30000 --output llm_extend_applicant_data.json
+```
+
+It validated and merged all 30,000 records in 8,896.5 seconds. The snapshot is
+an ignored local safety copy; `applicant_data.json` is its verified submitted
+equivalent.
 
 Changes to the supplied package are documented in `llm_hosting/LOCAL_CHANGES.md`.
 Deprecated Hugging Face download arguments were removed. The adapter invokes
@@ -266,7 +270,7 @@ merges in source order. This does not increase website request concurrency.
 .\.venv\Scripts\python.exe -c "from scrape import load_data; d=load_data(); print('Records:', len(d), 'Unique URLs:', len({r['url'] for r in d})); assert len(d) >= 30000"
 ```
 
-The final assertion intentionally fails until 30,000 real entries are present.
+The final assertion passes for the submitted 30,000-record dataset.
 Tests use explicitly synthetic fixtures in temporary directories; they never
 write synthetic records into the deliverable. They cover parsing, null values,
 mobile badges, cursor links, comment/score separation, robots rejection, block
@@ -275,8 +279,7 @@ uses four-space indentation, descriptive names, Google-style public API
 docstrings, and a 79-character formatter configuration. Sphinx uses Napoleon to
 render those docstrings. No grade or perfect style score is claimed.
 
-Known limits: fewer than 30,000 records have been collected; CAPTCHA interaction
-remains manual; the
+Known limits: CAPTCHA interaction remains manual; the
 HTML parser supports the observed layout and deliberately stops when that
 layout changes. A newly changing live results feed can shift between captures;
 cursor links and URL deduplication reduce repeated entries but cannot freeze
@@ -288,18 +291,13 @@ different GPA do not overwrite the labeled score. Public submissions may contain
 spam, false claims, unusual scores, or jokes. Such source entries are retained
 without asserting their truth or rewriting their contents.
 
-Before submitting, confirm the supplied
-package is included, reach the required record count, run local standardization,
-review its outliers, and verify both JSON files. Confirm the repository is
-private and shared with the grader, make meaningful commits, push before the
-deadline, and submit the matching zipped `module_2` folder plus SSH URL through
-Canvas. Two development checkpoints were pushed to private GitHub main:
-`4d4bc30` (code, tests, safeguards) and `fca0659` (420 refreshed source records,
-raw evidence, and local LLM output). Canvas submission has not been performed.
+Before submitting, confirm the repository is shared with the grader, push the
+final verified commit before the deadline, and submit the matching zipped
+`module_2` folder plus SSH URL through Canvas. Meaningful code and data
+checkpoints were pushed throughout development. Canvas submission has not been
+performed.
 
 Repository metadata was checked through GitHub: `dnvr1/jhu_software_concepts`
-is private. Module 2 files are pushed; grader access remains unverified.
-The current suite passes 51 tests. Signed-out access to two pages is verified;
-the live Python collection/resume test passed for 60 records. The
-30,000-entry requirement is still unresolved; these commits are not a claim
-of assignment completion.
+is private. Grader access remains unverified. The current suite passes 89 tests,
+the completed source collection contains 30,000 unique records, and the extended
+file contains 30,000 matching locally cleaned records.
