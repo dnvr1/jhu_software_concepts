@@ -292,3 +292,18 @@ The script prompts for the PostgreSQL password once and reads the actual
 database through both required query implementations. The Flask screenshot is
 captured separately from `http://127.0.0.1:5000` while the application is
 running.
+
+## Final Archive Verification
+
+Create the Canvas archive from the repository root so it contains exactly the
+committed `module_3` folder:
+
+```powershell
+git archive --format=zip --output=module_3.zip HEAD module_3
+python module_3/verify_submission.py
+```
+
+`verify_submission.py` checks the archive CRC, compares its complete file
+manifest with the current Git commit, confirms the required deliverables are
+present, rejects generated or sensitive directories, and prints the archive's
+SHA-256 digest.
