@@ -8,7 +8,7 @@ verified.
 
 - [x] `github.txt` contains the verified private repository SSH URL.
 - [x] A dedicated, organized `module_3` folder exists in the repository.
-- [ ] The final GitHub commit and Canvas ZIP contain the same files.
+- [x] The final GitHub commit and Canvas ZIP contain the same files.
 
 ## 2. PostgreSQL Database Setup and Data Loading - 18 points
 
@@ -77,5 +77,5 @@ verified.
 - [x] Required files are present and no secrets or generated environments are
   included.
 - [x] Automated checks pass from a clean environment.
-- [ ] `module_3.zip` is created from the final committed folder.
-- [ ] The ZIP contents and final GitHub commit correspond.
+- [x] `module_3.zip` is created from the final committed folder.
+- [x] The ZIP contents and final GitHub commit correspond.
