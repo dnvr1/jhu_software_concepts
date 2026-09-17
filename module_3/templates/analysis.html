@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Dynamic PostgreSQL analysis of GradCafe applicant entries."
+    >
+    <title>GradCafe Application Analysis</title>
+    <link
+      rel="icon"
+      href="{{ url_for('static', filename='favicon.svg') }}"
+      type="image/svg+xml"
+    >
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    >
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero__inner">
+        <form class="update-form" method="get" action="{{ url_for('analysis_page') }}">
+          <input type="hidden" name="updated" value="1">
+          <button class="secondary-button" type="submit">Update Analysis</button>
+        </form>
+        <p class="eyebrow">EN.605.256 · MODULE 3</p>
+        <h1>Graduate application results</h1>
+        <p class="hero__summary">
+          A dynamic analysis of anonymous, self-reported GradCafe entries,
+          queried from PostgreSQL through SQLAlchemy.
+        </p>
+        {% if analysis %}
+          <div class="dataset-meta" aria-label="Dataset information">
+            <span><strong>{{ analysis.database_rows }}</strong> database rows</span>
+            <span>Updated {{ analysis.generated_at }}</span>
+          </div>
+        {% endif %}
+      </div>
+    </header>
+
+    <main class="page-shell">
+      {% if update_message %}
+        <div
+          id="update-message"
+          class="update-message"
+          role="status"
+          data-active-scrape="{{ 'true' if scrape.status == 'running' else 'false' }}"
+        >
+          {{ update_message }}
+        </div>
+      {% endif %}
+      <section class="section scrape-panel" aria-labelledby="pull-data-title">
+        <div class="scrape-panel__copy">
+          <p class="section-kicker">Data refresh</p>
+          <h2 id="pull-data-title">Check for new GradCafe entries</h2>
+          <p>
+            Pull Data checks GradCafe for newly submitted application results
+            and adds new usable records to PostgreSQL. Depending on the amount
+            of new data available, this may take some time.
+          </p>
+        </div>
+        <form method="post" action="{{ url_for('pull_data') }}">
+          <button
+            id="pull-data-button"
+            class="primary-button"
+            type="submit"
+            {% if scrape.status == 'running' %}disabled aria-disabled="true"{% endif %}
+          >
+            {% if scrape.status == 'running' %}Pulling data…{% else %}Pull Data{% endif %}
+          </button>
+        </form>
+        <div
+          id="scrape-status"
+          class="status-message status-message--{{ scrape.status }}"
+          role="status"
+          aria-live="polite"
+          data-status="{{ scrape.status }}"
+          data-status-url="{{ url_for('scrape_status') }}"
+        >
+          {{ scrape.message }}
+        </div>
+      </section>
+
+      {% if error %}
+        <section class="error-panel" role="alert">
+          <p class="section-kicker">Database unavailable</p>
+          <h2>Analysis results could not be retrieved</h2>
+          <p>{{ error }}</p>
+        </section>
+      {% else %}
+        <section class="section" aria-labelledby="overview-title">
+          <p class="section-kicker">Dataset overview</p>
+          <h2 id="overview-title">Application volume and nationality</h2>
+          <div class="headline-metrics">
+            <article class="headline-metric">
+              <p class="question-number">Question 1</p>
+              <p class="metric-value">{{ analysis.question_1 }}</p>
+              <h3>Fall 2026 entries</h3>
+              <p>Entries whose intended term is Fall 2026.</p>
+            </article>
+            <article class="headline-metric">
+              <p class="question-number">Question 2</p>
+              <p class="metric-value">{{ analysis.question_2 }}</p>
+              <h3>International entries</h3>
+              <p>Share of entries with a usable nationality classification.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" aria-labelledby="scores-title">
+          <p class="section-kicker">Question 3</p>
+          <h2 id="scores-title">Average reported academic metrics</h2>
+          <dl class="score-list">
+            <div>
+              <dt>GPA</dt>
+              <dd>{{ analysis.question_3.gpa }}</dd>
+            </div>
+            <div>
+              <dt>GRE Quantitative</dt>
+              <dd>{{ analysis.question_3.gre }}</dd>
+            </div>
+            <div>
+              <dt>GRE Verbal</dt>
+              <dd>{{ analysis.question_3.gre_v }}</dd>
+            </div>
+            <div>
+              <dt>GRE Analytical Writing</dt>
+              <dd>{{ analysis.question_3.gre_aw }}</dd>
+            </div>
+          </dl>
+          <p class="data-note">
+            Each average uses entries that provide that individual metric.
+            Unusual values remain because the source is anonymous and
+            self-reported.
+          </p>
+        </section>
+
+        <section class="section" aria-labelledby="focused-title">
+          <p class="section-kicker">Questions 4–7</p>
+          <h2 id="focused-title">Focused applicant analyses</h2>
+          <div class="analysis-rows">
+            <article class="analysis-row">
+              <div>
+                <p class="question-number">Question 4</p>
+                <h3>American applicants applying for Fall 2026</h3>
+                <p>Average GPA among entries that provide a GPA.</p>
+              </div>
+              <p class="row-result">{{ analysis.question_4 }}</p>
+            </article>
+            <article class="analysis-row">
+              <div>
+                <p class="question-number">Question 5</p>
+                <h3>Fall 2025 entries</h3>
+                <p>Percentage whose cleaned status is Accepted.</p>
+              </div>
+              <p class="row-result">{{ analysis.question_5 }}</p>
+            </article>
+            <article class="analysis-row">
+              <div>
+                <p class="question-number">Question 6</p>
+                <h3>Accepted applicants applying for Fall 2026</h3>
+                <p>Average GPA among entries that provide a GPA.</p>
+              </div>
+              <p class="row-result">{{ analysis.question_6 }}</p>
+            </article>
+            <article class="analysis-row">
+              <div>
+                <p class="question-number">Question 7</p>
+                <h3>JHU Computer Science master's applicants</h3>
+                <p>Count using the original program and degree fields.</p>
+              </div>
+              <p class="row-result">{{ analysis.question_7 }}</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" aria-labelledby="comparison-title">
+          <p class="section-kicker">Questions 8–9</p>
+          <h2 id="comparison-title">Original and standardized field comparison</h2>
+          <p class="section-intro">
+            Fall 2026 Computer Science PhD acceptances at Georgetown, MIT,
+            Stanford, or Carnegie Mellon.
+          </p>
+          <div class="comparison-strip">
+            <div>
+              <span>Original fields</span>
+              <strong>{{ analysis.question_9.original }}</strong>
+            </div>
+            <div>
+              <span>LLM-generated fields</span>
+              <strong>{{ analysis.question_9.llm }}</strong>
+            </div>
+            <div>
+              <span>Difference</span>
+              <strong>{{ analysis.question_9.difference }}</strong>
+            </div>
+          </div>
+          <p class="data-note">
+            Both methods identify the same entries because the original names
+            in this subset were already recognizable.
+          </p>
+        </section>
+
+        <section class="section" aria-labelledby="original-title">
+          <p class="section-kicker">Original questions</p>
+          <h2 id="original-title">Acceptance patterns and submission volume</h2>
+
+          <article class="table-block">
+            <div class="table-heading">
+              <p class="question-number">Question 10</p>
+              <h3>Fall 2026 entries by nationality classification</h3>
+            </div>
+            <div class="table-scroll">
+              <table>
+                <caption class="visually-hidden">
+                  Fall 2026 applicant counts and acceptance percentages by
+                  nationality classification
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Classification</th>
+                    <th scope="col">Entries</th>
+                    <th scope="col">Accepted</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for row in analysis.question_10 %}
+                    <tr>
+                      <th scope="row">{{ row.classification }}</th>
+                      <td>{{ row.count }}</td>
+                      <td>{{ row.percentage }}</td>
+                    </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+            </div>
+          </article>
+
+          <article class="table-block">
+            <div class="table-heading">
+              <p class="question-number">Question 11</p>
+              <h3>Universities with the most Fall 2026 entries</h3>
+            </div>
+            <div class="table-scroll">
+              <table>
+                <caption class="visually-hidden">
+                  Five universities with the most Fall 2026 entries and their
+                  acceptance percentages
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Rank</th>
+                    <th scope="col">University</th>
+                    <th scope="col">Entries</th>
+                    <th scope="col">Accepted</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for row in analysis.question_11 %}
+                    <tr>
+                      <td>{{ row.rank }}</td>
+                      <th scope="row">{{ row.university }}</th>
+                      <td>{{ row.count }}</td>
+                      <td>{{ row.percentage }}</td>
+                    </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+            </div>
+          </article>
+
+          <p class="data-note">
+            These percentages describe this self-selected dataset. They should
+            not be interpreted as institutional admission rates.
+          </p>
+        </section>
+      {% endif %}
+    </main>
+
+    <footer class="site-footer">
+      <p>Denver Clarke · EN.605.256 Modern Software Concepts</p>
+      <p>Data source: anonymous, self-reported GradCafe submissions.</p>
+    </footer>
+    <script>
+      (() => {
+        const statusBox = document.querySelector("#scrape-status");
+        const button = document.querySelector("#pull-data-button");
+        const updateMessage = document.querySelector("#update-message");
+        if (!statusBox || statusBox.dataset.status !== "running") return;
+
+        const poll = window.setInterval(async () => {
+          try {
+            const response = await fetch(statusBox.dataset.statusUrl, {
+              headers: { "Accept": "application/json" },
+              cache: "no-store"
+            });
+            if (!response.ok) return;
+            const job = await response.json();
+            statusBox.textContent = job.message;
+            statusBox.className = `status-message status-message--${job.status}`;
+            statusBox.dataset.status = job.status;
+            if (job.status !== "running") {
+              window.clearInterval(poll);
+              button.disabled = false;
+              button.removeAttribute("aria-disabled");
+              button.textContent = "Pull Data";
+              if (updateMessage?.dataset.activeScrape === "true") {
+                updateMessage.textContent =
+                  "Data retrieval finished. Select Update Analysis again " +
+                  "to include any newly added records.";
+                updateMessage.dataset.activeScrape = "false";
+              }
+            }
+          } catch (_error) {
+            // A later poll can recover from a brief local connection failure.
+          }
+        }, 2000);
+      })();
+    </script>
+  </body>
+</html>
