@@ -49,6 +49,9 @@ recorded in `coverage_summary.txt`. When `DATABASE_URL` names a database ending
 in `_test`, the suite also runs its PostgreSQL-backed insert and idempotency
 test; GitHub Actions supplies this database automatically.
 
+The workflow passed on commit `3af0dee`: [verified GitHub Actions run](https://github.com/dnvr1/jhu_software_concepts/actions/runs/36050953484).
+The required green-run evidence is saved as `actions_success.png`.
+
 ## Build documentation
 
 ```powershell
@@ -72,5 +75,4 @@ module_4/
 `-- README.md
 ```
 
-External evidence still required at submission time: `actions_success.png`
-and the published Read the Docs link.
+The remaining external deliverable is the published Read the Docs link.
