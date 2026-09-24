@@ -1,0 +1,27 @@
+Module 4 Pytest coverage summary
+Generated locally with:
+python -m pytest -m "web or buttons or analysis or db or integration"
+
+Name                     Stmts   Miss  Cover
+------------------------------------------------------
+src\analysis_format.py      10      0   100%
+src\app.py                  70      0   100%
+src\clean.py               116      0   100%
+src\comment_scores.py       31      0   100%
+src\load_data.py           163      0   100%
+src\models.py               44      0   100%
+src\orm_queries.py         112      0   100%
+src\query_data.py           99      0   100%
+src\run_flask.py             8      0   100%
+src\scrape.py              363      0   100%
+src\scrape_refresh.py       91      0   100%
+src\storage.py              39      0   100%
+------------------------------------------------------
+TOTAL                     1146      0   100%
+
+Required test coverage of 100% reached. Total coverage: 100.00%
+131 passed, 3 skipped in 19.48s
+
+Two skipped tests require the optional local llama_cpp model runtime. The
+third is the PostgreSQL-backed test, which runs when DATABASE_URL points to a
+*_test database; the GitHub Actions workflow supplies gradcafe_test.

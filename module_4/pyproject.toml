@@ -1,0 +1,23 @@
+[tool.black]
+line-length = 79
+target-version = ["py310"]
+
+[tool.pylint.main]
+py-version = "3.10"
+
+[tool.pylint.format]
+max-line-length = 79
+
+[tool.pylint.messages_control]
+# CLI/parser methods have deliberately cohesive state. Do not hide correctness
+# warnings; these thresholds only avoid splitting one page transaction across
+# unrelated functions just to satisfy an arbitrary size limit.
+disable = ["too-few-public-methods"]
+
+[tool.pylint.design]
+max-args = 7
+max-positional-arguments = 7
+max-locals = 35
+max-branches = 20
+max-statements = 75
+max-attributes = 10
