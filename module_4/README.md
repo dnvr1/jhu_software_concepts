@@ -59,7 +59,7 @@ The required green-run evidence is saved as `actions_success.png`.
 ```
 
 Open `docs/_build/html/index.html` locally. The published Read the Docs URL
-will be added here after the hosted build is green.
+is [dnvr1-gradcafe-module4.readthedocs.io](https://dnvr1-gradcafe-module4.readthedocs.io/en/latest/).
 
 ## Project layout
 
@@ -75,4 +75,5 @@ module_4/
 `-- README.md
 ```
 
-The remaining external deliverable is the published Read the Docs link.
+The hosted documentation is built automatically from the repository's
+`.readthedocs.yaml` configuration.
