@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Setup and local development &#8212; GradCafe Analytics 4.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=27fed22d" />
+    <script src="_static/documentation_options.js?v=9f5556dd"></script>
+    <script src="_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Architecture" href="architecture.html" />
+    <link rel="prev" title="GradCafe Analytics" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="setup-and-local-development">
+<h1>Setup and local development<a class="headerlink" href="#setup-and-local-development" title="Link to this heading">¶</a></h1>
+<p>Install Python 3.10 or newer, PostgreSQL, and the dependencies in
+<code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code>. From <code class="docutils literal notranslate"><span class="pre">module_4</span></code> run:</p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">-m</span> <span class="n">venv</span> <span class="p">.</span><span class="n">venv</span>
+<span class="p">.\.</span><span class="n">venv</span><span class="p">\</span><span class="n">Scripts</span><span class="p">\</span><span class="n">python</span><span class="p">.</span><span class="n">exe</span> <span class="n">-m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">-r</span> <span class="n">requirements</span><span class="p">.</span><span class="n">txt</span>
+<span class="nv">$env:DATABASE_URL</span> <span class="p">=</span> <span class="s2">"postgresql+psycopg://postgres:password@localhost:5432/gradcafe"</span>
+<span class="p">.\.</span><span class="n">venv</span><span class="p">\</span><span class="n">Scripts</span><span class="p">\</span><span class="n">python</span><span class="p">.</span><span class="n">exe</span> <span class="n">src</span><span class="p">\</span><span class="n">run_flask</span><span class="p">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>The application is available at <code class="docutils literal notranslate"><span class="pre">http://127.0.0.1:5000/analysis</span></code>.</p>
+<section id="configuration">
+<h2>Configuration<a class="headerlink" href="#configuration" title="Link to this heading">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">DATABASE_URL</span></code> is preferred. The data layer also accepts <code class="docutils literal notranslate"><span class="pre">PGHOST</span></code>,
+<code class="docutils literal notranslate"><span class="pre">PGPORT</span></code>, <code class="docutils literal notranslate"><span class="pre">PGDATABASE</span></code>, <code class="docutils literal notranslate"><span class="pre">PGUSER</span></code>, and <code class="docutils literal notranslate"><span class="pre">PGPASSWORD</span></code>. Optional scrape
+settings include <code class="docutils literal notranslate"><span class="pre">SCRAPE_DELAY</span></code>, <code class="docutils literal notranslate"><span class="pre">SCRAPE_MAX_PAGES</span></code>, and
+<code class="docutils literal notranslate"><span class="pre">SCRAPE_RUN_ROOT</span></code>. Never commit credentials.</p>
+<p>Build these docs with:</p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="p">.\.</span><span class="n">venv</span><span class="p">\</span><span class="n">Scripts</span><span class="p">\</span><span class="n">python</span><span class="p">.</span><span class="n">exe</span> <span class="n">-m</span> <span class="n">sphinx</span> <span class="n">-W</span> <span class="p">-</span><span class="n">-keep-going</span> <span class="n">-b</span> <span class="n">html</span> <span class="n">docs</span> <span class="n">docs</span><span class="p">\</span><span class="n">_build</span><span class="p">\</span><span class="n">html</span>
+</pre></div>
+</div>
+<p>Read the Docs uses the repository-level <code class="docutils literal notranslate"><span class="pre">.readthedocs.yaml</span></code> file and this
+same requirements file and Sphinx configuration.</p>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">GradCafe Analytics</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Setup and local development</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#configuration">Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="architecture.html">Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testing.html">Testing guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="operations.html">Operational notes</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">GradCafe Analytics</a></li>
+      <li>Next: <a href="architecture.html" title="next chapter">Architecture</a></li>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 9.1.0</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="_sources/setup.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

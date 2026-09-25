@@ -10,7 +10,13 @@ tmp/
 llm_hosting/.venv/
 llm_hosting/models/
 llm_hosting/.cache/
-docs/_build/
+# Keep the generated HTML required by the Module 4 deliverables while
+# excluding Sphinx's transient doctree/cache files.
+docs/_build/*
+!docs/_build/html/
+!docs/_build/html/**
+docs/_build/html/.doctrees/
+docs/_build/html/.buildinfo.bak
 .browser_profile/
 .chrome_browser_profile/
 .env

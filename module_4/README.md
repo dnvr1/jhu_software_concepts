@@ -58,8 +58,10 @@ The required green-run evidence is saved as `actions_success.png`.
 .\.venv\Scripts\python.exe -m sphinx -W --keep-going -b html docs docs\_build\html
 ```
 
-Open `docs/_build/html/index.html` locally. The published Read the Docs URL
-is [dnvr1-gradcafe-module4.readthedocs.io](https://dnvr1-gradcafe-module4.readthedocs.io/en/latest/).
+Open `docs/_build/html/index.html` locally. The generated HTML is committed
+under `docs/_build/html/` as a submission artifact. The published Read the
+Docs URL is
+[dnvr1-gradcafe-module4.readthedocs.io](https://dnvr1-gradcafe-module4.readthedocs.io/en/latest/).
 
 ## Project layout
 
