@@ -354,6 +354,12 @@ main {
     text-decoration: none;
 }
 
+.project-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 28px;
+}
+
 .project-link:hover {
     text-decoration: underline;
 }
