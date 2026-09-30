@@ -1,0 +1,14 @@
+Verbatim verification output from GitHub Actions, 2026-09-30.
+Run: https://github.com/dnvr1/jhu_software_concepts/actions/runs/36719680940
+Job: pytest (109901297093)
+Command: python tools/verify_least_privilege.py
+
+DENIED as expected: CREATE
+DENIED as expected: ALTER
+DENIED as expected: DROP
+DENIED as expected: UPDATE
+DENIED as expected: DELETE
+DENIED as expected: TRUNCATE
+PASS: gradcafe_app is non-superuser, has no owner membership, and cannot perform DDL or destructive writes.
+PASS: SELECT, INSERT, sequence usage, duplicate handling, bound malicious input, and Flask analysis/update work.
+Scope: disposable CI/test database only; the home gradcafe database was not changed.

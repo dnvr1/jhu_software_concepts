@@ -1,10 +1,10 @@
 @echo off
 setlocal
-title Module 4 - Load GradCafe Data
+title Module 5 - Load GradCafe Data
 cd /d "%~dp0"
 
 if not exist ".venv\Scripts\python.exe" (
-    echo The module_4 virtual environment was not found.
+    echo The module_5 virtual environment was not found.
     echo Run: python -m venv .venv
     pause
     exit /b 1

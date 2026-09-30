@@ -7,7 +7,7 @@ import re
 from reportlab.lib import colors
 from reportlab.lib.styles import getSampleStyleSheet
 from reportlab.lib.units import inch
-from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, PageBreak
+from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer
 
 ROOT = Path(__file__).resolve().parents[1]
 evidence_dir = ROOT / "tmp" / "evidence"
@@ -33,7 +33,7 @@ styles["BodyText"].fontSize = 10
 styles["BodyText"].leading = 14
 styles["BodyText"].spaceAfter = 8
 styles["Heading1"].textColor = colors.HexColor("#173e67")
-source = (ROOT / "MODULE5_REPORT_DRAFT.md").read_text(encoding="utf-8")
+source = (ROOT / "MODULE5_REPORT.md").read_text(encoding="utf-8")
 story = []
 for block in source.split("\n\n"):
     block = block.strip()
@@ -45,8 +45,6 @@ for block in source.split("\n\n"):
         style = styles["Title"]
     elif block.startswith("## "):
         block = block[3:]
-        if block.startswith("Dependency graph"):
-            story.append(PageBreak())
         style = styles["Heading2"]
     text = escape(" ".join(block.splitlines()))
     text = re.sub(r"`([^`]+)`", r'<font name="Courier">\1</font>', text)
@@ -57,14 +55,14 @@ def footer(canvas, doc):
     canvas.setFont("Helvetica", 8)
     canvas.setFillColor(colors.HexColor("#56647a"))
     canvas.drawString(0.65 * inch, 0.4 * inch,
-                      "Denver Clarke | EN.605.256 | Evidence draft")
+                      "Denver Clarke | EN.605.256 | Module 5")
     canvas.drawRightString(7.85 * inch, 0.4 * inch, str(doc.page))
 
 SimpleDocTemplate(
     str(ROOT / "module_5_report.pdf"),
     rightMargin=0.65 * inch, leftMargin=0.65 * inch,
     topMargin=0.6 * inch, bottomMargin=0.65 * inch,
-    title="Module 5 Software Assurance - Evidence Draft",
+    title="Module 5 Software Assurance and Secure SQL",
     author="Denver Clarke",
     allowSplitting=0,
 ).build(story, onFirstPage=footer, onLaterPages=footer)

@@ -97,6 +97,7 @@ jobs:
       - run: python -m pip install -e .
       - run: python -m pytest -m "web or buttons or analysis or db or integration"
       - name: Verify restricted database role and live application
+        shell: bash
         run: python tools/verify_least_privilege.py | tee database_privileges.txt
       - uses: actions/upload-artifact@v4
         with:

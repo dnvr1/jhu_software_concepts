@@ -72,8 +72,10 @@ SELECT and INSERT table privileges and no owner-role membership.
 The raw analysis queries in `query_data.py` have explicit result limits.
 `lookup_applicants` accepts only approved column names, quotes them using
 `psycopg.sql.Identifier`, binds user values as parameters, and clamps the
-requested limit to 1-100. The Module 5 hardening work is still in progress;
-A live database privilege check and a successful hosted CI run are pending.
+requested limit to 1-100. The restricted role and live Flask analysis were
+verified against PostgreSQL 17 in CI; see `database_privileges.txt`.
+The home database has not been changed. For local deployment, run
+`setup_database.cmd` as the database administrator and configure app credentials.
 Snyk successfully tested 52 dependencies with zero issues; see
 `snyk-analysis.txt`, `snyk-results.json`, and `snyk-analysis.png`.
 
@@ -121,9 +123,17 @@ in `_test`, the suite also runs its PostgreSQL-backed insert and idempotency
 test; GitHub Actions supplies this database automatically.
 
 The Module 5 workflow is in `.github/workflows/ci.yml` at the repository root.
-It has local test coverage, lint, dependency graph, and Snyk jobs. A successful
-Module 5 run has not been captured yet. The copied `actions_success.png` is
-Module 4 evidence and must not be used as proof for Module 5.
+It has test coverage, lint, dependency graph, and Snyk jobs and runs on every
+push/PR. All four passed in
+[Module 5 run 36719680940](https://github.com/dnvr1/jhu_software_concepts/actions/runs/36719680940).
+`ci_success.jpg` captures that run. Hosted tests passed 133 tests with two
+optional model skips and 100% coverage. Snyk tested 50 dependencies on Linux
+with zero issues (the local Windows scan tested 52).
+
+The CI database check provisions a new `gradcafe_app` in the disposable
+`gradcafe_test` service, with a random password kept in memory. It verifies
+permitted reads/inserts, denied DDL/destructive writes, safe lookup input, and
+HTTP 200 responses from analysis/update. No live GradCafe scraping is needed.
 
 ## Build documentation
 
@@ -153,5 +163,19 @@ module_5/
 `-- README.md
 ```
 
-The hosted documentation is built automatically from the repository's
-`.readthedocs.yaml` configuration.
+The hosted documentation remains Module 4 and is built automatically from
+the repository's unchanged `.readthedocs.yaml` configuration. Module 5's own
+documentation is included as locally built HTML.
+
+## Submission archive
+
+From the repository root, after committing all deliverables:
+
+```powershell
+git archive --format=zip --output=module_5/output/module_5_submission.zip HEAD module_5 .github/workflows/ci.yml
+module_5/.venv/Scripts/python.exe module_5/tools/verify_submission.py
+```
+
+Create `module_5/output` first if needed. The verifier checks the ZIP's file
+list and every file's bytes against Git. The archive includes the root
+workflow alongside `module_5/` and excludes environments, secrets and caches.

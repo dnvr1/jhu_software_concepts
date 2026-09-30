@@ -1,7 +1,6 @@
-# Module 5 report draft
+# Module 5 report
 
-This is a working draft. It is not the submission PDF. Items marked pending
-require evidence from a live service or from GitHub.
+Denver Clarke (dclar106), EN.605.256. Verified September 30, 2026.
 
 ## Installation and packaging
 
@@ -14,6 +13,9 @@ and `uv pip install --python .venv/Scripts/python.exe -e .`. The `setup.py`
 metadata makes the local modules installable in editable mode, so imports work
 consistently in development, tests, and CI. Both install methods have been
 verified locally with successful `app`, `models`, and `query_data` imports.
+After configuring the database environment variables, run
+`.venv/Scripts/python src/run_flask.py` and open
+`http://127.0.0.1:5000/analysis`. On Linux/macOS, use `.venv/bin/python`.
 
 ## SQL injection defenses and query limits
 
@@ -27,26 +29,33 @@ The requested row count is clamped to the range 1 through 100, and the limit
 is passed as a bound parameter. A test with `Accepted' OR 1=1 --` verifies that
 the malicious value stays in the parameter tuple and never enters the SQL
 statement. The loader also uses `sql.Identifier` when it needs to compose a
-database name.
+database name. The existing Flask analysis routes do not accept SQL search
+filters; the lookup helper is a separately tested safe-search API, not a new
+web endpoint. The analysis endpoint safely ignores malicious query values.
 
 ## Least privilege database role
 
 The application now reads `DB_HOST`, `DB_PORT`, `DB_NAME`, `DB_USER`, and
 `DB_PASSWORD` from the environment, with `DATABASE_URL` and legacy `PG*`
 variables as alternatives. The example file `.env.example` has placeholders,
-and `.gitignore` excludes `.env`. The `gradcafe_app` role should receive only
+and `.gitignore` excludes `.env`. The `gradcafe_app` role receives only
 `CONNECT` on the database, `USAGE` on schema `public`, `SELECT` and `INSERT`
 on `public.applicants`, and `USAGE` on the primary key sequence. `SELECT` is
 needed for analysis; `INSERT` and sequence use support the Pull Data action.
-It should not own the database or receive `CREATE`, `ALTER`, `DROP`, `UPDATE`,
-`DELETE`, or superuser privileges. The grant script is `least_privilege.sql`.
+It does not own the database or receive `CREATE`, `ALTER`, `DROP`, `UPDATE`,
+`DELETE`, or superuser privileges. The local grant script is `least_privilege.sql`.
 Read-only connections no longer try to provision a database. The data loader
 must be run separately with an administrator role when it creates the schema.
 
-Pending: apply the grant script to the intended local or course database and
-capture a privilege listing to confirm the actual role configuration.
+This role was created and tested in the disposable PostgreSQL 17 CI database
+`gradcafe_test`, using `tools/verify_least_privilege.py`. The captured output
+in `database_privileges.txt` confirms denied DDL/destructive writes, successful
+SELECT/INSERT, safe malicious-input handling, and working Flask analysis and
+update responses. No home database changes were made: local deployment still
+requires an administrator to run `setup_database.cmd` and set private app
+credentials. CI generates a random, temporary role password without printing it.
 
-The core grant statements are `GRANT CONNECT ON DATABASE gradcafe TO
+The CI grant statements include `GRANT CONNECT ON DATABASE gradcafe_test TO
 gradcafe_app;`, `GRANT USAGE ON SCHEMA public TO gradcafe_app;`,
 `GRANT SELECT, INSERT ON TABLE public.applicants TO gradcafe_app;`, and
 `GRANT USAGE ON SEQUENCE public.applicants_p_id_seq TO gradcafe_app;`.
@@ -69,10 +78,14 @@ The local Module 5 test command passed with 132 tests, three skips, and 100%
 coverage. Pylint on `src/` returned 10.00/10 using
 `python -m pylint src --fail-under=10`. The repository root workflow
 `.github/workflows/ci.yml` has separate Pylint, dependency graph, Snyk, and
-Pytest jobs. It runs on pushes and pull requests that change Module 5 or the
-workflow. The Snyk job requires the `SNYK_TOKEN` repository secret. A
-successful GitHub Actions run and screenshot are pending until the workflow
-is committed and pushed.
+Pytest jobs. It runs on every push and pull request, with a manual trigger
+available. The Snyk job requires the `SNYK_TOKEN` repository secret. All four
+jobs passed in GitHub Actions run 36719680940 (commit 87284d8); `ci_success.jpg`
+captures the successful run. Hosted Pytest passed 133 tests, with two optional
+model tests skipped and 100% coverage, including the live PostgreSQL test.
+The hosted Snyk scan tested 50 Linux dependencies with zero issues. The
+existing Module 4 Read the Docs site remains online; Module 5 Sphinx HTML
+also builds locally with warnings treated as errors.
 
 ## Snyk status
 

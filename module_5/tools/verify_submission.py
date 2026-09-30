@@ -1,4 +1,4 @@
-"""Verify that the Canvas ZIP matches the committed Module 3 folder."""
+"""Verify the Module 5 Canvas ZIP against committed Git file contents."""
 
 from __future__ import annotations
 
@@ -9,20 +9,25 @@ import sys
 import zipfile
 
 
-MODULE_DIRECTORY = "module_3"
+MODULE_DIRECTORY = "module_5"
+WORKFLOW = ".github/workflows/ci.yml"
 REQUIRED_FILES = {
     "github.txt",
-    "limitations.pdf",
-    "load_data.py",
-    "models.py",
-    "orm_queries.py",
-    "query_data.py",
-    "query_results.pdf",
+    "src/load_data.py",
+    "src/models.py",
+    "src/orm_queries.py",
+    "src/query_data.py",
+    "module_5_report.pdf",
+    "dependency.svg",
+    "setup.py",
+    ".env.example",
+    "lint_summary.txt",
+    "coverage_summary.txt",
+    "database_privileges.txt",
+    "ci_success.jpg",
+    "snyk-analysis.png",
     "README.md",
     "requirements.txt",
-    "screenshots/flask_webpage.png",
-    "screenshots/raw_sql_output.png",
-    "screenshots/sqlalchemy_orm_output.png",
 }
 FORBIDDEN_PARTS = {
     ".env",
@@ -46,7 +51,7 @@ def repository_root() -> Path:
 
 
 def committed_files(root: Path) -> set[str]:
-    """Return files committed under module_3 at the current HEAD."""
+    """Return committed Module 5 files and its executable root workflow."""
     result = subprocess.run(
         [
             "git",
@@ -55,6 +60,7 @@ def committed_files(root: Path) -> set[str]:
             "--name-only",
             "HEAD",
             MODULE_DIRECTORY,
+            WORKFLOW,
         ],
         cwd=root,
         check=True,
@@ -67,7 +73,7 @@ def committed_files(root: Path) -> set[str]:
 def main() -> int:
     """Validate required files, archive integrity, and Git correspondence."""
     root = repository_root()
-    archive_path = root / "module_3.zip"
+    archive_path = root / "module_5" / "output" / "module_5_submission.zip"
     if not archive_path.is_file():
         print(f"Missing archive: {archive_path}", file=sys.stderr)
         return 1
@@ -89,6 +95,7 @@ def main() -> int:
         path
         for path in expected
         if FORBIDDEN_PARTS.intersection(Path(path).parts)
+        or any(part.endswith(".egg-info") for part in Path(path).parts)
     }
     if unsafe:
         print(
@@ -103,6 +110,14 @@ def main() -> int:
             name for name in archive.namelist() if not name.endswith("/")
         }
         damaged = archive.testzip()
+        for name in actual & expected:
+            committed = subprocess.run(
+                ["git", "show", f"HEAD:{name}"], cwd=root,
+                check=True, capture_output=True,
+            ).stdout
+            if archive.read(name) != committed:
+                print(f"ZIP content differs from Git: {name}", file=sys.stderr)
+                return 1
 
     if damaged:
         print(f"Archive CRC failure: {damaged}", file=sys.stderr)
