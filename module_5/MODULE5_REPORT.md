@@ -4,7 +4,7 @@ Denver Clarke (dclar106), EN.605.256. Verified September 30, 2026.
 
 ## Installation and packaging
 
-The application supports Python 3.10 or newer. From `module_5/`, create a
+Use Python 3.12, the verified tooling/CI version. From `module_5/`, create a
 virtual environment with `python -m venv .venv`, then run
 `.venv/Scripts/python -m pip install -r requirements.txt` and
 `.venv/Scripts/python -m pip install -e .` on Windows. As an alternative, run

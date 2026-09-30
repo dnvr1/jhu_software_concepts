@@ -2,6 +2,7 @@
 
 from decimal import Decimal
 from contextlib import nullcontext
+import re
 
 import pytest
 
@@ -104,6 +105,9 @@ def test_raw_query_helpers_and_complete_execution():
     assert query_data.run_analysis(connection) == expected
     assert connection.read_only is True
     assert len(cursor.queries) == 11
+    for statement, _ in cursor.queries:
+        limit = re.search(r"\bLIMIT\s+(\d+)", statement, re.IGNORECASE)
+        assert limit and 1 <= int(limit.group(1)) <= 100
 
 
 def test_fetch_one_rejects_missing_result():
@@ -125,6 +129,10 @@ def test_lookup_uses_quoted_identifier_bound_value_and_bounded_limit():
 
     assert query_data.clamp_limit("-10") == 1
     assert query_data.clamp_limit("invalid") == 25
+    for value in (None, float("inf"), float("nan"), "1; DROP TABLE applicants"):
+        assert query_data.clamp_limit(value) == 25
+    assert query_data.clamp_limit(0) == 1
+    assert query_data.clamp_limit(10**100) == 100
     with pytest.raises(ValueError, match="Unsupported search column"):
         query_data.build_lookup_statement("status; DROP TABLE applicants")
 

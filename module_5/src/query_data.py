@@ -220,7 +220,7 @@ def clamp_limit(requested: object, default: int = 25) -> int:
     """Constrain a requested row count before it reaches the database."""
     try:
         value = int(requested)
-    except (TypeError, ValueError):
+    except (TypeError, ValueError, OverflowError):
         value = default
     return min(max(value, 1), MAX_QUERY_LIMIT)
 

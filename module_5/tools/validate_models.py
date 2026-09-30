@@ -64,7 +64,7 @@ def validate() -> None:
 
     with session_factory() as session:
         row_count = session.scalar(
-            select(func.count(models.Applicant.p_id))
+            select(func.count(models.Applicant.p_id)).limit(1)
         )
         sample = session.scalar(
             select(models.Applicant).order_by(models.Applicant.p_id).limit(1)

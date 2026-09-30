@@ -25,6 +25,8 @@ def test_all_required_orm_statements_are_select_objects():
         "question_10",
     }
     assert all(isinstance(statement, Select) for statement in statements.values())
+    for statement in orm_queries.build_complete_statements().values():
+        assert 1 <= statement._limit_clause.value <= 100
 
 
 def test_orm_file_does_not_use_raw_sql_or_psycopg_cursors():

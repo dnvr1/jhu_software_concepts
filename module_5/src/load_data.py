@@ -271,11 +271,10 @@ def connect_database(create_if_missing: bool = False) -> psycopg.Connection:
                     (database_name,),
                 )
                 if cursor.fetchone() is None:
-                    cursor.execute(
-                        sql.SQL("CREATE DATABASE {}").format(
-                            sql.Identifier(database_name)
-                        )
+                    statement = sql.SQL("CREATE DATABASE {}").format(
+                        sql.Identifier(database_name)
                     )
+                    cursor.execute(statement)
                     print(f"Created PostgreSQL database: {database_name}")
     return psycopg.connect(password=password, **arguments)
 

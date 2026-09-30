@@ -1,7 +1,7 @@
 Setup and local development
 ===========================
 
-Install Python 3.10 or newer, PostgreSQL, and the dependencies in
+Install Python 3.12 (the verified tooling/CI version), PostgreSQL, and the dependencies in
 ``requirements.txt``. From ``module_5`` run:
 
 .. code-block:: powershell

@@ -11,7 +11,7 @@ application code lives in `src/`, and the tests live in `tests/`.
 
 ## Fresh Install
 
-Python 3.10 or newer and PostgreSQL are required. Start in `module_5/`.
+Use Python 3.12 (the verified tooling/CI version) and PostgreSQL. Start in `module_5/`.
 Choose either path below, then provide the database settings shown in
 `.env.example`. The sample file contains placeholders only; `.env` is ignored
 by Git. The application does not load `.env` automatically, so export the
