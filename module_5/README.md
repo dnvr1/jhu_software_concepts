@@ -172,10 +172,11 @@ documentation is included as locally built HTML.
 From the repository root, after committing all deliverables:
 
 ```powershell
-git archive --format=zip --output=module_5/output/module_5_submission.zip HEAD module_5 .github/workflows/ci.yml
+module_5/.venv/Scripts/python.exe module_5/tools/build_submission.py
 module_5/.venv/Scripts/python.exe module_5/tools/verify_submission.py
 ```
 
-Create `module_5/output` first if needed. The verifier checks the ZIP's file
-list and every file's bytes against Git. The archive includes the root
+The builder creates `module_5/output/module_5_submission.zip` directly from
+Git blobs, avoiding platform-specific line-ending conversion. The verifier
+checks the ZIP's file list and every file's bytes against Git. The archive includes the root
 workflow alongside `module_5/` and excludes environments, secrets and caches.
