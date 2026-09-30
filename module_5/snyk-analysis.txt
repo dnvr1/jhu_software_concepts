@@ -1,0 +1,24 @@
+Snyk dependency scan - captured CLI output
+Captured: 2026-09-30T12:03:48.613925+00:00
+Exit code: 0
+Command: snyk test --file=requirements.txt --command=.venv\Scripts\python.exe
+
+
+Testing  (requirements.txt) ...
+                                                                     
+✔ Tested 52 dependencies for known issues, no vulnerable paths found.
+                                                                     
+╭──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ Test Summary                                                                                                         │
+│                                                                                                                      │
+│   Organization:      dnvr1                                                                                           │
+│   Test type:         open-source                                                                                     │
+│   Project path:      C:\Users\DNVR\Documents\Hopkins\Modern Software -- EN.605.256\jhu_software_concepts\module_5    │
+│                                                                                                                      │
+│   Total issues: 0                                                                                                    │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+💡 Tip
+
+   To view ignored issues, use the --include-ignores option.
+                                                            
+

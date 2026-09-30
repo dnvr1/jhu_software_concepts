@@ -1,0 +1,31 @@
+{
+  "dependencyCount": 52,
+  "displayTargetFile": "requirements.txt",
+  "filesystemPolicy": false,
+  "filtered": {
+    "ignore": [],
+    "patch": []
+  },
+  "hasUnknownVersions": false,
+  "ignoreSettings": {
+    "adminOnly": false,
+    "autoApproveIgnores": false,
+    "disregardFilesystemIgnores": false,
+    "reasonRequired": false
+  },
+  "isPrivate": true,
+  "licensesPolicy": {
+    "orgLicenseRules": null,
+    "severities": null
+  },
+  "ok": true,
+  "org": "dnvr1",
+  "packageManager": "pip",
+  "path": "C:\\Users\\DNVR\\Documents\\Hopkins\\Modern Software -- EN.605.256\\jhu_software_concepts\\module_5",
+  "policy": "",
+  "projectName": "module_5",
+  "summary": "No known vulnerabilities",
+  "targetFile": "",
+  "uniqueCount": 0,
+  "vulnerabilities": []
+}

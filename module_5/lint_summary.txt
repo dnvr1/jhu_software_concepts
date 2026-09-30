@@ -1,0 +1,7 @@
+Module 5 Pylint evidence (local run)
+Command: .venv\Scripts\python.exe -m pylint src --fail-under=10
+
+--------------------------------------------------------------------
+Your code has been rated at 10.00/10
+
+Pylint was run only on module_5/src, as required by the assignment.
