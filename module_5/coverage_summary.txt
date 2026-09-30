@@ -1,6 +1,6 @@
 Module 5 Pytest coverage summary
 Generated locally with:
-python -m pytest -m "web or buttons or analysis or db or integration"
+python -m pytest
 
 Name                     Stmts   Miss  Cover
 ------------------------------------------------------
@@ -20,7 +20,9 @@ src\storage.py              39      0   100%
 TOTAL                     1166      0   100%
 
 Required test coverage of 100% reached. Total coverage: 100.00%
-132 passed, 3 skipped in 19.33s
+133 passed, 3 skipped in 19.54s
+
+Includes the Google-style source documentation regression test.
 
 Two skipped tests require the optional local llama_cpp model runtime. The
 third is the PostgreSQL-backed test, which runs when DATABASE_URL points to a

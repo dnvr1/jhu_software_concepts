@@ -27,9 +27,24 @@ This is an evidence checklist, not a prediction or guarantee of the instructor's
 - Corrected installation guidance to the verified Python 3.12 tooling version.
 - Refreshed test evidence and regenerated/reviewed the report and documentation.
 
-Local audit rerun: 132 passed, three documented skips, 100% coverage over
+Local documentation-update rerun: 133 passed, three documented skips, 100% coverage over
 1,166 statements; Pylint 10.00/10; Sphinx warning-as-error build succeeded.
-Hosted runs also exercise the PostgreSQL integration test (133 passed, two skips).
+Earlier hosted runs also exercised the PostgreSQL integration test (133 passed,
+two skips), before the documentation regression test was added.
+
+## Google-style documentation follow-up
+
+- All 107 source functions/classes now have docstrings; all parameters have
+  Google-style Args entries, with Returns/Yields/Raises/Attributes as applicable.
+- Detailed comments explain binding, identifier allowlisting, transaction
+  ownership, atomic persistence, and the background-job locking lifecycle.
+- Pylint now loads docparams with Google-style parsing and required parameter
+  documentation. A regression test checks source documentation completeness.
+- STYLE_GUIDE.md links the official guide and records project-specific choices;
+  a perfect configured lint score is not a claim of exhaustive guide compliance.
+- Sphinx HTML was rebuilt without warnings. Source AST comparison confirmed
+  executable behavior is unchanged by the comments/docstrings update.
+- Existing PDF and Snyk/CI artifacts retain their original evidence/run identity.
 
 ## Remaining actions and scope
 

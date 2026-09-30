@@ -177,6 +177,9 @@ def extend_with_llm(
             with tempfile.TemporaryDirectory(prefix="gradcafe-llm-") as temp:
                 batch_path = Path(temp) / "input.json"
                 save_data(batch, batch_path)
+                # The interpreter and instructor package are trusted operator
+                # choices, not web inputs. An argument list avoids shell
+                # expansion but does not make an arbitrary executable safe.
                 result = subprocess.run(
                     [
                         python,

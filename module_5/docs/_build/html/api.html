@@ -45,12 +45,30 @@
 <p>Tests can replace <code class="docutils literal notranslate"><span class="pre">SESSION_FACTORY</span></code>, <code class="docutils literal notranslate"><span class="pre">ANALYSIS_RUNNER</span></code>, and
 <code class="docutils literal notranslate"><span class="pre">SCRAPE_MANAGER</span></code> with deterministic doubles. Production uses the Module
 3 PostgreSQL and scraper implementations by default.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>test_config</strong> – Optional overrides applied after the default settings.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A Flask application with analysis and background-scrape routes.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="app.prepare_analysis">
 <span class="sig-prename descclassname"><span class="pre">app.</span></span><span class="sig-name descname"><span class="pre">prepare_analysis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">results</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#app.prepare_analysis" title="Link to this definition">¶</a></dt>
 <dd><p>Convert ORM values to the assignment’s display formats.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>results</strong> – Complete ORM result mapping including total_rows and
+question_1 through question_11. The input is not modified.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Template-ready counts, percentages, grouped rows, and a timestamp.
+Missing numeric averages are represented by the string N/A.</p>
+</dd>
+</dl>
 </dd></dl>
 
 </section>
@@ -61,6 +79,67 @@
 <dt class="sig sig-object py" id="scrape.GradCafeScraper">
 <span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">scrape.</span></span><span class="sig-name descname"><span class="pre">GradCafeScraper</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Path</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'applicant_data.json'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">raw_dir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Path</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'raw'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delay</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">6.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">30.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#scrape.GradCafeScraper" title="Link to this definition">¶</a></dt>
 <dd><p>Checkpoint collection progress and stop on rejected requests.</p>
+<p>Instances are intended for one collection worker, not concurrent access.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scrape.GradCafeScraper.output">
+<span class="sig-name descname"><span class="pre">output</span></span><a class="headerlink" href="#scrape.GradCafeScraper.output" title="Link to this definition">¶</a></dt>
+<dd><p>Aggregate applicant JSON path.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scrape.GradCafeScraper.raw_dir">
+<span class="sig-name descname"><span class="pre">raw_dir</span></span><a class="headerlink" href="#scrape.GradCafeScraper.raw_dir" title="Link to this definition">¶</a></dt>
+<dd><p>Directory holding original HTML and per-page journals.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scrape.GradCafeScraper.delay">
+<span class="sig-name descname"><span class="pre">delay</span></span><a class="headerlink" href="#scrape.GradCafeScraper.delay" title="Link to this definition">¶</a></dt>
+<dd><p>Minimum interval between request starts, in seconds.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scrape.GradCafeScraper.timeout">
+<span class="sig-name descname"><span class="pre">timeout</span></span><a class="headerlink" href="#scrape.GradCafeScraper.timeout" title="Link to this definition">¶</a></dt>
+<dd><p>Network timeout in seconds.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scrape.GradCafeScraper.state_path">
+<span class="sig-name descname"><span class="pre">state_path</span></span><a class="headerlink" href="#scrape.GradCafeScraper.state_path" title="Link to this definition">¶</a></dt>
+<dd><p>Durable checkpoint JSON path.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scrape.GradCafeScraper.robots">
+<span class="sig-name descname"><span class="pre">robots</span></span><a class="headerlink" href="#scrape.GradCafeScraper.robots" title="Link to this definition">¶</a></dt>
+<dd><p>Loaded robots policy, or None before validation.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scrape.GradCafeScraper.last_request">
+<span class="sig-name descname"><span class="pre">last_request</span></span><a class="headerlink" href="#scrape.GradCafeScraper.last_request" title="Link to this definition">¶</a></dt>
+<dd><p>Monotonic time of the latest request start.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scrape.GradCafeScraper.state">
+<span class="sig-name descname"><span class="pre">state</span></span><a class="headerlink" href="#scrape.GradCafeScraper.state" title="Link to this definition">¶</a></dt>
+<dd><p>Progress, pagination, schema version, and saved stop reason.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scrape.GradCafeScraper.records">
+<span class="sig-name descname"><span class="pre">records</span></span><a class="headerlink" href="#scrape.GradCafeScraper.records" title="Link to this definition">¶</a></dt>
+<dd><p>Applicant records committed or recovered from journals.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scrape.GradCafeScraper.seen">
+<span class="sig-name descname"><span class="pre">seen</span></span><a class="headerlink" href="#scrape.GradCafeScraper.seen" title="Link to this definition">¶</a></dt>
+<dd><p>Source URLs already included in records.</p>
+</dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="scrape.GradCafeScraper.check_robots">
 <span class="sig-name descname"><span class="pre">check_robots</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">saved_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Path</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#scrape.GradCafeScraper.check_robots" title="Link to this definition">¶</a></dt>
@@ -81,6 +160,11 @@
 <dd><p>Refuse new live operations after a saved rejection or block.</p>
 <p>Offline replay into separate paths remains possible. This method never
 clears the saved stop or treats a browser transport as authorization.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#scrape.ScrapingStopped" title="scrape.ScrapingStopped"><strong>ScrapingStopped</strong></a> – A previous stop reason is still recorded.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -160,6 +244,18 @@ clears the saved stop or treats a browser transport as authorization.</p>
 <p>The saved temporary-file replacement pattern must name the configured
 output on both sides. Website, parser, policy, and general filesystem
 failures cannot be cleared through this recovery path.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>resolution</strong> – Nonblank evidence describing the reviewed file lock.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>ValueError</strong> – The saved failure is not the supported lock pattern,
+    or the review evidence is blank.</p></li>
+<li><p><strong>OSError</strong> – The updated checkpoint cannot be saved.</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -188,6 +284,17 @@ blocking.</p>
 <dd><p>Clear only a reviewed parser-layout stop after offline validation.</p>
 <p>Access denials, challenges, rate limits, and transport failures cannot
 be cleared through this method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>resolution</strong> – Human-readable account of the offline parser review.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>ValueError</strong> – The saved stop is not a parser-layout stop.</p></li>
+<li><p><strong>OSError</strong> – The updated checkpoint cannot be saved.</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -267,6 +374,21 @@ be cleared through this method.</p>
 <dt class="sig sig-object py" id="scrape.scrape_data">
 <span class="sig-prename descclassname"><span class="pre">scrape.</span></span><span class="sig-name descname"><span class="pre">scrape_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#scrape.scrape_data" title="Link to this definition">¶</a></dt>
 <dd><p>Collect using default files and keyword target/max_pages arguments.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>**kwargs</strong> – target and/or max_pages forwarded to the scraper method.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Committed applicant dictionaries, which may be below the target.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="#scrape.ScrapingStopped" title="scrape.ScrapingStopped"><strong>ScrapingStopped</strong></a> – Policy or response validation stops collection.</p></li>
+<li><p><strong>ValueError</strong> – A checkpoint or parsed record is incompatible.</p></li>
+<li><p><strong>OSError</strong> – Collection evidence cannot be persisted.</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
@@ -358,36 +480,106 @@ package hashes, so changing canonical lists invalidates the cache.</p>
 <section id="module-load_data">
 <span id="loading"></span><h2>Loading<a class="headerlink" href="#module-load_data" title="Link to this heading">¶</a></h2>
 <p>Load cleaned GradCafe applicant records into PostgreSQL.</p>
-<p>Connection settings use standard PostgreSQL environment variables. If a
-password is not provided, the program requests it without echoing it.</p>
+<p>Connection settings prefer DB_* variables, with legacy PG* fallbacks;
+DATABASE_URL overrides those settings. Missing passwords are prompted for
+without echo only in an interactive terminal. Provisioning requires an
+administrator role, separate from the restricted Flask application role.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="load_data.batches">
 <span class="sig-prename descclassname"><span class="pre">load_data.</span></span><span class="sig-name descname"><span class="pre">batches</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rows</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#load_data.batches" title="Link to this definition">¶</a></dt>
 <dd><p>Yield bounded batches for efficient inserts.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>rows</strong> – Ordered normalized tuples ready for parameter binding.</p></li>
+<li><p><strong>batch_size</strong> – Positive maximum number of rows in each yielded slice.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Yields<span class="colon">:</span></dt>
+<dd class="field-even"><p>Consecutive slices of rows, with a possibly shorter final slice.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="load_data.connect_database">
 <span class="sig-prename descclassname"><span class="pre">load_data.</span></span><span class="sig-name descname"><span class="pre">connect_database</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">create_if_missing</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Connection</span></span></span><a class="headerlink" href="#load_data.connect_database" title="Link to this definition">¶</a></dt>
 <dd><p>Connect directly unless an authorized loader requests provisioning.</p>
+<p>DATABASE_URL takes precedence and connects directly without provisioning.
+Otherwise, environment settings are used and a missing password is
+requested privately only when standard input is interactive.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>create_if_missing</strong> – Whether an administrator loader may create a
+missing database through the postgres maintenance database.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>An open connection. The caller must commit/rollback and close it.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError</strong> – Noninteractive execution has no configured password.</p></li>
+<li><p><strong>ValueError</strong> – The configured port is invalid.</p></li>
+<li><p><strong>psycopg.Error</strong> – Authentication, connection, or provisioning fails.</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="load_data.connection_arguments">
 <span class="sig-prename descclassname"><span class="pre">load_data.</span></span><span class="sig-name descname"><span class="pre">connection_arguments</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">object</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#load_data.connection_arguments" title="Link to this definition">¶</a></dt>
 <dd><p>Build non-secret connection settings from the environment.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>host, port, dbname, and user settings. DB_* takes precedence over
+PG*; defaults target local gradcafe with the gradcafe_app role.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – The configured port is not an integer.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="load_data.first_present">
 <span class="sig-prename descclassname"><span class="pre">load_data.</span></span><span class="sig-name descname"><span class="pre">first_present</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">record</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">keys</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#load_data.first_present" title="Link to this definition">¶</a></dt>
 <dd><p>Return the first nonblank value among equivalent source fields.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>record</strong> – Source applicant dictionary, which is not modified.</p></li>
+<li><p><strong>*keys</strong> – Equivalent field names in descending order of preference.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The first non-None, nonblank value, or None. Zero remains valid.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="load_data.load_rows">
 <span class="sig-prename descclassname"><span class="pre">load_data.</span></span><span class="sig-name descname"><span class="pre">load_rows</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rows</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#load_data.load_rows" title="Link to this definition">¶</a></dt>
-<dd><p>Create, load, and validate the table, returning row counts.</p>
+<dd><p>Create, load, and validate the table in one transaction.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>rows</strong> – Normalized tuples whose order matches COLUMNS.</p></li>
+<li><p><strong>batch_size</strong> – Positive maximum number of rows per executemany call.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Counts before loading, after loading, and of distinct stored URLs.
+Existing URL conflicts are ignored rather than overwritten.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError</strong> – Configuration or post-insert schema validation fails.</p></li>
+<li><p><strong>psycopg.Error</strong> – Provisioning, insertion, or verification fails.</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
@@ -400,48 +592,141 @@ password is not provided, the program requests it without echoing it.</p>
 <dt class="sig sig-object py" id="load_data.normalize_record">
 <span class="sig-prename descclassname"><span class="pre">load_data.</span></span><span class="sig-name descname"><span class="pre">normalize_record</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">record</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#load_data.normalize_record" title="Link to this definition">¶</a></dt>
 <dd><p>Map one Module 2 object to the required applicants schema.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>record</strong> – Applicant dictionary; legacy field aliases are accepted.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Values ordered exactly as COLUMNS for parameterized insertion.
+Missing optional fields become None, which psycopg binds as NULL.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ValueError</strong> – The URL is absent or a date/numeric value is invalid.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="load_data.optional_date">
 <span class="sig-prename descclassname"><span class="pre">load_data.</span></span><span class="sig-name descname"><span class="pre">optional_date</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">date</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#load_data.optional_date" title="Link to this definition">¶</a></dt>
 <dd><p>Convert source dates such as ‘Feb 12, 2026’ to date objects.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> – date, datetime, supported date string, blank string, or None.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A date without time information, or None for missing input.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ValueError</strong> – A nonblank string matches none of DATE_FORMATS.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="load_data.optional_float">
 <span class="sig-prename descclassname"><span class="pre">load_data.</span></span><span class="sig-name descname"><span class="pre">optional_float</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#load_data.optional_float" title="Link to this definition">¶</a></dt>
 <dd><p>Convert a supplied numeric value while preserving missing values.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> – Numeric source value, blank string, or None.</p></li>
+<li><p><strong>field</strong> – Field name included in validation errors.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A finite float, or None for a missing or blank input.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ValueError</strong> – The value is nonnumeric, infinite, or NaN.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="load_data.optional_text">
 <span class="sig-prename descclassname"><span class="pre">load_data.</span></span><span class="sig-name descname"><span class="pre">optional_text</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#load_data.optional_text" title="Link to this definition">¶</a></dt>
 <dd><p>Return normalized text, using None for missing or blank values.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> – Source field to stringify and strip, or None.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Trimmed text, or None when the input is missing or blank.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="load_data.parse_args">
 <span class="sig-prename descclassname"><span class="pre">load_data.</span></span><span class="sig-name descname"><span class="pre">parse_args</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Namespace</span></span></span><a class="headerlink" href="#load_data.parse_args" title="Link to this definition">¶</a></dt>
 <dd><p>Parse command-line settings that do not contain credentials.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Parsed file path and batch size. Invalid CLI syntax exits through
+argparse before any database operation is attempted.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="load_data.prepare_rows">
 <span class="sig-prename descclassname"><span class="pre">load_data.</span></span><span class="sig-name descname"><span class="pre">prepare_rows</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">records</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#load_data.prepare_rows" title="Link to this definition">¶</a></dt>
 <dd><p>Normalize records and remove repeated source URLs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>records</strong> – Iterable of applicant dictionaries to validate.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A pair of ordered database rows and the duplicate-URL count. The
+first record for each URL is retained; input records are unchanged.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ValueError</strong> – A record is invalid; the error names its 1-based position.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="load_data.read_records">
 <span class="sig-prename descclassname"><span class="pre">load_data.</span></span><span class="sig-name descname"><span class="pre">read_records</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Path</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#load_data.read_records" title="Link to this definition">¶</a></dt>
 <dd><p>Read and validate the top-level JSON document.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>filename</strong> – UTF-8 JSON input path, optionally with a byte-order mark.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Applicant dictionaries in their original document order.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ValueError</strong> – JSON is invalid or is not an array of objects.</p></li>
+<li><p><strong>OSError</strong> – The input file cannot be read.</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="load_data.verify_schema">
 <span class="sig-prename descclassname"><span class="pre">load_data.</span></span><span class="sig-name descname"><span class="pre">verify_schema</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cursor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Cursor</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#load_data.verify_schema" title="Link to this definition">¶</a></dt>
-<dd><p>Verify the live table structure, constraints, and URL uniqueness.</p>
+<dd><p>Verify the live table structure, primary key, and URL uniqueness.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>cursor</strong> – Open cursor with access to applicants and schema metadata.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The number of distinct stored URLs after all checks pass.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError</strong> – Columns, identity, primary key, or row uniqueness do
+    not match expectations. This checks data uniqueness, not the
+    presence of a separate UNIQUE constraint in metadata.</p></li>
+<li><p><strong>psycopg.Error</strong> – A validation query cannot be executed.</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 </section>
@@ -452,30 +737,103 @@ password is not provided, the program requests it without echoing it.</p>
 <dt class="sig sig-object py" id="query_data.build_lookup_statement">
 <span class="sig-prename descclassname"><span class="pre">query_data.</span></span><span class="sig-name descname"><span class="pre">build_lookup_statement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">column</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Composed</span></span></span><a class="headerlink" href="#query_data.build_lookup_statement" title="Link to this definition">¶</a></dt>
 <dd><p>Quote an approved column name while keeping values out of SQL text.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>column</strong> – Exact member of SEARCHABLE_COLUMNS to compare for equality.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A composed SELECT with placeholders for the value and row limit.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ValueError</strong> – The column is not on the application allowlist.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="query_data.clamp_limit">
 <span class="sig-prename descclassname"><span class="pre">query_data.</span></span><span class="sig-name descname"><span class="pre">clamp_limit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">requested</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">25</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#query_data.clamp_limit" title="Link to this definition">¶</a></dt>
 <dd><p>Constrain a requested row count before it reaches the database.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>requested</strong> – Integer-like row count supplied by the caller.</p></li>
+<li><p><strong>default</strong> – Fallback when conversion fails; also clamped to 1-100.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>An integer between one and MAX_QUERY_LIMIT, inclusive. Invalid and
+nonfinite inputs use the fallback instead of reaching PostgreSQL.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="query_data.fetch_all">
 <span class="sig-prename descclassname"><span class="pre">query_data.</span></span><span class="sig-name descname"><span class="pre">fetch_all</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cursor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Cursor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">query</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#query_data.fetch_all" title="Link to this definition">¶</a></dt>
-<dd><p>Execute one analysis query and return all result rows.</p>
+<dd><p>Execute one trusted, bounded analysis query and fetch its rows.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cursor</strong> – Open cursor owned by the caller.</p></li>
+<li><p><strong>query</strong> – Developer-owned SQL constant with an explicit result limit.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>All rows returned by the bounded query, or an empty list.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>psycopg.Error</strong> – Query execution fails.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="query_data.fetch_one">
 <span class="sig-prename descclassname"><span class="pre">query_data.</span></span><span class="sig-name descname"><span class="pre">fetch_one</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cursor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Cursor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">query</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#query_data.fetch_one" title="Link to this definition">¶</a></dt>
-<dd><p>Execute one analysis query and require exactly one result row.</p>
+<dd><p>Execute a trusted scalar-analysis query and fetch its first row.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cursor</strong> – Open cursor belonging to the caller’s read-only connection.</p></li>
+<li><p><strong>query</strong> – Developer-owned SQL constant with LIMIT 1, not user input.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The first result row as a tuple. Additional rows are not checked.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError</strong> – The query produces no row.</p></li>
+<li><p><strong>psycopg.Error</strong> – Query execution fails.</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="query_data.lookup_applicants">
 <span class="sig-prename descclassname"><span class="pre">query_data.</span></span><span class="sig-name descname"><span class="pre">lookup_applicants</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cursor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Cursor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">column</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">25</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#query_data.lookup_applicants" title="Link to this definition">¶</a></dt>
 <dd><p>Run a bounded lookup with separate statement and bound parameters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cursor</strong> – Open psycopg cursor; the caller owns its transaction.</p></li>
+<li><p><strong>column</strong> – Approved search column, such as program or term.</p></li>
+<li><p><strong>value</strong> – Exact search value, treated as data even if it contains SQL.</p></li>
+<li><p><strong>limit</strong> – Requested row count, normalized to the inclusive range 1-100.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Rows of (p_id, program, status, term), ordered by p_id.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ValueError</strong> – The search column is not allowed.</p></li>
+<li><p><strong>psycopg.Error</strong> – PostgreSQL rejects or cannot execute the lookup.</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
@@ -488,18 +846,49 @@ password is not provided, the program requests it without echoing it.</p>
 <dt class="sig sig-object py" id="query_data.print_analysis">
 <span class="sig-prename descclassname"><span class="pre">query_data.</span></span><span class="sig-name descname"><span class="pre">print_analysis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">results</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">object</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#query_data.print_analysis" title="Link to this definition">¶</a></dt>
 <dd><p>Print every result using the assignment’s required formatting.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>results</strong> – Complete result mapping returned by run_analysis. Counts
+use thousands separators; missing averages display as N/A.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="query_data.print_question">
 <span class="sig-prename descclassname"><span class="pre">query_data.</span></span><span class="sig-name descname"><span class="pre">print_question</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">question</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#query_data.print_question" title="Link to this definition">¶</a></dt>
 <dd><p>Print a consistent heading for console and screenshot output.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>number</strong> – Assignment question number to display.</p></li>
+<li><p><strong>question</strong> – Human-readable question text, printed without modification.</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="query_data.run_analysis">
 <span class="sig-prename descclassname"><span class="pre">query_data.</span></span><span class="sig-name descname"><span class="pre">run_analysis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">connection</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Connection</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">object</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#query_data.run_analysis" title="Link to this definition">¶</a></dt>
 <dd><p>Execute Questions 1-11 using handwritten SQL only.</p>
+<p>Sets the supplied connection to read-only; the caller closes it and owns
+the transaction. LIMIT bounds result rows, not aggregate scanning work.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>connection</strong> – Open connection with no transaction already in progress.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>question_1 through question_11 mapped to scalars, the four-score
+tuple for question_3, or grouped row lists for questions 10 and 11.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError</strong> – An expected aggregate result row is absent.</p></li>
+<li><p><strong>psycopg.Error</strong> – Read-only setup or any query fails.</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 </section>
@@ -510,6 +899,12 @@ password is not provided, the program requests it without echoing it.</p>
 <dt class="sig sig-object py" id="orm_queries.acceptance_percentage">
 <span class="sig-prename descclassname"><span class="pre">orm_queries.</span></span><span class="sig-name descname"><span class="pre">acceptance_percentage</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#orm_queries.acceptance_percentage" title="Link to this definition">¶</a></dt>
 <dd><p>Return a conditional aggregate for accepted-row percentages.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>An expression computing accepted / total * 100. NULLIF preserves a
+missing result for empty groups instead of dividing by zero.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
@@ -540,6 +935,15 @@ password is not provided, the program requests it without echoing it.</p>
 <dt class="sig sig-object py" id="orm_queries.normalized">
 <span class="sig-prename descclassname"><span class="pre">orm_queries.</span></span><span class="sig-name descname"><span class="pre">normalized</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">column</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#orm_queries.normalized" title="Link to this definition">¶</a></dt>
 <dd><p>Return a case-insensitive, whitespace-normalized SQL expression.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>column</strong> (<em>sqlalchemy.sql.elements.ColumnElement</em>) – Text column or
+expression, not a raw SQL string.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A lower(btrim(column)) expression evaluated by PostgreSQL.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
@@ -552,6 +956,11 @@ password is not provided, the program requests it without echoing it.</p>
 <dt class="sig sig-object py" id="orm_queries.print_analysis">
 <span class="sig-prename descclassname"><span class="pre">orm_queries.</span></span><span class="sig-name descname"><span class="pre">print_analysis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">results</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#orm_queries.print_analysis" title="Link to this definition">¶</a></dt>
 <dd><p>Print ORM results with the same formatting as the raw-SQL output.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>results</strong> – Selected-question mapping returned by run_analysis.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
@@ -624,18 +1033,51 @@ password is not provided, the program requests it without echoing it.</p>
 <dt class="sig sig-object py" id="orm_queries.run_analysis">
 <span class="sig-prename descclassname"><span class="pre">orm_queries.</span></span><span class="sig-name descname"><span class="pre">run_analysis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">session</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Session</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#orm_queries.run_analysis" title="Link to this definition">¶</a></dt>
 <dd><p>Execute selected analyses through an ORM Session.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>session</strong> – Open caller-owned session with SELECT access to applicants.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Results for questions 1, 4, 5, 8, 9, and 10. Question 10 contains
+grouped rows; the other entries contain scalar aggregate values.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>sqlalchemy.exc.SQLAlchemyError</strong> – A query cannot be executed.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="orm_queries.run_complete_analysis">
 <span class="sig-prename descclassname"><span class="pre">orm_queries.</span></span><span class="sig-name descname"><span class="pre">run_complete_analysis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">session</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Session</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#orm_queries.run_complete_analysis" title="Link to this definition">¶</a></dt>
 <dd><p>Execute all 11 ORM analyses for the dynamic Flask page.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>session</strong> – Open caller-owned session. This function neither closes it
+nor commits its transaction; the caller controls its lifetime.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A mapping with question_1 through question_11 and total_rows. The
+question_3 row has GPA, GRE, verbal, and writing averages; questions
+10 and 11 contain grouped row lists. Empty averages may be None.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>sqlalchemy.exc.SQLAlchemyError</strong> – Query execution or row retrieval fails.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="orm_queries.runtime_password">
 <span class="sig-prename descclassname"><span class="pre">orm_queries.</span></span><span class="sig-name descname"><span class="pre">runtime_password</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#orm_queries.runtime_password" title="Link to this definition">¶</a></dt>
-<dd><p>Use configured credentials or securely request the password.</p>
+<dd><p>Use configured credentials or request the password through getpass.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None when DATABASE_URL supplies connection settings; otherwise the
+DB_PASSWORD/PGPASSWORD value or an interactively entered password.
+Noninteractive callers should configure credentials in advance.</p>
+</dd>
+</dl>
 </dd></dl>
 
 </section>

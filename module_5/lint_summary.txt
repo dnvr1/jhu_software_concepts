@@ -5,3 +5,8 @@ Command: .venv\Scripts\python.exe -m pylint src --fail-under=10
 Your code has been rated at 10.00/10
 
 Pylint was run only on module_5/src, as required by the assignment.
+
+Rerun after Google-style documentation updates: 10.00/10, no warnings.
+The pylint.extensions.docparams plugin uses Google-style parsing and requires
+parameter documentation. See pyproject.toml and STYLE_GUIDE.md for configuration
+and project-specific exceptions. All 107 source functions/classes have docstrings.

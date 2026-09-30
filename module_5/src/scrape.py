@@ -28,7 +28,15 @@ SCORE_FIELDS = {"gre", "gre_v", "gre_aw", "gre_quantitative", "gpa"}
 
 
 def _validate_checkpoint_schema(records: list[dict], source: Path) -> None:
-    """Reject stale/mixed score schemas before any recovery writes."""
+    """Reject stale/mixed score schemas before any recovery writes.
+
+    Args:
+        records: Previously saved applicant dictionaries to inspect.
+        source: Source path included in a schema-mismatch error.
+
+    Raises:
+        ValueError: A record lacks the current score/provenance structure.
+    """
     for record in records:
         provenance = record.get("score_provenance")
         narrative_schema_valid = isinstance(
@@ -62,6 +70,13 @@ def _declared_comment_gre(comment: str | None) -> dict:
 
     Quantitative is a distinct metric; it is not an inferred total GRE score.
     Anchoring the whole comment excludes historical or third-party prose.
+
+    Args:
+        comment: Complete applicant comment, or None when absent.
+
+    Returns:
+        Quantitative, verbal, and writing score strings when the entire
+        comment matches the declaration format; otherwise an empty dict.
     """
     if comment is None:
         return {}
@@ -164,17 +179,51 @@ class _CheckedRedirect(HTTPRedirectHandler):
     """Validate every redirect target before urllib follows it."""
 
     def __init__(self, allowed):
-        """Store the URL-policy callback used for redirect validation."""
+        """Store the URL-policy callback used for redirect validation.
+
+        Args:
+            allowed: Callable that raises when a destination is prohibited.
+        """
         self.allowed = allowed
 
     def redirect_request(self, req, fp, code, msg, headers, newurl):
-        """Reject a redirect unless its destination passes URL policy."""
+        """Reject a redirect unless its destination passes URL policy.
+
+        Args:
+            req (urllib.request.Request): Original request.
+            fp (typing.IO): Original response stream supplied by urllib.
+            code (int): HTTP redirect status code.
+            msg (str): HTTP response message.
+            headers (http.client.HTTPMessage): Redirect response headers.
+            newurl (str): Destination checked before delegating to urllib.
+
+        Returns:
+            The request or None produced by the parent redirect handler.
+
+        Raises:
+            ScrapingStopped: Destination policy rejects the redirect.
+        """
         self.allowed(newurl)
         return super().redirect_request(req, fp, code, msg, headers, newurl)
 
 
 class GradCafeScraper:
-    """Checkpoint collection progress and stop on rejected requests."""
+    """Checkpoint collection progress and stop on rejected requests.
+
+    Instances are intended for one collection worker, not concurrent access.
+
+    Attributes:
+        output: Aggregate applicant JSON path.
+        raw_dir: Directory holding original HTML and per-page journals.
+        delay: Minimum interval between request starts, in seconds.
+        timeout: Network timeout in seconds.
+        state_path: Durable checkpoint JSON path.
+        robots: Loaded robots policy, or None before validation.
+        last_request: Monotonic time of the latest request start.
+        state: Progress, pagination, schema version, and saved stop reason.
+        records: Applicant records committed or recovered from journals.
+        seen: Source URLs already included in records.
+    """
 
     def __init__(
         self,
@@ -183,7 +232,21 @@ class GradCafeScraper:
         delay: float = 6.0,
         timeout: float = 30.0,
     ):
-        """Load durable progress and configure cautious request limits."""
+        """Load durable progress and configure cautious request limits.
+
+        Recovery may rewrite the aggregate and checkpoint from valid page
+        journals. No network requests are made during construction.
+
+        Args:
+            output: Aggregate JSON path for this collection.
+            raw_dir: Capture/journal directory associated with that output.
+            delay: Minimum seconds between requests; must be at least two.
+            timeout: Timeout passed to urllib for each network operation.
+
+        Raises:
+            ValueError: Delay, saved JSON, or checkpoint schema is invalid.
+            OSError: Recovery files cannot be read or written.
+        """
         if delay < 2:
             raise ValueError(
                 "Use a delay of at least 2 seconds; the default is 6 seconds."
@@ -270,6 +333,9 @@ class GradCafeScraper:
 
         Offline replay into separate paths remains possible. This method never
         clears the saved stop or treats a browser transport as authorization.
+
+        Raises:
+            ScrapingStopped: A previous stop reason is still recorded.
         """
         if self.state.get("stop_reason"):
             raise ScrapingStopped(
@@ -284,6 +350,13 @@ class GradCafeScraper:
 
         Access denials, challenges, rate limits, and transport failures cannot
         be cleared through this method.
+
+        Args:
+            resolution: Human-readable account of the offline parser review.
+
+        Raises:
+            ValueError: The saved stop is not a parser-layout stop.
+            OSError: The updated checkpoint cannot be saved.
         """
         reason = self.state.get("stop_reason")
         if not reason or not reason.startswith(
@@ -353,6 +426,14 @@ class GradCafeScraper:
         The saved temporary-file replacement pattern must name the configured
         output on both sides. Website, parser, policy, and general filesystem
         failures cannot be cleared through this recovery path.
+
+        Args:
+            resolution: Nonblank evidence describing the reviewed file lock.
+
+        Raises:
+            ValueError: The saved failure is not the supported lock pattern,
+                or the review evidence is blank.
+            OSError: The updated checkpoint cannot be saved.
         """
         reason = self.state.get("stop_reason") or ""
         output_name = self.output.name.lower()
@@ -380,7 +461,15 @@ class GradCafeScraper:
         self._checkpoint()
 
     def _allowed(self, url: str) -> None:
-        """Require a valid public URL permitted by the loaded robots policy."""
+        """Require a valid public URL permitted by the loaded robots policy.
+
+        Args:
+            url: Absolute destination, including redirects and pagination.
+
+        Raises:
+            ScrapingStopped: The URL is outside the allowed site paths or
+                robots policy is absent/denies access to a non-robots URL.
+        """
         validate_public_url(url)
         if urlparse(url).path != "/robots.txt" and (
             self.robots is None or not self.robots.can_fetch(USER_AGENT, url)
@@ -390,7 +479,18 @@ class GradCafeScraper:
             )
 
     def _request(self, url: str) -> tuple[bytes, str]:
-        """Make one paced request and reject unsafe or blocked responses."""
+        """Make one paced request and reject unsafe or blocked responses.
+
+        Args:
+            url: Public URL subject to robots and redirect checks.
+
+        Returns:
+            Original response bytes and the final validated response URL.
+
+        Raises:
+            ScrapingStopped: A saved stop, policy rejection, unexpected
+                content type, HTTP failure, or transport error blocks access.
+        """
         self.ensure_live_allowed()
         self._allowed(url)
         remaining = self.delay - (time.monotonic() - self.last_request)
@@ -475,7 +575,21 @@ class GradCafeScraper:
 
     @staticmethod
     def _parse_entry(main_row, details, page_url: str) -> dict:
-        """Parse one listing and its detail row without inventing values."""
+        """Parse one listing and its detail rows without inventing values.
+
+        Args:
+            main_row: BeautifulSoup table row holding the applicant link.
+            details: Following table rows containing metadata and comments.
+            page_url: Source URL used to resolve the applicant's stable link.
+
+        Returns:
+            An applicant dictionary retaining raw text and score provenance.
+            Missing source values remain None rather than inferred scores.
+
+        Raises:
+            ValueError: Required link or table layout cannot be recognized.
+            ScrapingStopped: The resolved applicant URL is prohibited.
+        """
         cells = main_row.find_all("td", recursive=False)
         link = main_row.find("a", href=re.compile(r"(?:^|/)result/\d+"))
         if link is None:
@@ -812,7 +926,19 @@ class GradCafeScraper:
 
 
 def scrape_data(**kwargs) -> list[dict]:
-    """Collect using default files and keyword target/max_pages arguments."""
+    """Collect using default files and keyword target/max_pages arguments.
+
+    Args:
+        **kwargs: target and/or max_pages forwarded to the scraper method.
+
+    Returns:
+        Committed applicant dictionaries, which may be below the target.
+
+    Raises:
+        ScrapingStopped: Policy or response validation stops collection.
+        ValueError: A checkpoint or parsed record is incompatible.
+        OSError: Collection evidence cannot be persisted.
+    """
     return GradCafeScraper().scrape_data(**kwargs)
 
 

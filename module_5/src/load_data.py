@@ -1,7 +1,9 @@
 """Load cleaned GradCafe applicant records into PostgreSQL.
 
-Connection settings use standard PostgreSQL environment variables. If a
-password is not provided, the program requests it without echoing it.
+Connection settings prefer DB_* variables, with legacy PG* fallbacks;
+DATABASE_URL overrides those settings. Missing passwords are prompted for
+without echo only in an interactive terminal. Provisioning requires an
+administrator role, separate from the restricted Flask application role.
 """
 
 from __future__ import annotations
@@ -104,7 +106,14 @@ ON CONFLICT (url) DO NOTHING
 
 
 def optional_text(value: object) -> str | None:
-    """Return normalized text, using None for missing or blank values."""
+    """Return normalized text, using None for missing or blank values.
+
+    Args:
+        value: Source field to stringify and strip, or None.
+
+    Returns:
+        Trimmed text, or None when the input is missing or blank.
+    """
     if value is None:
         return None
     text = str(value).strip()
@@ -112,7 +121,18 @@ def optional_text(value: object) -> str | None:
 
 
 def optional_float(value: object, field: str) -> float | None:
-    """Convert a supplied numeric value while preserving missing values."""
+    """Convert a supplied numeric value while preserving missing values.
+
+    Args:
+        value: Numeric source value, blank string, or None.
+        field: Field name included in validation errors.
+
+    Returns:
+        A finite float, or None for a missing or blank input.
+
+    Raises:
+        ValueError: The value is nonnumeric, infinite, or NaN.
+    """
     if value is None or (isinstance(value, str) and not value.strip()):
         return None
     try:
@@ -125,7 +145,17 @@ def optional_float(value: object, field: str) -> float | None:
 
 
 def optional_date(value: object) -> date | None:
-    """Convert source dates such as 'Feb 12, 2026' to date objects."""
+    """Convert source dates such as 'Feb 12, 2026' to date objects.
+
+    Args:
+        value: date, datetime, supported date string, blank string, or None.
+
+    Returns:
+        A date without time information, or None for missing input.
+
+    Raises:
+        ValueError: A nonblank string matches none of DATE_FORMATS.
+    """
     if value is None or (isinstance(value, str) and not value.strip()):
         return None
     if isinstance(value, datetime):
@@ -142,7 +172,15 @@ def optional_date(value: object) -> date | None:
 
 
 def first_present(record: dict[str, Any], *keys: str) -> object:
-    """Return the first nonblank value among equivalent source fields."""
+    """Return the first nonblank value among equivalent source fields.
+
+    Args:
+        record: Source applicant dictionary, which is not modified.
+        *keys: Equivalent field names in descending order of preference.
+
+    Returns:
+        The first non-None, nonblank value, or None. Zero remains valid.
+    """
     for key in keys:
         value = record.get(key)
         if value is not None and not (
@@ -153,7 +191,18 @@ def first_present(record: dict[str, Any], *keys: str) -> object:
 
 
 def normalize_record(record: dict[str, Any]) -> tuple[object, ...]:
-    """Map one Module 2 object to the required applicants schema."""
+    """Map one Module 2 object to the required applicants schema.
+
+    Args:
+        record: Applicant dictionary; legacy field aliases are accepted.
+
+    Returns:
+        Values ordered exactly as COLUMNS for parameterized insertion.
+        Missing optional fields become None, which psycopg binds as NULL.
+
+    Raises:
+        ValueError: The URL is absent or a date/numeric value is invalid.
+    """
     url = optional_text(record.get("url"))
     if url is None:
         raise ValueError("url is required to identify and deduplicate a row")
@@ -194,7 +243,18 @@ def normalize_record(record: dict[str, Any]) -> tuple[object, ...]:
 
 
 def read_records(filename: Path) -> list[dict[str, Any]]:
-    """Read and validate the top-level JSON document."""
+    """Read and validate the top-level JSON document.
+
+    Args:
+        filename: UTF-8 JSON input path, optionally with a byte-order mark.
+
+    Returns:
+        Applicant dictionaries in their original document order.
+
+    Raises:
+        ValueError: JSON is invalid or is not an array of objects.
+        OSError: The input file cannot be read.
+    """
     with filename.open(encoding="utf-8-sig") as source:
         records = json.load(source)
     if not isinstance(records, list) or any(
@@ -209,7 +269,18 @@ def read_records(filename: Path) -> list[dict[str, Any]]:
 def prepare_rows(
     records: Iterable[dict[str, Any]],
 ) -> tuple[list[tuple[object, ...]], int]:
-    """Normalize records and remove repeated source URLs."""
+    """Normalize records and remove repeated source URLs.
+
+    Args:
+        records: Iterable of applicant dictionaries to validate.
+
+    Returns:
+        A pair of ordered database rows and the duplicate-URL count. The
+        first record for each URL is retained; input records are unchanged.
+
+    Raises:
+        ValueError: A record is invalid; the error names its 1-based position.
+    """
     rows: list[tuple[object, ...]] = []
     seen_urls: set[object] = set()
     duplicate_count = 0
@@ -230,7 +301,15 @@ def prepare_rows(
 
 
 def connection_arguments() -> dict[str, object]:
-    """Build non-secret connection settings from the environment."""
+    """Build non-secret connection settings from the environment.
+
+    Returns:
+        host, port, dbname, and user settings. DB_* takes precedence over
+        PG*; defaults target local gradcafe with the gradcafe_app role.
+
+    Raises:
+        ValueError: The configured port is not an integer.
+    """
     return {
         "host": os.getenv("DB_HOST", os.getenv("PGHOST", "localhost")),
         "port": int(os.getenv("DB_PORT", os.getenv("PGPORT", "5432"))),
@@ -240,7 +319,24 @@ def connection_arguments() -> dict[str, object]:
 
 
 def connect_database(create_if_missing: bool = False) -> psycopg.Connection:
-    """Connect directly unless an authorized loader requests provisioning."""
+    """Connect directly unless an authorized loader requests provisioning.
+
+    DATABASE_URL takes precedence and connects directly without provisioning.
+    Otherwise, environment settings are used and a missing password is
+    requested privately only when standard input is interactive.
+
+    Args:
+        create_if_missing: Whether an administrator loader may create a
+            missing database through the postgres maintenance database.
+
+    Returns:
+        An open connection. The caller must commit/rollback and close it.
+
+    Raises:
+        RuntimeError: Noninteractive execution has no configured password.
+        ValueError: The configured port is invalid.
+        psycopg.Error: Authentication, connection, or provisioning fails.
+    """
     database_url = os.getenv("DATABASE_URL")
     if database_url:
         return psycopg.connect(database_url)
@@ -271,6 +367,8 @@ def connect_database(create_if_missing: bool = False) -> psycopg.Connection:
                     (database_name,),
                 )
                 if cursor.fetchone() is None:
+                    # Database names are identifiers, not bound values. Quote
+                    # with Identifier; never insert the raw environment text.
                     statement = sql.SQL("CREATE DATABASE {}").format(
                         sql.Identifier(database_name)
                     )
@@ -282,13 +380,34 @@ def connect_database(create_if_missing: bool = False) -> psycopg.Connection:
 def batches(
     rows: Sequence[tuple[object, ...]], batch_size: int
 ) -> Iterable[Sequence[tuple[object, ...]]]:
-    """Yield bounded batches for efficient inserts."""
+    """Yield bounded batches for efficient inserts.
+
+    Args:
+        rows: Ordered normalized tuples ready for parameter binding.
+        batch_size: Positive maximum number of rows in each yielded slice.
+
+    Yields:
+        Consecutive slices of rows, with a possibly shorter final slice.
+    """
     for start in range(0, len(rows), batch_size):
         yield rows[start : start + batch_size]
 
 
 def verify_schema(cursor: psycopg.Cursor) -> int:
-    """Verify the live table structure, constraints, and URL uniqueness."""
+    """Verify the live table structure, primary key, and URL uniqueness.
+
+    Args:
+        cursor: Open cursor with access to applicants and schema metadata.
+
+    Returns:
+        The number of distinct stored URLs after all checks pass.
+
+    Raises:
+        RuntimeError: Columns, identity, primary key, or row uniqueness do
+            not match expectations. This checks data uniqueness, not the
+            presence of a separate UNIQUE constraint in metadata.
+        psycopg.Error: A validation query cannot be executed.
+    """
     cursor.execute(
         """
         SELECT column_name, data_type, is_identity
@@ -344,7 +463,22 @@ def verify_schema(cursor: psycopg.Cursor) -> int:
 def load_rows(
     rows: Sequence[tuple[object, ...]], batch_size: int
 ) -> tuple[int, int, int]:
-    """Create, load, and validate the table, returning row counts."""
+    """Create, load, and validate the table in one transaction.
+
+    Args:
+        rows: Normalized tuples whose order matches COLUMNS.
+        batch_size: Positive maximum number of rows per executemany call.
+
+    Returns:
+        Counts before loading, after loading, and of distinct stored URLs.
+        Existing URL conflicts are ignored rather than overwritten.
+
+    Raises:
+        RuntimeError: Configuration or post-insert schema validation fails.
+        psycopg.Error: Provisioning, insertion, or verification fails.
+    """
+    # The connection context commits only after verification succeeds. Any
+    # failure rolls back this table transaction instead of leaving half a load.
     with connect_database(create_if_missing=True) as connection:
         with connection.cursor() as cursor:
             cursor.execute(CREATE_TABLE_SQL)
@@ -359,7 +493,12 @@ def load_rows(
 
 
 def parse_args() -> argparse.Namespace:
-    """Parse command-line settings that do not contain credentials."""
+    """Parse command-line settings that do not contain credentials.
+
+    Returns:
+        Parsed file path and batch size. Invalid CLI syntax exits through
+        argparse before any database operation is attempted.
+    """
     parser = argparse.ArgumentParser(
         description="Load cleaned GradCafe records into PostgreSQL."
     )

@@ -217,7 +217,16 @@ SEARCHABLE_COLUMNS = frozenset({"program", "status", "term", "degree"})
 
 
 def clamp_limit(requested: object, default: int = 25) -> int:
-    """Constrain a requested row count before it reaches the database."""
+    """Constrain a requested row count before it reaches the database.
+
+    Args:
+        requested: Integer-like row count supplied by the caller.
+        default: Fallback when conversion fails; also clamped to 1-100.
+
+    Returns:
+        An integer between one and MAX_QUERY_LIMIT, inclusive. Invalid and
+        nonfinite inputs use the fallback instead of reaching PostgreSQL.
+    """
     try:
         value = int(requested)
     except (TypeError, ValueError, OverflowError):
@@ -226,7 +235,19 @@ def clamp_limit(requested: object, default: int = 25) -> int:
 
 
 def build_lookup_statement(column: str) -> sql.Composed:
-    """Quote an approved column name while keeping values out of SQL text."""
+    """Quote an approved column name while keeping values out of SQL text.
+
+    Args:
+        column: Exact member of SEARCHABLE_COLUMNS to compare for equality.
+
+    Returns:
+        A composed SELECT with placeholders for the value and row limit.
+
+    Raises:
+        ValueError: The column is not on the application allowlist.
+    """
+    # Identifiers cannot be bound as values. Enforce the business allowlist
+    # first, then let psycopg quote the identifier without interpolating it.
     if column not in SEARCHABLE_COLUMNS:
         raise ValueError("Unsupported search column")
     return sql.SQL(
@@ -243,9 +264,25 @@ def build_lookup_statement(column: str) -> sql.Composed:
 def lookup_applicants(
     cursor: psycopg.Cursor, column: str, value: str, limit: object = 25
 ) -> list[tuple[Any, ...]]:
-    """Run a bounded lookup with separate statement and bound parameters."""
+    """Run a bounded lookup with separate statement and bound parameters.
+
+    Args:
+        cursor: Open psycopg cursor; the caller owns its transaction.
+        column: Approved search column, such as program or term.
+        value: Exact search value, treated as data even if it contains SQL.
+        limit: Requested row count, normalized to the inclusive range 1-100.
+
+    Returns:
+        Rows of (p_id, program, status, term), ordered by p_id.
+
+    Raises:
+        ValueError: The search column is not allowed.
+        psycopg.Error: PostgreSQL rejects or cannot execute the lookup.
+    """
     statement = build_lookup_statement(column)
     parameters = (value, clamp_limit(limit))
+    # Keep the SQL structure separate from the value tuple. Quoting strings
+    # manually or using an f-string here would defeat parameter binding.
     cursor.execute(statement, parameters)
     return cursor.fetchall()
 
@@ -253,7 +290,19 @@ def lookup_applicants(
 def fetch_one(
     cursor: psycopg.Cursor, query: str
 ) -> tuple[Any, ...]:
-    """Execute one analysis query and require exactly one result row."""
+    """Execute a trusted scalar-analysis query and fetch its first row.
+
+    Args:
+        cursor: Open cursor belonging to the caller's read-only connection.
+        query: Developer-owned SQL constant with LIMIT 1, not user input.
+
+    Returns:
+        The first result row as a tuple. Additional rows are not checked.
+
+    Raises:
+        RuntimeError: The query produces no row.
+        psycopg.Error: Query execution fails.
+    """
     cursor.execute(query)
     row = cursor.fetchone()
     if row is None:
@@ -264,13 +313,39 @@ def fetch_one(
 def fetch_all(
     cursor: psycopg.Cursor, query: str
 ) -> list[tuple[Any, ...]]:
-    """Execute one analysis query and return all result rows."""
+    """Execute one trusted, bounded analysis query and fetch its rows.
+
+    Args:
+        cursor: Open cursor owned by the caller.
+        query: Developer-owned SQL constant with an explicit result limit.
+
+    Returns:
+        All rows returned by the bounded query, or an empty list.
+
+    Raises:
+        psycopg.Error: Query execution fails.
+    """
     cursor.execute(query)
     return cursor.fetchall()
 
 
 def run_analysis(connection: psycopg.Connection) -> dict[str, object]:
-    """Execute Questions 1-11 using handwritten SQL only."""
+    """Execute Questions 1-11 using handwritten SQL only.
+
+    Sets the supplied connection to read-only; the caller closes it and owns
+    the transaction. LIMIT bounds result rows, not aggregate scanning work.
+
+    Args:
+        connection: Open connection with no transaction already in progress.
+
+    Returns:
+        question_1 through question_11 mapped to scalars, the four-score
+        tuple for question_3, or grouped row lists for questions 10 and 11.
+
+    Raises:
+        RuntimeError: An expected aggregate result row is absent.
+        psycopg.Error: Read-only setup or any query fails.
+    """
     connection.read_only = True
     with connection.cursor() as cursor:
         question_1 = fetch_one(cursor, SQL_QUESTION_1)[0]
@@ -301,13 +376,23 @@ def run_analysis(connection: psycopg.Connection) -> dict[str, object]:
 
 
 def print_question(number: int, question: str) -> None:
-    """Print a consistent heading for console and screenshot output."""
+    """Print a consistent heading for console and screenshot output.
+
+    Args:
+        number: Assignment question number to display.
+        question: Human-readable question text, printed without modification.
+    """
     print(f"\nQuestion {number}")
     print(question)
 
 
 def print_analysis(results: dict[str, object]) -> None:
-    """Print every result using the assignment's required formatting."""
+    """Print every result using the assignment's required formatting.
+
+    Args:
+        results: Complete result mapping returned by run_analysis. Counts
+            use thousands separators; missing averages display as N/A.
+    """
     print("Module 3 Raw SQL Analysis")
 
     print_question(1, QUESTION_1)

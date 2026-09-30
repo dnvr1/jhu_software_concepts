@@ -31,12 +31,25 @@ PHD_DEGREES = ("phd", "ph.d.", "doctor of philosophy")
 
 
 def normalized(column):
-    """Return a case-insensitive, whitespace-normalized SQL expression."""
+    """Return a case-insensitive, whitespace-normalized SQL expression.
+
+    Args:
+        column (sqlalchemy.sql.elements.ColumnElement): Text column or
+            expression, not a raw SQL string.
+
+    Returns:
+        A lower(btrim(column)) expression evaluated by PostgreSQL.
+    """
     return func.lower(func.btrim(column))
 
 
 def acceptance_percentage():
-    """Return a conditional aggregate for accepted-row percentages."""
+    """Return a conditional aggregate for accepted-row percentages.
+
+    Returns:
+        An expression computing accepted / total * 100. NULLIF preserves a
+        missing result for empty groups instead of dividing by zero.
+    """
     accepted_count = func.count(models.Applicant.p_id).filter(
         normalized(models.Applicant.status) == "accepted"
     )
@@ -237,7 +250,18 @@ def build_complete_statements() -> dict[str, Select]:
 
 
 def run_analysis(session: Session) -> dict[str, Any]:
-    """Execute selected analyses through an ORM Session."""
+    """Execute selected analyses through an ORM Session.
+
+    Args:
+        session: Open caller-owned session with SELECT access to applicants.
+
+    Returns:
+        Results for questions 1, 4, 5, 8, 9, and 10. Question 10 contains
+        grouped rows; the other entries contain scalar aggregate values.
+
+    Raises:
+        sqlalchemy.exc.SQLAlchemyError: A query cannot be executed.
+    """
     statements = build_statements()
     return {
         "question_1": session.scalar(statements["question_1"]),
@@ -252,7 +276,20 @@ def run_analysis(session: Session) -> dict[str, Any]:
 
 
 def run_complete_analysis(session: Session) -> dict[str, Any]:
-    """Execute all 11 ORM analyses for the dynamic Flask page."""
+    """Execute all 11 ORM analyses for the dynamic Flask page.
+
+    Args:
+        session: Open caller-owned session. This function neither closes it
+            nor commits its transaction; the caller controls its lifetime.
+
+    Returns:
+        A mapping with question_1 through question_11 and total_rows. The
+        question_3 row has GPA, GRE, verbal, and writing averages; questions
+        10 and 11 contain grouped row lists. Empty averages may be None.
+
+    Raises:
+        sqlalchemy.exc.SQLAlchemyError: Query execution or row retrieval fails.
+    """
     results = run_analysis(session)
     statements = build_complete_statements()
     results.update(
@@ -275,7 +312,13 @@ def run_complete_analysis(session: Session) -> dict[str, Any]:
 
 
 def runtime_password() -> str | None:
-    """Use configured credentials or securely request the password."""
+    """Use configured credentials or request the password through getpass.
+
+    Returns:
+        None when DATABASE_URL supplies connection settings; otherwise the
+        DB_PASSWORD/PGPASSWORD value or an interactively entered password.
+        Noninteractive callers should configure credentials in advance.
+    """
     if os.getenv("DATABASE_URL"):
         return None
     password = os.getenv("DB_PASSWORD", os.getenv("PGPASSWORD"))
@@ -288,7 +331,11 @@ def runtime_password() -> str | None:
 
 
 def print_analysis(results: dict[str, Any]) -> None:
-    """Print ORM results with the same formatting as the raw-SQL output."""
+    """Print ORM results with the same formatting as the raw-SQL output.
+
+    Args:
+        results: Selected-question mapping returned by run_analysis.
+    """
     print("Module 3 SQLAlchemy ORM Analysis")
 
     print("\nQuestion 1")

@@ -20,7 +20,25 @@ class Base(DeclarativeBase):
 
 
 class Applicant(Base):
-    """One GradCafe applicant entry in the existing applicants table."""
+    """One GradCafe applicant entry in the existing applicants table.
+
+    Attributes:
+        p_id: Database-generated integer primary key.
+        program: Original combined program and university text.
+        comments: Optional applicant narrative.
+        date_added: Source publication date, without time information.
+        url: Required unique source URL used for deduplication.
+        status: Source decision classification.
+        term: Application term, such as Fall 2026.
+        us_or_international: Reported nationality classification.
+        gpa: Reported GPA; no scale conversion is performed.
+        gre: Imported GRE field under the assignment's schema mapping.
+        gre_v: Reported verbal GRE score.
+        gre_aw: Reported analytical-writing GRE score.
+        degree: Reported degree name.
+        llm_generated_program: Optional locally standardized program name.
+        llm_generated_university: Optional standardized university name.
+    """
 
     __tablename__ = "applicants"
 
@@ -53,7 +71,21 @@ class Applicant(Base):
 
 
 def database_url(password: str | None = None) -> URL:
-    """Build a SQLAlchemy URL without exposing credentials in source code."""
+    """Build a SQLAlchemy URL without hardcoding credentials.
+
+    Args:
+        password: Runtime password override for DB_*/PG* configuration.
+            Ignored when DATABASE_URL is set.
+
+    Returns:
+        A URL using DATABASE_URL first, otherwise DB_* with PG* fallbacks.
+        A plain postgresql driver name is upgraded to postgresql+psycopg.
+        The returned object contains credentials and must not be logged.
+
+    Raises:
+        ValueError: The configured port is not an integer.
+        sqlalchemy.exc.ArgumentError: DATABASE_URL cannot be parsed.
+    """
     configured_url = os.getenv("DATABASE_URL")
     if configured_url:
         url = make_url(configured_url)
@@ -77,7 +109,15 @@ def database_url(password: str | None = None) -> URL:
 
 
 def make_engine(password: str | None = None) -> Engine:
-    """Create a production-style Engine for the configured PostgreSQL DB."""
+    """Create a lazy Engine for the configured PostgreSQL database.
+
+    Args:
+        password: Optional runtime password forwarded to database_url.
+
+    Returns:
+        An Engine with pool_pre_ping enabled to detect stale connections.
+        Construction alone does not authenticate or open a DB connection.
+    """
     return create_engine(
         database_url(password),
         pool_pre_ping=True,
@@ -95,7 +135,18 @@ SessionLocal = sessionmaker(  # pylint: disable=invalid-name
 def configure_database(
     password: str | None = None,
 ) -> tuple[Engine, sessionmaker]:
-    """Reconfigure globals after securely obtaining runtime credentials."""
+    """Reconfigure globals after securely obtaining runtime credentials.
+
+    Call during startup, before creating the Flask app or serving requests;
+    consumers holding the old session factory are not updated automatically.
+
+    Args:
+        password: Optional runtime password forwarded to make_engine.
+
+    Returns:
+        The replacement Engine and session factory, also assigned to the
+        module globals after disposing of the previous connection pool.
+    """
     global engine, SessionLocal  # pylint: disable=global-statement
 
     engine.dispose()

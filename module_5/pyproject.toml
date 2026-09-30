@@ -4,9 +4,17 @@ target-version = ["py310"]
 
 [tool.pylint.main]
 py-version = "3.10"
+load-plugins = ["pylint.extensions.docparams"]
+
+[tool.pylint.parameter_documentation]
+default-docstring-type = "google"
+accept-no-param-doc = false
 
 [tool.pylint.format]
 max-line-length = 79
+# Retain the existing cohesive parser/recovery module while documenting its
+# contracts in full. This changes a size threshold, not correctness checks.
+max-module-lines = 1200
 
 [tool.pylint.messages_control]
 # CLI/parser methods have deliberately cohesive state. Do not hide correctness

@@ -15,7 +15,16 @@ from scrape_refresh import scrape_manager
 
 
 def prepare_analysis(results: dict[str, Any]) -> dict[str, Any]:
-    """Convert ORM values to the assignment's display formats."""
+    """Convert ORM values to the assignment's display formats.
+
+    Args:
+        results: Complete ORM result mapping including total_rows and
+            question_1 through question_11. The input is not modified.
+
+    Returns:
+        Template-ready counts, percentages, grouped rows, and a timestamp.
+        Missing numeric averages are represented by the string N/A.
+    """
     gpa, gre, gre_v, gre_aw = results["question_3"]
     original_count = int(results["question_8"])
     llm_count = int(results["question_9"])
@@ -76,6 +85,12 @@ def create_app(test_config: dict[str, Any] | None = None) -> Flask:
     Tests can replace ``SESSION_FACTORY``, ``ANALYSIS_RUNNER``, and
     ``SCRAPE_MANAGER`` with deterministic doubles. Production uses the Module
     3 PostgreSQL and scraper implementations by default.
+
+    Args:
+        test_config: Optional overrides applied after the default settings.
+
+    Returns:
+        A Flask application with analysis and background-scrape routes.
     """
     application = Flask(__name__)
     application.config.from_mapping(
@@ -89,6 +104,12 @@ def create_app(test_config: dict[str, Any] | None = None) -> Flask:
     @application.get("/")
     @application.get("/analysis")
     def analysis_page():
+        """Render a database snapshot without initiating a scrape.
+
+        Returns:
+            Rendered HTML on success, or an HTML/status tuple with HTTP 503
+            when the database or result formatting is unavailable.
+        """
         manager = current_app.config["SCRAPE_MANAGER"]
         scrape_status = manager.snapshot()
         update_requested = request.args.get("updated") == "1"
@@ -110,6 +131,8 @@ def create_app(test_config: dict[str, Any] | None = None) -> Flask:
                 results = analysis_runner(session)
             analysis = prepare_analysis(results)
         except (RuntimeError, ValueError, SQLAlchemyError):
+            # Keep diagnostic details in the server log, not the public page;
+            # database errors can contain connection or schema information.
             current_app.logger.exception("Unable to load analysis results")
             return (
                 render_template(
@@ -135,7 +158,12 @@ def create_app(test_config: dict[str, Any] | None = None) -> Flask:
 
     @application.post("/pull-data")
     def pull_data():
-        """Start one background pull, or reject the request while busy."""
+        """Start one background pull, or reject the request while busy.
+
+        Returns:
+            A JSON/status tuple: HTTP 202 when accepted, or HTTP 409 when
+            another scrape holds the manager's single-worker lock.
+        """
         manager = current_app.config["SCRAPE_MANAGER"]
         started, status = manager.start()
         if not started:
@@ -144,7 +172,12 @@ def create_app(test_config: dict[str, Any] | None = None) -> Flask:
 
     @application.post("/update-analysis")
     def update_analysis():
-        """Refresh the analysis unless a pull is currently in progress."""
+        """Refresh the analysis unless a pull is currently in progress.
+
+        Returns:
+            A JSON/status tuple with HTTP 200 and formatted results, HTTP
+            409 while scraping, or HTTP 503 after a database/format error.
+        """
         manager = current_app.config["SCRAPE_MANAGER"]
         status = manager.snapshot()
         if status["status"] == "running":
@@ -162,7 +195,11 @@ def create_app(test_config: dict[str, Any] | None = None) -> Flask:
 
     @application.get("/scrape-status")
     def scrape_status():
-        """Provide status updates without starting or interrupting a scrape."""
+        """Provide status updates without starting or interrupting a scrape.
+
+        Returns:
+            A JSON response containing a copy of the current job state.
+        """
         manager = current_app.config["SCRAPE_MANAGER"]
         return jsonify(manager.snapshot())
 

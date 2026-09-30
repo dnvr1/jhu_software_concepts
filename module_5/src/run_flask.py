@@ -9,9 +9,19 @@ from orm_queries import runtime_password
 
 
 def main() -> None:
-    """Configure the shared Engine and run the local development server."""
+    """Configure the shared Engine and run the local development server.
+
+    Reads FLASK_HOST and FLASK_PORT, defaulting to loopback on port 5000.
+    This development entry point blocks until the server stops. Debugging
+    and the automatic reloader remain disabled to avoid duplicate workers.
+
+    Raises:
+        ValueError: A configured database or Flask port is not an integer.
+    """
     models.configure_database(runtime_password())
 
+    # Import after configuration: create_app captures the current session
+    # factory, so an earlier import would retain the old database binding.
     from app import app  # pylint: disable=import-outside-toplevel
 
     app.run(

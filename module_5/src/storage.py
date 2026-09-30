@@ -17,6 +17,14 @@ def _replace_with_retry(source: Path, destination: Path) -> None:
     A complete temporary file is retained between attempts. Only
     ``PermissionError`` is retried; unrelated filesystem failures remain
     immediately visible to the caller.
+
+    Args:
+        source: Complete temporary file to move into place.
+        destination: Final path replaced atomically by the operating system.
+
+    Raises:
+        PermissionError: Reader locks persist after all retry attempts.
+        OSError: Another filesystem failure prevents replacement.
     """
     delay = INITIAL_REPLACE_DELAY
     for attempt in range(REPLACE_ATTEMPTS):
@@ -36,10 +44,17 @@ def save_json(data: object, filename: Path) -> None:
     Args:
         data: JSON-compatible value to serialize.
         filename: Destination path, whose parent is created when needed.
+
+    Raises:
+        TypeError: The data contains an unsupported JSON value.
+        ValueError: The data contains a nonfinite number or a cycle.
+        OSError: Directory creation, writing, or replacement fails.
     """
     filename.parent.mkdir(parents=True, exist_ok=True)
     temporary = None
     try:
+        # Use the destination directory so replacement stays on one volume.
+        # Flush before replacement to avoid publishing a partial file.
         with tempfile.NamedTemporaryFile(
             "w",
             encoding="utf-8",

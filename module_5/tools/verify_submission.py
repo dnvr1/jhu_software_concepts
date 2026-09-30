@@ -30,6 +30,8 @@ REQUIRED_FILES = {
     "snyk-code-results.json",
     "SNYK_CODE_REVIEW.md",
     "README.md",
+    "STYLE_GUIDE.md",
+    "tests/test_source_documentation.py",
     "requirements.txt",
 }
 FORBIDDEN_PARTS = {

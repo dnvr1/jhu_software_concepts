@@ -9,6 +9,15 @@ Repository: `git@github.com:dnvr1/jhu_software_concepts.git`
 This directory builds on Module 4's GradCafe analytics application. The
 application code lives in `src/`, and the tests live in `tests/`.
 
+## Python style and comments
+
+The style reference is the **Google Python Style Guide**. See
+[`STYLE_GUIDE.md`](STYLE_GUIDE.md) for Google-style docstring conventions,
+automated checks, and explicit project-specific choices. Source documentation
+explains parameters, return values, relevant failures, and non-obvious security
+or concurrency decisions. Pylint checks Google-style parameter documentation;
+Sphinx renders the same docstrings as API documentation.
+
 ## Fresh Install
 
 Use Python 3.12 (the verified tooling/CI version) and PostgreSQL. Start in `module_5/`.

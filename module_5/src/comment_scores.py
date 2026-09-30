@@ -26,6 +26,14 @@ def enrich_scores(item):
     Score scales are stored as stated, never inferred or converted. Generic
     GRE remains unspecified, not relabeled as quantitative or a total.
     Potential historical/third-party/requirement contexts are review-only.
+
+    Args:
+        item (dict): Applicant dictionary with score_provenance and optional
+            comments. Scores and evidence fields are updated in place.
+
+    Returns:
+        The same dictionary, with comment_score_mentions and score_context
+        recording which exact excerpts were accepted or left for review.
     """
     comment = item.get("comments") or ""
     mentions = []

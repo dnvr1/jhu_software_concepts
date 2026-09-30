@@ -20,7 +20,19 @@ RUNTIME_ROOT = Path(__file__).with_name("runtime") / "pull_data"
 
 
 def collect_current_entries() -> list[dict]:
-    """Reuse the Module 2 scraper to collect the newest public results page."""
+    """Reuse the Module 2 scraper to collect the newest public results page.
+
+    Creates a unique capture directory under SCRAPE_RUN_ROOT. SCRAPE_DELAY
+    and SCRAPE_MAX_PAGES configure pacing and the maximum page count.
+
+    Returns:
+        Cleaned records from the first complete permitted page.
+
+    Raises:
+        ValueError: Delay/page settings are invalid.
+        scrape.ScrapingStopped: Site policy or a response blocks collection.
+        OSError: Capture evidence cannot be persisted.
+    """
     run_name = (
         datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
         + "-"
@@ -43,7 +55,15 @@ def collect_current_entries() -> list[dict]:
 
 
 def prepare_mappings(records: list[dict]) -> tuple[list[dict], int]:
-    """Normalize usable records and skip malformed or repeated source URLs."""
+    """Normalize usable records and skip malformed or repeated source URLs.
+
+    Args:
+        records: Scraped applicant dictionaries; originals are not mutated.
+
+    Returns:
+        Database column mappings and the number of malformed or repeated
+        records skipped within this batch. Existing DB rows are not checked.
+    """
     mappings: list[dict] = []
     seen_urls: set[object] = set()
     rejected = 0
@@ -65,11 +85,24 @@ def prepare_mappings(records: list[dict]) -> tuple[list[dict], int]:
 
 
 def insert_new_records(records: list[dict]) -> tuple[int, int]:
-    """Insert unseen URLs atomically and return inserted/rejected counts."""
+    """Insert unseen URLs atomically and return inserted/rejected counts.
+
+    Args:
+        records: Scraped applicant dictionaries to normalize and insert.
+
+    Returns:
+        Inserted count and input-rejection count. Conflicts with existing
+        database URLs are skipped, but do not increment the rejection count.
+
+    Raises:
+        sqlalchemy.exc.SQLAlchemyError: The transaction cannot complete.
+    """
     mappings, rejected = prepare_mappings(records)
     if not mappings:
         return 0, rejected
 
+    # The unique URL constraint resolves races between concurrent processes;
+    # a Python-only existence check would not make insertion idempotent.
     statement = (
         insert(models.Applicant)
         .values(mappings)
@@ -89,6 +122,13 @@ class ScrapeJobManager:
         collector: Callable[[], list[dict]] = collect_current_entries,
         loader: Callable[[list[dict]], tuple[int, int]] = insert_new_records,
     ) -> None:
+        """Initialize injectable work functions and an idle status snapshot.
+
+        Args:
+            collector: No-argument callable returning applicant dictionaries.
+            loader: Callable accepting those records and returning the
+                inserted and rejected counts. Exceptions become job failures.
+        """
         self._collector = collector
         self._loader = loader
         self._lock = Lock()
@@ -106,12 +146,24 @@ class ScrapeJobManager:
         }
 
     def snapshot(self) -> dict:
-        """Return a copy that Flask can safely render or serialize."""
+        """Return a copy that Flask can safely render or serialize.
+
+        Returns:
+            A lock-protected shallow copy of scalar job-state fields, so
+            callers cannot mutate the manager's internal state dictionary.
+        """
         with self._state_lock:
             return dict(self._state)
 
     def start(self) -> tuple[bool, dict]:
-        """Start one worker, refusing a second request while it is active."""
+        """Start one worker, refusing a second request while it is active.
+
+        Returns:
+            A started flag and status snapshot. A false flag means another
+            thread already holds the job lock; no second scrape is started.
+        """
+        # Ownership intentionally spans threads: start acquires the job lock,
+        # and the worker releases it in finally. A with block would end early.
         if not self._lock.acquire(  # pylint: disable=consider-using-with
             blocking=False
         ):
@@ -136,10 +188,23 @@ class ScrapeJobManager:
         return True, self.snapshot()
 
     def wait(self, timeout: float | None = None) -> bool:
-        """Wait for the active job without polling or arbitrary sleeps."""
+        """Wait for the active job without polling or arbitrary sleeps.
+
+        Args:
+            timeout: Maximum seconds to wait, or None to wait indefinitely.
+
+        Returns:
+            True when finished (including failed jobs), or False on timeout.
+        """
         return self._finished.wait(timeout)
 
     def _run(self) -> None:
+        """Collect, insert, and publish the outcome of an accepted job.
+
+        Worker exceptions are converted into a failed status because they
+        cannot propagate to the initiating HTTP request. The finally block
+        releases the job lock and wakes waiters for either outcome.
+        """
         try:
             records = self._collector()
             inserted, rejected = self._loader(records)
