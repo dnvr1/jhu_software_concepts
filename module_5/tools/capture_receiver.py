@@ -56,7 +56,7 @@ def make_handler(directory: Path, token: str) -> type[BaseHTTPRequestHandler]:
                 "<!doctype html><title>GradCafe capture</title>"
                 "<h1>Save visible GradCafe results</h1>"
                 '<form method="post">'
-                f'<input type="hidden" name="token" value="{token}">'
+                f'<input type="hidden" name="token" value="{html.escape(token, quote=True)}">'
                 '<label>Source URL<input name="url" required></label><br>'
                 '<label>Captured HTML<textarea name="html" required '
                 'rows="12" cols="90"></textarea></label><br>'
@@ -123,7 +123,7 @@ def make_handler(directory: Path, token: str) -> type[BaseHTTPRequestHandler]:
                 )
                 self._reply(
                     200,
-                    f"<h1>Saved {filename}.html</h1>"
+                    f"<h1>Saved {html.escape(filename, quote=True)}.html</h1>"
                     "<a href='/'>Next capture</a>",
                 )
             except (ValueError, KeyError, RuntimeError) as error:

@@ -79,6 +79,17 @@ The home database has not been changed. For local deployment, run
 Snyk successfully tested 52 dependencies with zero issues; see
 `snyk-analysis.txt`, `snyk-results.json`, and `snyk-analysis.png`.
 
+## Extra credit: Snyk Code
+
+Run `snyk code test --json-file-output=snyk-code-results.json` from this
+folder after authenticating and enabling Snyk Code for your organization.
+This uploads source code to Snyk for analysis. The completed scan initially
+reported 26 findings; HTML escaping in the capture helper resolved one
+medium XSS finding. The repeat scan reports 25 open findings: no high,
+two medium and 23 low. Exit code 1 means findings were detected.
+See `SNYK_CODE_REVIEW.md` and the original before/after text and JSON evidence.
+The extra-credit scan is separate from the four required CI jobs.
+
 ## Dependency graph
 
 Install Graphviz and add `dot` to `PATH`, then regenerate the graph with:

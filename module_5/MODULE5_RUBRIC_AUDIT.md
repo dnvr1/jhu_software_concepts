@@ -15,8 +15,8 @@ This is an evidence checklist, not a prediction or guarantee of the instructor's
 | Packaging | 5 | `setup.py` supports the documented `pip install -e .` and uv editable workflows, verified locally and in CI. PDF explains import consistency and editable development. Standalone wheel deployment is not the documented installation method. |
 | Snyk dependencies | 6 | `snyk-analysis.png`, text and JSON evidence record a successful local scan (52 dependencies, zero issues). Hosted Linux scan passed with 50 dependencies and zero issues. Different platforms resolve different dependency sets. |
 | GitHub Actions | 13 | Four jobs: Pylint threshold 10, graph generation/presence, Snyk scan, and Pytest with 100% coverage. Workflow runs on every push/PR and supports manual execution. Least-privilege verification also fails the job on errors (`bash` pipefail). Passing run evidence is in `ci_success.jpg` and linked in README. |
-| README, PDF and deliverables | 10 | README and the visually checked two-page `module_5_report.pdf` cover installation/run, environment variables, security, limits, grants, graph, packaging and CI. Required files are checked by the ZIP verifier. Existing Module 4 Read the Docs stays available; Module 5 Sphinx HTML builds with `-W`. |
-| Optional Snyk Code | +5 | **Not completed or claimed.** The required dependency scan is complete; SAST extra credit is separate. |
+| README, PDF and deliverables | 10 | README and the visually checked three-page `module_5_report.pdf` cover installation/run, environment variables, security, limits, grants, graph, packaging, CI and SAST extra credit. Required files are checked by the ZIP verifier. Existing Module 4 Read the Docs stays available; Module 5 Sphinx HTML builds with `-W`. |
+| Optional Snyk Code | +5 | Executed with original CLI and SARIF output preserved. Initial 26 findings reduced to 25 after fixing HTML escaping; zero high, two medium and 23 low remain. `SNYK_CODE_REVIEW.md` and the PDF explain the fix and remaining trust boundaries. No findings suppressed; exit code 1 correctly records findings, not scan failure. Instructor determines credit. |
 
 ## Audit corrections
 

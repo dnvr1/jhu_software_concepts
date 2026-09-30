@@ -7,7 +7,7 @@ import re
 from reportlab.lib import colors
 from reportlab.lib.styles import getSampleStyleSheet
 from reportlab.lib.units import inch
-from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer
+from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, PageBreak
 
 ROOT = Path(__file__).resolve().parents[1]
 evidence_dir = ROOT / "tmp" / "evidence"
@@ -45,6 +45,8 @@ for block in source.split("\n\n"):
         style = styles["Title"]
     elif block.startswith("## "):
         block = block[3:]
+        if block.startswith("Extra credit"):
+            story.append(PageBreak())
         style = styles["Heading2"]
     text = escape(" ".join(block.splitlines()))
     text = re.sub(r"`([^`]+)`", r'<font name="Courier">\1</font>', text)

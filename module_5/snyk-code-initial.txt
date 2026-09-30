@@ -1,0 +1,159 @@
+Snyk Code SAST - captured CLI output
+Captured: 2026-09-30T13:33:07.549398+00:00
+Exit code: 1
+Command: snyk code test --json-file-output=snyk-code-results.json
+
+
+Testing C:\Users\DNVR\Documents\Hopkins\Modern Software -- EN.605.256\jhu_software_concepts\module_5 ...
+
+Open Issues
+
+ ✗ [LOW] Path Traversal
+   Finding ID: 2cefd5ec-c92f-41c9-97ff-80fc1f027a80
+   Path: src/scrape.py, line 93
+   Info: Unsanitized input from a command line argument flows into pathlib.Path, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to write arbitrary files.
+
+ ✗ [LOW] Path Traversal
+   Finding ID: b82b760c-3877-40f6-9914-07b58e1fcd81
+   Path: src/scrape.py, line 876
+   Info: Unsanitized input from a command line argument flows into os.replace, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to write arbitrary files.
+
+ ✗ [LOW] Path Traversal
+   Finding ID: 09969860-2c02-4761-a281-c0708160e867
+   Path: tools/audit_data.py, line 39
+   Info: Unsanitized input from a command line argument flows into pathlib.Path, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to read arbitrary files.
+
+ ✗ [LOW] Path Traversal
+   Finding ID: 798b6b94-45a4-41f5-9a42-db78f75f8721
+   Path: tools/capture_receiver.py, line 27
+   Info: Unsanitized input from a command line argument flows into pathlib.Path, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to remove arbitrary files.
+
+ ✗ [LOW] Path Traversal
+   Finding ID: de568947-ebb6-49be-9b37-9d0b90ee0a1b
+   Path: tools/capture_receiver.py, line 30
+   Info: Unsanitized input from a command line argument flows into os.replace, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to remove arbitrary files.
+
+ ✗ [LOW] Path Traversal
+   Finding ID: 3b3e7536-7a86-45ff-9bad-9beb58074a7b
+   Path: tools/parallel_clean.py, line 46
+   Info: Unsanitized input from a command line argument flows into path concatenation, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to write arbitrary files.
+
+ ✗ [LOW] Use of Hardcoded Credentials
+   Finding ID: a79af395-61aa-4d29-9ecd-3193d8b3efdc
+   Path: tools/verify_least_privilege.py, line 19
+   Info: Do not hardcode credentials in code. Found hardcoded credential used in username.
+
+ ✗ [LOW] Path Traversal
+   Finding ID: 50b3daa5-b107-434d-958c-5b3e3ba8df9d
+   Path: llm_hosting/app.py, line 335
+   Info: Unsanitized input from a command line argument flows into open, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to read arbitrary files.
+
+ ✗ [LOW] Path Traversal
+   Finding ID: 32bd7ec0-8251-4cb0-8592-7145388d346d
+   Path: llm_hosting/app.py, line 342
+   Info: Unsanitized input from a command line argument flows into open, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to write arbitrary files.
+
+ ✗ [LOW] Path Traversal
+   Finding ID: 184981f1-82f8-4c3d-8004-8a6519df42e2
+   Path: llm_hosting/app.py, line 355
+   Info: Unsanitized input from a command line argument flows into json.dump, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to write arbitrary files.
+
+ ✗ [LOW] Path Traversal
+   Finding ID: 9d0a433e-86df-4aeb-97ac-c9b26dd7f177
+   Path: src/clean.py, line 248
+   Info: Unsanitized input from a command line argument flows into pathlib.Path, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to write arbitrary files.
+
+ ✗ [LOW] Path Traversal
+   Finding ID: e3de8fb7-180f-408e-a189-86354947e2c9
+   Path: src/clean.py, line 254
+   Info: Unsanitized input from a command line argument flows into pathlib.Path, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to write arbitrary files.
+
+ ✗ [LOW] Path Traversal
+   Finding ID: 920c34ab-fdab-4c81-8b30-2ad52f1250f8
+   Path: src/scrape.py, line 729
+   Info: Unsanitized input from a command line argument flows into path concatenation, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to write arbitrary files.
+
+ ✗ [LOW] Path Traversal
+   Finding ID: 1eb5620e-bfe2-440d-bda8-3f0e9b11d964
+   Path: src/scrape.py, line 462
+   Info: Unsanitized input from a command line argument flows into path concatenation, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to write arbitrary files.
+
+ ✗ [LOW] Path Traversal
+   Finding ID: 54ff4a5d-65d9-4e81-86f4-4beddbe89664
+   Path: tools/audit_data.py, line 47
+   Info: Unsanitized input from a command line argument flows into path concatenation, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to read arbitrary files.
+
+ ✗ [LOW] Path Traversal
+   Finding ID: 00893bcc-20e6-44d4-909f-45bc0407f1f7
+   Path: tools/parallel_clean.py, line 132
+   Info: Unsanitized input from a command line argument flows into pathlib.Path, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to write arbitrary files.
+
+ ✗ [LOW] Path Traversal
+   Finding ID: eff04123-0cdf-4333-9461-cb692dfdaae0
+   Path: src/scrape.py, line 193
+   Info: Unsanitized input from a command line argument flows into path concatenation, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to read arbitrary files.
+
+ ✗ [LOW] Path Traversal
+   Finding ID: e05348c8-725d-48d5-934a-dd0cc9fab318
+   Path: src/scrape.py, line 796
+   Info: Unsanitized input from a command line argument flows into path concatenation, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to read arbitrary files.
+
+ ✗ [LOW] Path Traversal
+   Finding ID: 4a1ff74d-db97-4827-af2c-f07e67de373d
+   Path: tools/parallel_clean.py, line 39
+   Info: Unsanitized input from a command line argument flows into pathlib.Path, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to write arbitrary files.
+
+ ✗ [LOW] Path Traversal
+   Finding ID: 45857cd6-cf44-47cb-9c36-376197cf1a36
+   Path: src/scrape.py, line 257
+   Info: Unsanitized input from a command line argument flows into os.replace, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to write arbitrary files.
+
+ ✗ [LOW] Path Traversal
+   Finding ID: cce01f8a-a949-4388-b521-f2483520366b
+   Path: src/scrape.py, line 463
+   Info: Unsanitized input from a command line argument flows into os.replace, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to write arbitrary files.
+
+ ✗ [LOW] Path Traversal
+   Finding ID: be54e64e-d68f-4c25-b2d4-ecdfa8b8668b
+   Path: src/scrape.py, line 757
+   Info: Unsanitized input from a command line argument flows into os.replace, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to write arbitrary files.
+
+ ✗ [LOW] Path Traversal
+   Finding ID: 700ceb72-e863-4400-bbcf-da9b1d6b4eca
+   Path: src/scrape.py, line 191
+   Info: Unsanitized input from a command line argument flows into pathlib.Path, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to write arbitrary files.
+
+ ✗ [MEDIUM] Command Injection
+   Finding ID: bc9f0db2-caf8-4b2f-a0c4-69e235671ef7
+   Path: src/clean.py, line 181
+   Info: Unsanitized input from a command line argument flows into subprocess.run, where it is used as a shell command. This may result in a Command Injection vulnerability.
+
+ ✗ [MEDIUM] Command Injection
+   Finding ID: c76ad907-82bd-4ac7-9900-6a5f63410550
+   Path: tools/browser_collect.py, line 343
+   Info: Unsanitized input from an environment variable flows into subprocess.Popen, where it is used as a shell command. This may result in a Command Injection vulnerability.
+
+ ✗ [MEDIUM] Cross-site Scripting (XSS)
+   Finding ID: adf21e72-8efd-4719-ad10-b2e54fcef910
+   Path: tools/capture_receiver.py, line 50
+   Info: Unsanitized input from a command line argument flows into write, where it is used to render an HTML page returned to the user. This may result in a Cross-Site Scripting attack (XSS).
+
+
+
+╭──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ Test Summary                                                                                                         │
+│                                                                                                                      │
+│   Organization:      dnvr1                                                                                           │
+│   Test type:         Static code analysis                                                                            │
+│   Project path:      C:\Users\DNVR\Documents\Hopkins\Modern Software -- EN.605.256\jhu_software_concepts\module_5    │
+│                                                                                                                      │
+│   Total issues:   26                                                                                                 │
+│   Ignored issues: 0 [ 0 HIGH  0 MEDIUM  0 LOW ]                                                                      │
+│   Open issues:    26 [ 0 HIGH  3 MEDIUM  23 LOW ]                                                                    │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+    
+💡 Tip
+
+   To view ignored issues, use the --include-ignores option.
+                                                            
+

@@ -98,3 +98,28 @@ The screenshot `snyk-analysis.png` shows the saved CLI output in a browser.
 This result describes known dependency issues at scan time, not a guarantee
 that the application has no security defects. No dependency remediation was
 required by this scan.
+
+## Extra credit: Snyk Code (SAST)
+
+After enabling Snyk Code with the account owner's approval, I ran
+`snyk code test --json-file-output=snyk-code-results.json` from `module_5/`.
+The initial scan found 26 issues: zero high, three medium, and 23 low.
+I fixed the medium XSS finding in the optional capture receiver by escaping
+the filename in its HTML success message, and also escaped the form token.
+A focused output-escaping check passed. A repeat scan confirmed the XSS
+finding was removed: 25 findings remain (zero high, two medium, 23 low).
+
+The two remaining medium findings concern operator-selected local Python
+and browser executables. Both use argument lists without a shell, but the
+executable and package inputs still require a trusted local operator. The
+low findings comprise 22 local file-path warnings and one fixed CI username
+warning; the CI password is randomly generated, not hardcoded. These
+findings remain open and unsuppressed. They are not evidence of a clean
+source scan or a proven remote exploit. Use trusted CLI inputs and do not
+expose these helpers as multi-user services without additional containment.
+
+Both scans completed with findings (exit code 1). Genuine before/after CLI
+output is in `snyk-code-initial.txt` and `snyk-code-analysis.txt`; both SARIF
+JSON files are included. `SNYK_CODE_REVIEW.md` explains the remediation and
+remaining trust boundaries. This completes the requested SAST execution,
+output evidence, and findings summary for extra-credit review.

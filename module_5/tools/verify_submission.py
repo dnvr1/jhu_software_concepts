@@ -26,6 +26,9 @@ REQUIRED_FILES = {
     "database_privileges.txt",
     "ci_success.jpg",
     "snyk-analysis.png",
+    "snyk-code-analysis.txt",
+    "snyk-code-results.json",
+    "SNYK_CODE_REVIEW.md",
     "README.md",
     "requirements.txt",
 }
