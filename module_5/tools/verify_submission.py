@@ -31,6 +31,7 @@ REQUIRED_FILES = {
     "SNYK_CODE_REVIEW.md",
     "README.md",
     "STYLE_GUIDE.md",
+    "M4_FEEDBACK_FOLLOWUP.md",
     "tests/test_source_documentation.py",
     "requirements.txt",
 }

@@ -48,6 +48,17 @@ two skips), before the documentation regression test was added.
 
 ## Remaining actions and scope
 
+### Module 4 feedback follow-up (October 1, 2026)
+
+All three prior testing deductions are addressed in the Module 5 tests. Busy
+requests have explicit no-side-effect assertions; database inserts enter through
+POST /pull-data; the end-to-end test now uses real PostgreSQL and ORM results.
+See M4_FEEDBACK_FOLLOWUP.md for the detailed mapping and passing hosted run.
+Local rerun: 132 passed, four explained skips, 100% coverage; hosted full-suite
+and dedicated PostgreSQL steps both passed in run 36932699860.
+
+### User actions
+
 1. Review and upload the rebuilt `output/module_5_submission.zip` to Canvas.
 2. For home-PC operation, apply the role setup with your administrator password
    and set the app credentials privately. No home database changes are claimed.
