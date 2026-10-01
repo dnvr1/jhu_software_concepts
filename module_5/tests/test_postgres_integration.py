@@ -1,79 +1,50 @@
-"""PostgreSQL-backed insert verification for CI and test databases."""
+"""Verify HTTP-triggered insertion and idempotency in real PostgreSQL."""
 
-import os
+import datetime
 
 import pytest
-from sqlalchemy import text
+import sqlalchemy
 
-import load_data
-import models
-from scrape_refresh import insert_new_records
+import app
+import scrape_refresh
 
 
 pytestmark = [pytest.mark.db, pytest.mark.integration]
 
 
-def _postgres_test_url():
-    url = os.getenv("DATABASE_URL")
-    if not url:
-        pytest.skip("DATABASE_URL is supplied by the PostgreSQL CI service")
-    parsed = models.database_url()
-    if not (parsed.database or "").endswith("_test"):
-        pytest.skip("PostgreSQL integration only runs against a *_test database")
-    return url
+def test_postgres_insert_required_fields_and_duplicate_policy(
+    postgres_engine, postgres_records
+):
+    """POST twice through the real worker and inspect committed row contents.
 
+    Args:
+        postgres_engine: Guarded disposable PostgreSQL engine.
+        postgres_records: Deterministic replacement for network collection.
+    """
+    manager = scrape_refresh.ScrapeJobManager(
+        collector=lambda: postgres_records
+    )
+    client = app.create_app({
+        "TESTING": True, "SCRAPE_MANAGER": manager
+    }).test_client()
+    for expected_inserted in (2, 0):
+        assert client.post("/pull-data").status_code == 202
+        assert manager.wait(timeout=10), "Background insertion timed out"
+        state = manager.snapshot()
+        assert state["status"] == "succeeded", state
+        assert state["records_inserted"] == expected_inserted
+        assert state["records_rejected"] == 0
 
-def test_postgres_insert_required_fields_and_duplicate_policy():
-    """A repeated pull keeps one row per required, non-null source URL."""
-    _postgres_test_url()
-    engine, _ = models.configure_database()
-    records = [
-        {
-            "program": "Computer Science, Example University",
-            "date_added": "Sep 22, 2026",
-            "url": "https://example.test/result/1",
-            "status": "Accepted",
-            "term": "Fall 2027",
-            "citizenship": "International",
-            "degree": "PhD",
-        },
-        {
-            "program": "Mathematics, Example University",
-            "date_added": "Sep 22, 2026",
-            "url": "https://example.test/result/2",
-            "status": "Rejected",
-            "term": "Fall 2027",
-            "citizenship": "American",
-            "degree": "Masters",
-        },
-    ]
-
-    with engine.begin() as connection:
-        connection.execute(text(load_data.CREATE_TABLE_SQL))
-        connection.execute(text("TRUNCATE TABLE applicants RESTART IDENTITY"))
-
-    assert insert_new_records(records) == (2, 0)
-    assert insert_new_records(records) == (0, 0)
-
-    with engine.connect() as connection:
-        rows = connection.execute(
-            text(
-                "SELECT url, program, date_added FROM applicants "
-                "ORDER BY url LIMIT 100"
-            )
-        ).mappings().all()
-
-    assert len(rows) == 2
+    # A new connection observes committed rows, not worker-local state.
+    with postgres_engine.connect() as connection:
+        rows = connection.execute(sqlalchemy.text(
+            "SELECT url, program, date_added FROM applicants "
+            "ORDER BY url LIMIT 100"
+        )).mappings().all()
     assert [dict(row) for row in rows] == [
         {
-            "url": "https://example.test/result/1",
-            "program": "Computer Science, Example University",
-            "date_added": rows[0]["date_added"],
-        },
-        {
-            "url": "https://example.test/result/2",
-            "program": "Mathematics, Example University",
-            "date_added": rows[1]["date_added"],
-        },
+            "url": record["url"], "program": record["program"],
+            "date_added": datetime.date(2026, 9, 22),
+        }
+        for record in postgres_records
     ]
-    assert all(row["date_added"] is not None for row in rows)

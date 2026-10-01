@@ -73,6 +73,19 @@ SELECT and INSERT table privileges and no owner-role membership.
 
 ## Security checks
 
+Module 4 feedback is addressed by real PostgreSQL tests in
+`tests/test_postgres_integration.py` and `tests/test_integration_end_to_end.py`.
+They POST to `/pull-data` using the real worker and loader, verify committed
+rows and duplicate handling, and exercise ORM updates and rendered HTML.
+Busy tests explicitly prove that rejected requests perform no analysis or
+session work; the live test also verifies unchanged database contents.
+
+For database tests, provide `DATABASE_URL` for a **disposable PostgreSQL
+database ending in `_test`**. Its applicants table is reset before each test.
+Set `REQUIRE_POSTGRES_TESTS=1` to make missing configuration a failure, as CI
+does. Without a URL, only local runs may skip the two database tests. Unsafe
+database names fail rather than being used. No home database changes are needed.
+
 ```powershell
 .\.venv\Scripts\python.exe -m pylint src --fail-under=10
 .\.venv\Scripts\python.exe -m pytest -m "web or buttons or analysis or db or integration"

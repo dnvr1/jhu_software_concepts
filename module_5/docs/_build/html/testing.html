@@ -50,17 +50,29 @@ pull-to-update-to-render flows.</p>
 <h2>Selectors and doubles<a class="headerlink" href="#selectors-and-doubles" title="Link to this heading">¶</a></h2>
 <p>The stable button selectors are <code class="docutils literal notranslate"><span class="pre">data-testid=&quot;pull-data-btn&quot;</span></code> and
 <code class="docutils literal notranslate"><span class="pre">data-testid=&quot;update-analysis-btn&quot;</span></code>. Shared fixtures replace the session
-factory, analysis runner, scraper, and loader with deterministic doubles.
+factory, analysis runner, scraper, and loader in isolated unit tests only.
+The PostgreSQL integration tests replace only network collection with fixed
+records. They use the real worker, loader, database, and ORM analysis.
 Tests never depend on the live GradCafe site and use events instead of
 arbitrary sleeps for background-job coordination.</p>
 </section>
 <section id="coverage-and-postgresql">
 <h2>Coverage and PostgreSQL<a class="headerlink" href="#coverage-and-postgresql" title="Link to this heading">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">pytest.ini</span></code> applies <code class="docutils literal notranslate"><span class="pre">pytest-cov</span></code> to all code under <code class="docutils literal notranslate"><span class="pre">src</span></code> and fails the
-run below 100 percent. The PostgreSQL integration test activates only when
-<code class="docutils literal notranslate"><span class="pre">DATABASE_URL</span></code> names a database ending in <code class="docutils literal notranslate"><span class="pre">_test</span></code>. GitHub Actions provides
-<code class="docutils literal notranslate"><span class="pre">gradcafe_test</span></code>, starts from an empty table, inserts two records, repeats the
-same pull, and verifies the required fields and URL uniqueness policy.</p>
+run below 100 percent. PostgreSQL integration tests require <code class="docutils literal notranslate"><span class="pre">DATABASE_URL</span></code>
+to name a disposable PostgreSQL database ending in <code class="docutils literal notranslate"><span class="pre">_test</span></code>. Fixtures create
+the applicants table if needed and truncate it before each test. Never point
+these tests at a database containing valuable data.</p>
+<p>GitHub Actions sets <code class="docutils literal notranslate"><span class="pre">REQUIRE_POSTGRES_TESTS=1</span></code>: missing configuration fails
+instead of skipping, and invalid database targets always fail before writes.
+Local runs without a database skip these two tests; CI must execute them.
+A dedicated CI step also runs both files verbosely and uploads JUnit evidence.</p>
+<p>Both tests insert through <code class="docutils literal notranslate"><span class="pre">POST</span> <span class="pre">/pull-data</span></code> and wait for the real worker.
+One checks exact committed fields and duplicate handling. The end-to-end test
+checks busy rejection before releasing an event-controlled collector, proves
+no analysis/session calls or stored-row changes occurred while busy, then
+verifies persisted rows, real ORM update results, and rendered HTML. A repeated
+pull verifies that the database unique-URL constraint prevents duplicates.</p>
 </section>
 </section>
 

@@ -20,10 +20,11 @@ src\storage.py              39      0   100%
 TOTAL                     1166      0   100%
 
 Required test coverage of 100% reached. Total coverage: 100.00%
-133 passed, 3 skipped in 19.54s
+132 passed, 4 skipped in 20.11s
 
 Includes the Google-style source documentation regression test.
 
-Two skipped tests require the optional local llama_cpp model runtime. The
-third is the PostgreSQL-backed test, which runs when DATABASE_URL points to a
-*_test database; the GitHub Actions workflow supplies gradcafe_test.
+Two skipped tests require the optional local llama_cpp model runtime. Two
+require disposable PostgreSQL storage. The prior in-memory integration test
+has been replaced with a real HTTP-to-database test. CI sets DATABASE_URL and
+REQUIRE_POSTGRES_TESTS=1 so missing database configuration fails, not skips.
